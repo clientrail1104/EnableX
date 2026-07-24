@@ -1,136 +1,2816 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
 
+<html xmlns="http://www.w3.org/1999/xhtml"
+  lang="en"
+  class="layout-navbar-fixed  layout-compact"
+  dir="ltr"
+  data-skin="default"
+  data-assets-path="./assets/"
+  data-template="vertical-menu-template"
+  data-bs-theme="tlight1">
+ 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Personnel Binaan Module</title>
 
-<title>Vision X</title>
+     <meta name="description" content="Carian Personnel Binaan" />
 
-<link rel="stylesheet" href="style.css">
-<elevenlabs-convai agent-id="agent_0301ky516eb3emwsy22td2f8z96g"></elevenlabs-convai>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
+   
+
+        <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/vendor/fonts/iconify-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Core CSS -->
+    <!-- build:css assets/vendor/css/theme.css -->
+
+    <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
+
+ 
+    <link rel="stylesheet" href="./assets/vendor/css/core.css" />
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+      <!-- Vendors CSS -->
+      <link rel="stylesheet" href="./assets/vendor/libs/chartjs/chartjs.css" />
+     <!-- Helpers -->
+
+   
+     <link rel="stylesheet" href="./assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+       <link rel="stylesheet" href="./assets/vendor/libs/datatables-fixedcolumns-bs5/fixedcolumns.bootstrap5.css" />
+       <link rel="stylesheet" href="./assets/vendor/libs/datatables-select-bs5/select.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/datatables-fixedheader-bs5/fixedheader.bootstrap5.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+       <link rel="stylesheet" href="./assets/css/tablelayout.css" /> 
+     <link rel="stylesheet" href="./assets/vendor/libs/spinkit/spinkit.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/notiflix/notiflix.css" />
+
+    <script src="./assets/vendor/js/helpers.js"></script>
+   
+
+      <script src="./assets/js/config.js"></script>
+        <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+        <link rel="stylesheet" href="./assets/vendor/css/pages/dashboards-crm.css" />
+   
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/sweetalert2/sweetalert2.css" />
+      <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+        <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
 </head>
-
 <body>
+    <!-- Layout wrapper -->
 
-<nav>
+    <div class="layout-wrapper layout-content-navbar layout-without-menu">
+                       
+          <div class="layout-container">
+              
+               <div class="menu-mobile-toggler d-xl-none rounded-1">
+                  <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large text-bg-secondary p-2 rounded-1">
+                    <i class="ri ri-menu-line icon-base"></i>
+                    <i class="ri ri-arrow-right-s-line icon-base"></i>
+                </a>
+              </div>
+            
 
-<div class="logo">
-    ✦
+                <div class="layout-page">
+               <nav 
+            class="layout-navbar container-xxl navbar-detached navbar navbar-expand-xl align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+                <i class="icon-base ri ri-menu-line icon-md"></i>
+              </a>
+            </div>
+                   <div class="app-brand demo">
+                       <a href="https://cims.cidb.gov.my/" class="app-brand-link gap-xl-0 gap-2">
+                           <span class="app-brand-logo demo me-1">
+                               <span class="text-primary">
+                                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="54" viewBox="0 0 180 54">
+                                       <image xlink:href="data:image/png;base64,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" x="0" y="0" width="180" height="54" />
+                                   </svg>
+
+                               </span>
+                           </span>
+
+                       </a>
+                      
+                   </div>
+            <div class="navbar-nav-right d-flex align-items-center justify-content-end" id="navbar-collapse">
+             
+           
+
+              <ul class="navbar-nav flex-row align-items-center ms-md-auto">
+                 <!--/ Language -->
+                   <li >
+                    <a class="nav-link fw-medium bg-primary" name="btn1" href="oPBIAppslink?personid=840411235085&userid=clientrail@gmail.com&lang=ms">BM</a>
+                </li>
+                <li >
+                    <a class="nav-link fw-medium " name="btn2" href="oPBIAppslink?personid=840411235085&userid=clientrail@gmail.com&lang=en">EN</a>
+                </li>
+               
+                <!--/ Language -->
+
+               
+
+                <!-- Quick links -->
+               
+                <!-- Quick links -->
+
+                <!-- Notification -->
+                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1" hidden >
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow btn btn-icon btn-text-secondary rounded-pill"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false">
+                    <span class="position-relative">
+                      <i class="icon-base ri ri-notification-2-line icon-22px"></i>
+                      <span class="badge rounded-pill bg-danger badge-dot badge-notifications border"></span>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end p-0">
+                    <li class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h6 class="mb-0 me-auto">Notification</h6>
+                        <div class="d-flex align-items-center h6 mb-0 " >
+                          <span class="badge bg-label-primary rounded-pill me-2">8 New</span>
+                          <a
+                            href="javascript:void(0)"
+                            class="dropdown-notifications-all p-2"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Mark all as read">
+                            <i class="icon-base ri ri-mail-open-line text-heading"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="dropdown-notifications-list scrollable-container">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/1.png" alt="alt" class="rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Congratulation Lettie 🎉</h6>
+                              <small class="mb-1 d-block text-body">Won the monthly best seller gold badge</small>
+                              <small class="text-body-secondary">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Charles Franklin</h6>
+                              <small class="mb-1 d-block text-body">Accepted your connection</small>
+                              <small class="text-body-secondary">12hr ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="./assets/img/avatars/2.png" alt="alt" class="rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">New Message ✉️</h6>
+                              <small class="mb-1 d-block text-body">You have new message from Natalie</small>
+                              <small class="text-body-secondary">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success">
+                                  <i class="icon-base ri ri-car-line"></i>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Whoo! You have new order 🛒</h6>
+                              <small class="mb-1 d-block text-body">ACME Inc. made new order $1,154</small>
+                              <small class="text-body-secondary">1 day ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/9.png" alt="alt" class="rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Application has been approved 🚀</h6>
+                              <small class="mb-1 d-block text-body"
+                                >Your ABC project application has been approved.</small
+                              >
+                              <small class="text-body-secondary">2 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success">
+                                  <i class="icon-base ri ri-pie-chart-2-line"></i>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Monthly report is generated</h6>
+                              <small class="mb-1 d-block text-body">July monthly financial report is generated </small>
+                              <small class="text-body-secondary">3 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/5.png" alt="alt" class="rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">Send connection request</h6>
+                              <small class="mb-1 d-block text-body">Peter sent you connection request</small>
+                              <small class="text-body-secondary">4 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/6.png" alt="alt" class="rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">New message from Jane</h6>
+                              <small class="mb-1 d-block text-body">Your have new message from Jane</small>
+                              <small class="text-body-secondary">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-warning">
+                                  <i class="icon-base ri ri-error-warning-line"></i>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="small mb-50">CPU is running high</h6>
+                              <small class="mb-1 d-block text-body"
+                                >CPU Utilization Percent is currently at 88.63%,</small
+                              >
+                              <small class="text-body-secondary">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read">
+                                <span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive">
+                                <span class="icon-base ri ri-close-line"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="border-top">
+                      <div class="d-grid p-4">
+                        <a class="btn btn-primary btn-sm d-flex h-px-34" href="javascript:void(0);">
+                          <small class="align-middle">View all notifications</small>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Notification -->
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow p-0"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="./assets/img/avatars/1.png" alt="alt" class="rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <div class="d-flex align-items-center">
+                          <div class="flex-shrink-0 me-2">
+                            <div class="avatar avatar-online">
+                              <img
+                                src="./assets/img/avatars/1.png"
+                                alt="alt"
+                                class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                        
+                          
+                          <div class="flex-grow-1">
+                              
+                            <h6 class="mb-0 small">SURESH NAIKER A/L SIVANAYAN</h6>
+                            
+                              
+                          </div>
+                         
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    
+                    <li>
+                      <div class="d-grid px-4 pt-2 pb-1">
+                        <a class="btn btn-primary d-flex" href="https://cims.cidb.gov.my/smis/regcontractor/sub-page-admin.vbhtml">
+                          <small class="align-middle">HOME</small>
+                          <i class="icon-base ri ri-logout-box-r-line ms-2 icon-16px"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+          </nav>
+
+              <div class="content-wrapper ">
+                  <div class="container-xxl flex-grow-1 container-p-y">
+                      <div class="row gy-6">
+
+                          <form method="post" action="./pbIRenewApplication?personid=zvvlG9QIQzljIbnPEeFmEzP7smFC5ioMyZdAzVaDFUkOwRuotAmPLlywaT8VEX9n&amp;userid=IUxS%40Zy2Aqfya6no0dqBIoqRcp4Z1jpig97t9EOEsJhLAwM74gMxlj3PXKq6d7iA&amp;lang=ms" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Uw3aUs0VR0pEoq7IZR5TyVBVaZi331T3gA5g7lOnF3SW9qLnlvkUGVDbhkHymRRhGGAbPhk5DEF6HtWHumF/QdlHm7N3wFV20Kb5Z3BihFXl5IE4nKLzDA2Ecl9TLBnRXN+COqqiiHBd7LIzElN3SnYwEjpMtqssNMnLHckujOIpFAr49edr+kIYz/4GIcAE94uhcpxC4lKVs3TBtaXBz5TeplmEj+JRA4jUWFIyGsE1ylwi8pTkt9BFgesxZsdH+sa6tYviJMjWa5nf26pJtQobF/LtrmWU3/I1vj6wE/x80HSeYvAiE2uRndm/G2TmVuN2TN87wCJtsIQjQBzikD1Jsm8k4cmyF1lDxd4+m6UEwGm2jpzWVirA9NO7vBiDl1J1DEfZP7t9ezbqpHfljA==" />
 </div>
 
-<div class="nav-icons">
+<div class="aspNetHidden">
 
-<a href="#home">⌂</a>
-<a href="#product">◉</a>
-<a href="#features">✦</a>
-<a href="#contact">✉</a>
-
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D60CA802" />
 </div>
+                              <div>
+                                  
+ <span id="userid" hidden>clientrail@gmail.com</span>
+<span id="lang" hidden>ms</span>
+<span id="confirm1_1" hidden>Are you sure</span>
+<span id="confirmbtn1_1" hidden>Yes</span>
+<span id="confirmbtn1_2" hidden>No</span>
+<span id="confirmtext1_1" hidden>Terima Rekod</span>
 
-</nav>
-
-
-<section id="home" class="hero">
-
-<div class="glow"></div>
-
-<h1>
-Vision<br>
-<span>X</span>
-</h1>
-
-<p>
-The future of technology.
-Designed beyond imagination.
-</p>
+<span id="confirm2_1" hidden>Adakah anda pasti untuk 
+membatalkan rekod ini?</span>
+<span id="confirmbtn2_1" hidden>YA</span>
+<span id="confirmbtn2_2" hidden>Tidak</span>
+<span id="confirmtext2_1" hidden>Batal Rekod</span>
 
 
-<a href="#product" class="button">
-Explore
-</a>
+<span id="personid" hidden>840411235085</span>
+<span id="personname" hidden>SURESH NAIKER A/L SIVANAYAN</span>
+
+<span id="email" hidden>clientrail@gmail.com</span>
+<span id="phoneno" hidden>0139920802</span>
+<span id="processtype" hidden>R</span>
+<span id="acceptagreement" class="d-none">0</span>
+<div class="container-xxl flex-grow-2 container-p-y ">
+        <style>
+            table.dataTable.compact th,
+            table.dataTable.compact td {
+                padding: 4px 8px; /* smaller padding */
+                font-size: 12px; /* smaller font */
+                border: 1px solid #ccc;
+            }
+
+            table.dataTable.compact .form-control,
+            table.dataTable.compact .form-select {
+                font-size: 12px !important;
+                height: 24px;
+                padding: 2px 28px 2px 6px !important;
+                background-position: right 8px center !important;
+            }
+
+            .badge-wrap {
+                white-space: normal;
+                max-width: 140px;
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        </style>
+      <style>
+            .summary-text {
+                font-size: 13px;
+                color: #6c757d;
+                line-height: 1.5;
+            }
+
+            .summary-label {
+                font-weight: 500;
+            }
+
+            .summary-label_fees {
+                font-weight: 800;
+                font-size: 18px;
+            }
+
+            .summary-value {
+                color: #212529;
+            }
+
+            .summary-value-fees {
+                 font-weight: 800;
+                font-size: 18px;
+            }
+
+            .summary-card {
+                background: #f8f9fa;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .status-box {
+                width: 28px;
+                height: 28px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                font-size: 18px;
+                color: #fff;
+            }
+
+                /* success */
+                .status-box.success {
+                    background-color: #5cbf7a;
+                    color: #fff;
+                }
+
+                /* error */
+                .status-box.error {
+                    background-color: #dc3545;
+                    color: #fff; /* ⬅️ important */
+                }
+
+                /* force icon white */
+                .status-box i {
+                    color: #fff !important;
+                }
+        </style>
+        
 
 
-<div class="device">
+        <h4 class="fw-bold mb-4">PENDAFTARAN PEMBAHARUAN PERSONEL BINAAN</h4>
+        <div class="row align-items-center">
+            <div class="col-12 text-end">
+                    
+                    <button type="button" 
+                            id="plapplication_flow_h8_input22" 
+                            class="btn btn-danger btn-sm d-none">
+                        Batal Permohonan
+                    </button>
+                    
+                     <button type="button" 
+                            id="plapplication_flow_h8_input23" 
+                            class="btn btn-warning btn-sm d-none">
+                        Batal Proforma
+                    </button>
 
-<div class="screen">
+                    <button type="button" 
+                            id="plapplication_flow_h8_input20" 
+                            class="btn btn-primary btn-sm  d-none">
+                        Bayar
+                    </button><br />
+                   <span id="autocancel" class="fs-5 fw-bolder  text-danger d-none"></span>
+
+                </div>
+        </div>
+
+        <div class="row align-items-center">
+    
+                <!-- Left: ID + Name -->
+                  <div class="col-md-8 d-flex gap-4 align-items-center mb-2">
+
+                    <label class="mb-0 fs-5 fw-bold text-dark text-nowrap">
+                        K/P :
+                        <span class="text-primary">840411235085</span>
+                    </label>
+
+                    <label class="mb-0 fs-5 fw-bold text-dark text-nowrap">
+                        NAMA :
+                        <span class="text-primary">SURESH NAIKER A/L SIVANAYAN</span>
+                    </label>
+
+                </div>
+
+                <!-- Right: Button -->
+           
+                
+
+        </div>
+
+
+      
+          <style>
+
+                 #personnelapps-flow {
+                        display: flex;
+                    }
+
+                        #personnelapps-flow .bs-stepper-header {
+                            width: 300px;
+                            min-width: 300px;
+                            flex: 0 0 300px;
+                            padding-right: 20px;
+                            border-right: 1px solid #ddd;
+                        }
+
+                        #personnelapps-flow .bs-stepper-content {
+                            flex: 1;
+                            padding: 30px;
+                        }
+
+                        #personnelapps-flow .bs-stepper-label {
+                            display: flex;
+                            align-items: flex-start;
+                  
+                        }
+
+                        #personnelapps-flow .bs-stepper-number {
+                            min-width: 45px;
+                            font-size: 28px;
+                            font-weight: 500;
+                        }
+
+                        #personnelapps-flow .bs-stepper-title {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: block;
+                            max-width: 100%;
+                             font-size: 14px;
+                        }
+
+                        #personnelapps-flow .bs-stepper-subtitle {
+                          /*  display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            white-space: normal;
+                            line-height: 1.3;
+                            max-width: 100%;*/
+                            white-space: normal;
+                            word-break: break-word;
+                            overflow-wrap: break-word;
+                            line-height: 1.4;
+                            max-width: 100%;
+                             font-size: 18px;
+                        }
+
+                    .bs-stepper .content {
+                        display: none;
+                    }
+
+                        .bs-stepper .content.active,
+                        .bs-stepper .content.dstepper-block {
+                            display: block;
+                        }
+
+                    #personnelapps-flow .step.completed .bs-stepper-circle {
+                        background-color: #5c9d8a;
+                        color: #fff;
+                        border-color: #5c9d8a;
+                    }
+
+                    #personnelapps-flow .bs-stepper-circle {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                    }
+                        #personnelapps-flow .bs-stepper-circle i {
+                            font-size: 24px;
+                            font-weight: 900;
+                        }
+
+                    #personnelapps-flow .step.completed .bs-stepper-circle {
+                        background-color: #5c9d8a;
+                        border-color: #5c9d8a;
+                    }
+                    #personnelapps-flow .step.completed .step-number {
+                        display: none;
+                    }
+
+
+                    #personnelapps-flow .step.completed .bs-stepper-circle i {
+                        display: block;
+                    }
+
+                    #personnelapps-flow .step.completed .bs-stepper-circle .step-number {
+                        display: none;
+                    }
+
+                    .custom-file-wrapper {
+                        position: relative;
+                    }
+
+        .custom-file-input{
+            opacity:0;
+            position:relative;
+            z-index:2;
+            cursor:pointer;
+            height:42px;
+        }
+
+        .custom-file-button{
+            position:absolute;
+            left:0;
+            top:0;
+            height:42px;
+            line-height:42px;
+            padding:0 16px;
+            background:#f1f1f1;
+            border:1px solid #d9d9d9;
+            border-radius:6px 0 0 6px;
+            z-index:1;
+            color:#444;
+            pointer-events:none;
+              width:200px;
+            text-align:center;
+        }
+
+        .custom-file-name{
+            position:absolute;
+            left:200px;
+            width:calc(100% - 145px);
+            top:0;
+            height:42px;
+            line-height:42px;
+            padding:0 12px;
+  
+            border:1px solid #d9d9d9;
+            border-left:none;
+            border-radius:0 6px 6px 0;
+            background:#fff;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            color:#777;
+        }     
+        .custom-file-button,
+        .custom-file-name{
+            top:10px;
+        }
+            
+       </style>    
+
+        <div id="personnelapps-flow" class="bs-stepper vertical mt-2">
+
+            <div class="bs-stepper-header gap-lg-2 border-end">
+               
+                 <div class="line"></div>
+                <div class="step active" data-target="#pbAppsflow-apptype">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">01</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">MAKLUMAT PEMOHON</span>
+                                <span class="bs-stepper-subtitle d-none">Semakan maklumat peribadi pemohon</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appco">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">02</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">MAKLUMAT PEKERJAAN</span>
+                                <span class="bs-stepper-subtitle d-none">Kemaskini maklumat majikan / bekerja sendiri.</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appaca" id ="pbAppsflow-step4">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">03</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">MAKLUMAT AKADEMIK</span>
+                                <span class="bs-stepper-subtitle d-none">Isi maklumat akademik jika ada</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appskill" id ="pbAppsflow-step5">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">04</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">MAKLUMAT KEMAHIRAN</span>
+                                <span class="bs-stepper-subtitle d-none">Bagi pemegang SKKP Setara, isi maklumat kemahiran jika ada</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appben" id="pbAppsflow-step6">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">05</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">MAKLUMAT PENAMA</span>
+                                <span class="bs-stepper-subtitle d-none">Sila lengkapkan maklumat penama</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appduration" id ="pbAppsflow-step7">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">06</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">TEMPOH PENDAFTARAN</span>
+                                <span class="bs-stepper-subtitle text-wrap d-none">Sila pilih tempoh pendaftaran personel binaan</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="line"></div>
+                <div class="step" data-target="#pbAppsflow-appsummary"  id ="pbAppsflow-step8">
+                    <button type="button" class="step-trigger">
+                        <span class="bs-stepper-circle"><i class="icon-base ri ri-check-line"></i></span>
+                        <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">07</span>
+                            <span class="d-flex flex-column mt-2">
+                                <span class="bs-stepper-title">SEMAKAN & BAYARAN</span>
+                                <span class="bs-stepper-subtitle text-wrap d-none">Sila semak maklumat sebelum meneruskan pembayaran</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+          
+
+            <div class="bs-stepper-content">
+
+                
+
+                <div class="content dstepper-block" id="pbAppsflow-apptype">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-4">MAKLUMAT PEMOHON</span>
+                            <span class="bs-stepper-subtitle text-wrap">Semakan maklumat peribadi pemohon</span>
+                            <hr />
+                            <span class="d-none" id="pbApp_regid"></span>
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-8">
+                                            <ul class="list-unstyled my-3 py-1">
+                                                <li class="d-flex align-items-start mb-3">
+                                                    <i class="icon-base ri  ri-check-double-line icon-24px  me-3"></i>
+                                                    <div class="row w-100">
+                                                        <div class="col-5 fw-medium">
+                                                            Kategori Personel
+                                                        </div>
+                                                        <div class="col-1 text-center">:</div>
+                                                        <div class="col-6">Personel Binaan</div>
+
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-items-start mb-3">
+                                                    <i class="icon-base ri  ri-check-double-line icon-24px  me-3"></i>
+                                                    <div class="row w-100">
+                                                        <div class="col-5 fw-medium">
+                                                            E-mel
+                                                        </div>
+                                                        <div class="col-1 text-center">:</div>
+                                                        <div class="col-6" id="plapplication_flow_h2_input3_v"></div>
+
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-items-start mb-3">
+                                                    <i class="icon-base ri  ri-check-double-line icon-24px  me-3"></i>
+                                                    <div class="row w-100">
+                                                        <div class="col-5 fw-medium">
+                                                            Nombor Telefon
+                                                        </div>
+                                                        <div class="col-1 text-center">:</div>
+                                                        <div class="col-6" id="plapplication_flow_h2_input4_v"></div>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 d-none">
+                                            <div class="form-floating form-floating-outline">
+                                                <select id="plapplication_flow_h2_input1" class="select2 form-select" data-allow-clear="true" disabled="disabled">
+                                                    <option value="1" selected="selected">Personal Binaan</option>
+                                                   
+                                                </select>
+                                                <label for="plapplication_flow_h2_input1" class="form-label text-primary d-none">
+                                                    Kategori Personel
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-3 d-none" id="plapplication_flow_h2_input2_dob">
+                                            <div class="form-floating form-floating-outline">
+                                                <input type="date" id="plapplication_flow_h2_input2" class="form-control pe-2" />
+                                               
+                                                <label>
+                                                    Tarikh Lahir
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-none d-flex">
+                                  <div class="col-12 ">
+                                        <div class="row g-3">
+                                             <div class="col-md-6">
+                                                <div class="form-floating form-floating-outline">
+                                                    <select id="plapplication_flow_h2_input5" class="select2 form-select" data-allow-clear="true">
+                                                        <option value="" selected="selected"></option>
+                                                        <option value="M">  Lelaki</option>
+                                                        <option value="F">Perempuan</option>
+                                                    </select>
+                                                    <label for="plapplication_flow_h2_input1" class="form-label text-primary">
+                                                        Jantina
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                            </div>
+
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3 d-none">
+                                        <div class="col-md-6">
+                                            <div class="form-floating form-floating-outline">
+                                                <input
+                                                    type="text"
+                                                    id="plapplication_flow_h2_input3"
+                                                    name="plapplication_flow_h2_input3"
+                                                    class="form-control"
+                                                    maxlength="100"
+                                                    disabled="disabled"
+                                                    placeholder="E-mel" />
+                                                <label class="d-none">
+                                                    E-mel
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input
+                                                    type="text"
+                                                    id="plapplication_flow_h2_input4"
+                                                    name="plapplication_flow_h2_input4"
+                                                    class="form-control"
+                                                    maxlength="100"
+                                                    disabled="disabled"
+                                                    placeholder="Nombor Telefon" />
+                                                <label class="d-none">
+                                                    Nombor Telefon
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 d-none" id="plapplication_flow_apptype_outcome">
+                                    <div class="col-md-10">
+                                        <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                            role="alert" id="plapplication_flow_apptype_alertoutcome">
+                                            <span class="alert-icon rounded">
+                                                <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                            </span>
+                                            <span id="plapplication_flow_apptype_alerttextoutcome"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <div class="d-none" id="plapplication_verify">
+                                        <div class="col-12 ">
+                                            <div class="row g-3">
+                                                <div class="col-md-8">
+                                                    <div class="card  summary-card ">
+                                                       <div class="card-body p-2">
+                                                                <small class="card-text  text-uppercase text-body-secondary small mb-1 d-block">Ringkasan Semakan</small>
+
+                                                                <ul class="list-unstyled my-2 py-1 summary-text">
+                                                              
+                                                                     <li class="d-flex align-items-start mb-2 ">
+                                                                        <div class="row w-100">
+                                                                            <div class="col-5 summary-label">
+                                                                                Maklumat Kad Pengenalan
+                                                                            </div>
+                                                                            <div class="col-1 text-center">:</div>
+                                                                            <div class="col-6 summary-value">
+                                                                                <span id="plapplication_flow_h2_jpn1"
+                                                                                    class="status-box success">
+                                                                                    <i class="bi bi-check"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-start mb-2 ">
+                                                                        <div class="row w-100">
+                                                                            <div class="col-5 summary-label">
+                                                                                Alamat Kad Pengenalan
+                                                                            </div>
+                                                                            <div class="col-1 text-center">:</div>
+                                                                            <div class="col-6 summary-value">
+                                                                                <span id="plapplication_flow_h2_jpn2"
+                                                                                    class="status-box success">
+                                                                                    <i class="bi bi-check"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                    </li>
+                                                                    <li class="d-flex align-items-start mb-2 ">
+                                                                        <div class="row w-100">
+                                                                            <div class="col-5 summary-label">
+                                                                                Gambar
+                                                                            </div>
+                                                                            <div class="col-1 text-center">:</div>
+                                                                            <div class="col-6 summary-value">
+                                                                                <span id="plapplication_flow_h2_jpn3"
+                                                                                    class="status-box success">
+                                                                                    <i class="bi bi-check"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-none" id="plapplication_flow_apptype_outcomeverify">
+                                        <div class="col-md-10">
+                                            <div class=" alert   
+                                                        d-flex align-items-center flex-wrap row-gap-2"
+                                                role="alert" id="plapplication_flow_apptype_alertoutcomeverify">
+                                                <span class="alert-icon rounded">
+                                                    <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                                </span>
+                                                <span id="plapplication_flow_apptype_alerttextoutcomeverify"></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="button" class="btn btn-outline-secondary btn-prev d-none" id="plapplication_flow_h2_btnprev">
+                                            <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h2_btnnext">
+                                            <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                            <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                        </button>
+                                    </div>
+
+                               
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content dstepper-block" id="pbAppsflow-appco">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-4">MAKLUMAT PEKERJAAN</span>
+                            <span class="bs-stepper-subtitle text-wrap">Kemaskini maklumat majikan / bekerja sendiri.</span>
+                            <hr />
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="form-check custom-option custom-option-label custom-option-basic">
+                                                <label class="form-check-label custom-option-content h-100 " for="plapplication_flow_h3_input1">
+                                                    <input
+                                                        name="plapplication_flow_h3"
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value="1"
+                                                        id="plapplication_flow_h3_input1" />
+                                                    <span class="custom-option-header">
+                                                        <span class="h6 mb-0 text-nowrap">Bekerja Sendiri</span>
+
+                                                    </span>
+                                                     <input
+                                                        name="plapplication_flow_h3"
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value="1"
+                                                        id="plapplication_flow_h3_input1_1" />
+                                                    <span class="custom-option-header">
+                                                        <span class="h6 mb-0 text-nowrap">Berkerja dengan majikan</span>
+
+                                                    </span>
+                                               </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-10">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <select id="plapplication_flow_h3_input2" class="select2 form-select"
+                                                    data-allow-clear="true"
+                                                    data-placeholder="Pilih Nama Majikan"
+                                                    allowclear: true>
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                            <span id="hidecompanyselectid" class="d-none"></span>
+                                            <span id="hidecompanyselectname" class="d-none"></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-none mt-2" id="plapplication_flow_appco_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appco_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appco_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev d-none" id="plapplication_flow_h3_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h3_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                           
+                             <div class="col-12 mt-2">
+                               
+                                    <div class="alert alert-secondary alert-dismissible mb-0  " role="alert">
+                                    <h4 class="alert-heading d-flex align-items-center fw-bold text-primary ">
+                                        <span class="alert-icon rounded"
+                                        ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                        >KETERANGAN
+                                    </h4>
+                                    <p class="mb-0 text-black fs-5">
+                                        Sila pastikan maklumat majikan diisi dengan tepat. Sebarang 
+pengisytiharan maklumat ini tanpa persetujuan pihak majikan akan 
+mengakibatkan permohonan ini boleh dibatalkan pada bila-bila masa
+                                    </p>
+                                          
+                                    </div>
+                           </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="content dstepper-block" id="pbAppsflow-appaca">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-4">MAKLUMAT AKADEMIK</span>
+                            <span class="bs-stepper-subtitle text-wrap">Isi maklumat akademik jika ada</span>
+                            <hr />
+                            <div class="row g-5 mt-2 d-none d-flex">
+                                    <div class="col-12 ">
+                                        <div class="row g-3">
+                                            <div class="col-md-5">
+                                                <div class="form-check custom-option custom-option-label custom-option-basic">
+                                                <label class="form-check-label custom-option-content h-100 " for="plapplication_flow_h3_input1">
+                                                     <input
+                                                            name="plapplication_flow_h4_tick"
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            value="1"
+                                                            id="plapplication_flow_h4_tick" />
+                                                        <span class="custom-option-header">
+                                                            <span class="h6 mb-0 text-nowrap">Tiada maklumat akademik</span>
+
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <span class="d-none" id="plapplication_flow_h4_input1_drp"></span>
+
+                                                <select id="plapplication_flow_h4_input1" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h4_input1">
+                                                    Jenis Institusi Pendidikan
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <span class="d-none" id="plapplication_flow_h4_input2_drp"></span>
+
+
+                                                <select id="plapplication_flow_h4_input2" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h4_input2">
+                                                    Nama Institusi Pendidikan
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-1  d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <span class="d-none" id="plapplication_flow_h4_input3_drp"></span>
+
+
+
+                                                <select id="plapplication_flow_h4_input3" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h4_input3">
+                                                    Tahap Pendidikan
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <span class="d-none" id="plapplication_flow_h4_input4_drp"></span>
+
+                                                <select id="plapplication_flow_h4_input4" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h4_input4">
+                                                    Bidang Pengajian
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-1  d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-11">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <input type="file" id="plapplication_flow_h4_input5"
+                                                    class="form-control form-control-sm"
+                                                    accept=".pdf,.jpg,.jpeg,.png,image/*,application/pdf" />
+                                                  <span class="custom-file-button">
+                                                         Muatnaik Sijil
+                                                    </span>
+
+                                                    <!-- FILE NAME -->
+                                                    <span class="custom-file-name">
+                                                         Tiada fail
+                                                    </span>
+                                                <small id="plapplication_flow_h4_input6" class="text-primary"></small>
+                                                <label for="plapplication_flow_h4_input5">
+                                                    Muatnaik Sijil
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 mt-1 d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-6 gap-3 d-flex">
+                                            <button type="button" id="plapplication_flow_h4_btn_1" class="btn btn-primary  w-auto">Tambah</button>
+                                            <button type="button" id="plapplication_flow_h4_btn_2" class="btn btn-warning  w-auto">Kosongkan Pilihan</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-none mt-2" id="plapplication_flow_appaca_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appaca_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appaca_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 mt-1 d-flex " id="plapplication_flow_h4_list">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+
+                                            <table class="table table-bordered table-striped compact datatable-pbAppsflow-appacalist">
+                                                <thead>
+                                                   <tr>
+                                                        <th>Bil</th>
+                                                        <th class="text-center">Jenis Institusi Pendidikan</th>
+
+                                                        <th class="text-center">Nama Institusi Pendidikan</th>
+                                                        <th class="text-center">Tahap Pendidikan</th>
+                                                        <th class="text-center">Bidang Pengajian</th>
+                                                        <th class="text-center">Paparan Sijil</th>
+                                                        <th class="text-center">Tindakan</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev" id="plapplication_flow_h4_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Kembali</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h4_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="content dstepper-block" id="pbAppsflow-appskill">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-4">MAKLUMAT KEMAHIRAN</span>
+                            <span class="bs-stepper-subtitle text-wrap">Bagi pemegang SKKP Setara, isi maklumat kemahiran jika ada</span>
+                            <hr />
+                            <div class="row g-5 mt-2  d-flex d-none">
+                                    <div class="col-12 ">
+                                        <div class="row g-3">
+                                            <div class="col-md-5">
+                                                <div class="form-check custom-option custom-option-label custom-option-basic">
+                                                <label class="form-check-label custom-option-content h-100 " for="plapplication_flow_h3_input1">
+                                                     <input
+                                                            name="plapplication_flow_h4_tick"
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            value="1"
+                                                            id="plapplication_flow_h5_tick" />
+                                                        <span class="custom-option-header">
+                                                            <span class="h6 mb-0 text-nowrap">Tiada maklumat kemahiran</span>
+
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-10">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <span class="d-none" id="plapplication_flow_h5_input1_drp"></span>
+
+                                                <select id="plapplication_flow_h5_input1" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h5_input1">
+                                                    Kursus Kemahiran / Kompetensi
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row g-5 mt-1  d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-4 d-none">
+                                            <div class="form-floating form-floating-outline">
+                                                <span class="d-none" id="plapplication_flow_h5_input2_drp"></span>
+
+
+
+                                                <select id="plapplication_flow_h5_input2" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h5_input2">
+                                                    Jenis Institusi Kemahiran
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <span class="d-none" id="plapplication_flow_h5_input3_drp"></span>
+
+                                                <select id="plapplication_flow_h5_input3" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h5_input3">
+                                                    Agensi / Institusi Kemahiran
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row g-5 mt-1  d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-10">
+                                            <div class="form-floating form-floating-outline">
+
+                                                <input type="file" id="plapplication_flow_h5_input4"
+                                                    class="form-control form-control-sm"
+                                                    accept=".pdf,.jpg,.jpeg,.png,image/*,application/pdf" />
+                                                  <span class="custom-file-button">
+                                                         Muatnaik Sijil
+                                                    </span>
+
+                                                    <!-- FILE NAME -->
+                                                    <span class="custom-file-name">
+                                                         Tiada fail
+                                                    </span>
+                                                <small id="plapplication_flow_h5_input5" class="text-primary"></small>
+                                                <label for="plapplication_flow_h5_input4">
+                                                    Sijil Kemahiran
+                                                    <span class="text-danger d-none">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 mt-1 d-flex">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-6 gap-3 d-flex">
+                                            <button type="button" id="plapplication_flow_h5_btn_1" class="btn btn-primary  w-auto">Tambah</button>
+                                            <button type="button" id="plapplication_flow_h5_btn_2" class="btn btn-warning  w-auto">Kosongkan Pilihan</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-none mt-2" id="plapplication_flow_appskill_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appskill_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appskill_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row g-5 mt-1 d-flex" id="plapplication_flow_h5_list">
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+
+                                            <table class="table table-bordered table-striped compact datatable-pbAppsflow-appskill_list">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Bil</th>
+                                                        <th class="text-center">Kursus Kemahiran</th>
+
+                                                        <th class="text-center">Institusi Kemahiran</th>
+                                                        <th class="text-center">Paparan Sijil</th>
+                                                        <th class="text-center">Tindakan</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev" id="plapplication_flow_h5_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Kembali</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h5_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            
+                            <div class="col-12 mt-5" id="plapplication_flow_skill_notice">
+                                    <div class="col-md-12">
+                                          <div class="alert alert-secondary alert-dismissible mb-0" role="alert">
+                                            <h4 class="alert-heading d-flex align-items-center fw-bold text-primary">
+                                              <span class="alert-icon rounded d-none"
+                                                ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                              >KETERANGAN
+                                            </h4>
+                                            <p class="mb-0 fs-5 text-black text-justify-custom" >
+                                                Sijil Kompetensi Kemahiran Pembinaan (SKKP) Setara: Sijil kemahiran atau sijil kompetensi yang 
+dikeluarkan oleh institusi yang diiktiraf CIDB.
+                                            </p>
+                                            <p class="mb-1 fst-italic text-black mt-2 text-justify-custom">
+                                                Sila muat naik sijil kemahiran / kompetensi yang berkaitan dengan institusi yang diiktiraf CIDB. Sijil 
+kehadiran, penyertaan, penghargaan dan pencapaian tidak diterima.
+                                            </p>
+                                          </div>
+                                    </div>
+                                </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                
+                <div class="content dstepper-block" id="pbAppsflow-appben">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-5">MAKLUMAT PENAMA</span>
+                            <span class="bs-stepper-subtitle text-wrap">Sila lengkapkan maklumat penama</span>
+                            <hr />
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+
+
+                                                <select id="plapplication_flow_h6_input4" class="select2 form-select"
+                                                    data-allow-clear="true"
+                                                    data-placeholder="Hubungan Penama"
+                                                    allowclear: true>
+                                                    <option></option>
+                                                </select>
+                                                <label>Hubungan Penama</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-8">
+                                            <div class="form-floating form-floating-outline">
+                                                <input
+                                                    type="text"
+                                                    id="plapplication_flow_h6_input2"
+                                                    class="form-control" maxlength="100"
+                                                    placeholder="Nama Penuh Penama" />
+                                                <label>Nama Penuh Penama</label>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input
+                                                    type="text"
+                                                    id="plapplication_flow_h6_input1"
+                                                    class="form-control" maxlength="25"
+                                                    placeholder="Kad Pengenalan / Pasport Penama" />
+                                                <label>Kad Pengenalan / Pasport Penama</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating form-floating-outline">
+                                                <input
+                                                    type="tel"
+                                                    id="plapplication_flow_h6_input3"
+                                                    class="form-control"
+                                                    maxlength="15"
+                                                    inputmode="numeric"
+                                                    pattern="^(\+60|0)1[0-9]{8,9}$"
+                                                    placeholder="Nombor Telefon Penama"
+                                                    required />
+                                                <label>Nombor Telefon Penama</label>
+                                                <div class="invalid-feedback">
+                                                    Sila masukkan nombor telefon format Malaysia yang sah (contoh: 0123456789 or 
+                                                        +60123456789)
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-none mt-2" id="plapplication_flow_appben_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appben_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appben_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev" id="plapplication_flow_h6_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Kembali</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h6_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+                                <div class="col-12 mt-2">
+                               
+                                    <div class="alert alert-secondary alert-dismissible mb-0  " role="alert">
+                                    <h4 class="alert-heading d-flex align-items-center fw-bold text-primary ">
+                                        <span class="alert-icon rounded d-none"
+                                        ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                        >Penama
+                                    </h4>
+                                    <p class="mb-0 text-black fs-5 text-justify-custom">
+                                        Penama merupakan individu yang dinamakan untuk pengurusan takaful setelah personel meninggal 
+dunia. Penama bertindak sebagai pentadbir, iaitu menerima wang tuntutan dan mengagihkan wang 
+tuntutan tersebut mengikut hukum faraid atau undang-undang berkaitan
+                                    </p>
+                                          
+                                 </div>
+                           </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+    <style>
+
+    body{
+        font-family:Arial, sans-serif;
+        background:#f5f5f5;
+        padding:40px;
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* CARD */
+    .year-card{
+        position:relative;
+        width:170px;
+        cursor:pointer;
+        transition:0.3s ease;
+        transform:scale(1);
+    }
+
+    .year-card img{
+        width:100%;
+        display:block;
+    }
+
+    /* HIDE RADIO */
+    .year-card input[type="radio"]{
+        display:none;
+    }
+
+    /* OPTION BUTTON */
+    .option-btn{
+        position:absolute;
+        top:-12px;
+        right:-12px;
+        width:28px;
+        height:28px;
+        border-radius:50%;
+        border:3px solid #fff;
+        background:#cfcfcf;
+        transition:0.3s;
+        box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* SELECTED */
+    .year-card.selected{
+        transform:scale(1.15);
+        z-index:2;
+    }
+
+    .year-card.selected .option-btn{
+        background:#28a745;
+    }
+
+    .year-card.selected .option-btn::after{
+        content:'✓';
+        color:white;
+        font-size:16px;
+        position:absolute;
+        top:1px;
+        left:6px;
+    }
+
+    /* TEXT */
+    .year-text{
+        position:absolute;
+        top:52px;
+        width:100%;
+        text-align:center;
+        font-size:22px;
+        font-weight:bold;
+        color:#ffcc00;
+
+    }
+
+    .price-text{
+        position:absolute;
+        top:115px;
+        width:100%;
+        text-align:center;
+        color:white;
+        font-size:34px;
+        line-height:1.1;
+    }
+
+</style>
+
+
+                <div class="content  dstepper-block" id="pbAppsflow-appduration">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-5">TEMPOH PENDAFTARAN</span>
+                            <span class="bs-stepper-subtitle text-wrap">Sila pilih tempoh pendaftaran personel binaan</span>
+                            <hr />
+
+                            <div class="row g-5 mt-2 d-flex">
+                                  <div class="col-12">
+                                        <div class="card-wrapper" id="plapplication_flow_h7_optgrp">
+                                             <label class="year-card">
+                                                <input type="radio" id="plapplication_flow_h7_input1" 
+                                                     value="1"
+                                                    name="plapplication_flow_h7_option"  />
+                                                <span class="option-btn"></span>
+                                                <img src="assets\img\backgrounds\tag-bg.png" alt="Card" />
+
+                                                <div class="year-text">1 Tahun</div>
+
+                                                <div class="price-text">
+                                                    RM<br>25
+                                                </div>
+                                            </label>
+
+                                             <label class="year-card">
+                                                <input type="radio" id="plapplication_flow_h7_input2" 
+                                                     value="2"
+                                                    name="plapplication_flow_h7_option"  />
+                                                 <span class="option-btn"></span>
+                                                <img src="assets\img\backgrounds\tag-bg.png" alt="Card" />
+
+                                                <div class="year-text">2 Tahun</div>
+
+                                                <div class="price-text">
+                                                    RM<br>50
+                                                </div>
+                                            </label>
+                                            <label class="year-card">
+                                                <input type="radio" id="plapplication_flow_h7_input3" 
+                                                     value="3"
+                                                    name="plapplication_flow_h7_option"  />
+                                                <span class="option-btn"></span>
+                                                <img src="assets\img\backgrounds\tag-bg.png" alt="Card" />
+
+                                                <div class="year-text">3 Tahun</div>
+
+                                                <div class="price-text">
+                                                    RM<br>75
+                                                </div>
+                                            </label>
+                                            <label class="year-card">
+                                                <input type="radio" id="plapplication_flow_h7_input4" 
+                                                     value="4"
+                                                    name="plapplication_flow_h7_option"  />
+                                                <span class="option-btn"></span>
+                                                <img src="assets\img\backgrounds\tag-bg.png" alt="Card" />
+
+                                                <div class="year-text">4 Tahun</div>
+
+                                                <div class="price-text">
+                                                    RM<br>100
+                                                </div>
+                                            </label>
+                                            <label class="year-card">
+                                                <input type="radio" id="plapplication_flow_h7_input5" 
+                                                     value="5"
+                                                    name="plapplication_flow_h7_option"  />
+                                                <span class="option-btn"></span>
+                                                <img src="assets\img\backgrounds\tag-bg.png" alt="Card" />
+
+                                                <div class="year-text">5 Tahun</div>
+
+                                                <div class="price-text">
+                                                    RM<br>125
+                                                </div>
+                                            </label>
+                                        </div>
+                                   </div>
+                            </div>
+                            
+                            <div class="col-12 d-none mt-2" id="plapplication_flow_appduration_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appduration_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appduration_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev" id="plapplication_flow_h7_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Kembali</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-next " id="plapplication_flow_h7_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1">Seterusnya</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="col-12 mt-2">
+                               
+                                    <div class="alert alert-secondary alert-dismissible mb-0" role="alert">
+                                    <h4 class="alert-heading d-flex align-items-center fw-bold text-primary">
+                                        <span class="alert-icon rounded d-none"
+                                        ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                        >KETERANGAN
+                                    </h4>
+                                    <p class="mb-0 fs-5 text-black">
+                                        Yuran proses RM10 dikenakan bagi setiap permohonan
+                                    </p>
+                                    <p class="mb-1 fst-italic text-black mt-2">
+                                        a. Tempoh pendaftaran akan berakhir pada tarikh hari lahir personel binaan. Sekiranya permohonan pendaftaran pembaharuan dibuat dalam tempoh 12 bulan selepas tarikh lahir, personel hanya boleh memilih tempoh pendaftaran dari 2 tahun sehingga 5 tahun. <br>
+b. Sekiranya pendaftaran pembaharuan dibuat melebihi tempoh yang dinyatakan di item (a), personel hanya boleh memilih tempoh pendaftaran dari 3 tahun sehingga 5 tahun
+                                    </p>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                 
+
+                <div class="content  dstepper-block" id="pbAppsflow-appsummary">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <span class="bs-stepper-title fw-bold fs-5">Semakan & Bayaran</span>
+                            <span class="bs-stepper-subtitle text-wrap">Sila semak maklumat sebelum meneruskan pembayaran</span>
+                        
+                           
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+                                            <div class="card  summary-card ">
+
+                                                <div class="card-body p-2">
+                                                    <small class="card-text  text-uppercase text-body-secondary small mb-1 d-block">Ringkasan Semakan</small>
+                                                    <div class="row">
+                                                         <div class="col-md-8">
+                                                    <ul class="list-unstyled my-2 py-1 summary-text">
+
+                                                         <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label">
+                                                                    Maklumat Kad Pengenalan
+                                                                </div>
+                                                                <div class="col-1 text-center">:</div>
+                                                                <div class="col-6 summary-value">
+                                                                    <span id="plapplication_flow_h8_input3"
+                                                                        class="status-box success">
+                                                                        <i class="bi bi-check"></i>
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label">
+                                                                    Alamat Kad Pengenalan
+                                                                </div>
+                                                                <div class="col-1 text-center">:</div>
+                                                                <div class="col-6 summary-value">
+                                                                    <span id="plapplication_flow_h8_input4"
+                                                                        class="status-box success">
+                                                                        <i class="bi bi-check"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </li>
+
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label">
+                                                                    Gambar
+                                                                </div>
+                                                                <div class="col-1 text-center">:</div>
+                                                                <div class="col-6 summary-value">
+                                                                    <span id="plapplication_flow_h8_input5"
+                                                                        class="status-box success">
+                                                                        <i class="bi bi-check"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </li>
+
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label">
+                                                                    Tempoh Pendaftaran
+                                                                </div>
+                                                                <div class="col-1 text-center">:</div>
+                                                                <div class="col-6 summary-value" id="plapplication_flow_h8_input2"></div>
+                                                            </div>
+                                                         </li>
+                                                       
+                                                      
+                                                        
+
+                                                        <li class="d-flex align-items-start mb-2">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label">
+                                                                    Kategori Pendaftaran
+                                                                </div>
+                                                                <div class="col-1 text-center">:</div>
+                                                                <div class="col-6 summary-value" id="plapplication_flow_h8_text1"></div>
+                                                            </div>
+
+
+                                                        </li>
+                                                    </ul>
+                                                      </div>
+
+                                                        <div class="col-md-4 text-center">
+                                                            <img id="plapplication_flow_h8_img"
+                                                                src=""
+                                                                class="img-fluid border rounded"
+                                                                style="max-width:150px; max-height:180px; object-fit:cover;">
+                                                            </div>
+                                                             
+                                                      </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="card  summary-card ">
+
+                                                <div class="card-body p-2">
+                                                    <small class="card-text   text-uppercase text-body-secondary small  mb-1 d-block">Maklumat Tred</small>
+                                                    <div class="text-wrap" id="tredList"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-5 d-flex mt-2">
+                             <div class="col-12 d-none " id="plapplication_flow_appsummary_outcome">
+                                <div class="col-md-12">
+                                    <div class=" alert   
+                                                    d-flex align-items-center flex-wrap row-gap-2"
+                                        role="alert" id="plapplication_flow_appsummary_alertoutcome">
+                                        <span class="alert-icon rounded">
+                                            <i class="icon-base ri ri-error-warning-line icon-md"></i>
+                                        </span>
+                                        <span id="plapplication_flow_appsummary_alerttextoutcome"></span>
+
+                                    </div>
+                                </div>
+                            </div></div>
+                            <div id="cardcollection_div">
+                            <div class="row g-1 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-1">
+                                        <div class="col-md-12">
+                                            <div class="divider divider-primary">
+                                                <div class="divider-text">Kad Pendaftaran Personel Binaan</div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5  d-flex" >
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-5">
+                                            <div class="form-floating form-floating-outline">
+                                                <select id="plapplication_flow_h8_input8" class="select2 form-select" data-allow-clear="true">
+                                                    <option value="">Pilih alamat</option>
+                                                   
+                                                    <option value="M">Alamat surat menyurat</option>
+                                                    <option value="P">Alamat Kad Pengenalan</option>
+                                                </select>
+                                                <label for="plapplication_flow_h8_input8" class="form-label text-primary">
+                                                    Alamat Penghantaran Kad
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+
+                                            <div class="form-floating form-floating-outline d-none" id="plapplication_flow_h8_input9">
+                                                <select id="plapplication_flow_h8_input9_drp" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h8_input9" class="form-label text-primary">
+                                                    Alamat CIDB negeri/cawangan
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+                                            <div class="card d-none" id="plapplication_flow_h8_input10">
+                                                <div class="card-body p-2">
+                                                    <small class="card-text  text-body-secondary small mb-1 d-block">Alamat surat menyurat</small>
+
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input
+                                                            type="text"
+                                                            id="plapplication_flow_h8_input10_subinpt1"
+                                                            class="form-control" maxlength="45"
+                                                            placeholder="Alamat 1" />
+                                                        <label>
+                                                            Alamat 1
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input
+                                                            type="text"
+                                                            id="plapplication_flow_h8_input10_subinpt2"
+                                                            class="form-control" maxlength="45"
+                                                            placeholder="Alamat 2" />
+                                                        <label>
+                                                            Alamat 2
+                                                             <span class="text-danger">*</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input
+                                                            type="text"
+                                                            id="plapplication_flow_h8_input10_subinpt3"
+                                                            class="form-control" maxlength="6"
+                                                            placeholder="Poskod" />
+                                                        <label>
+                                                            Poskod
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-floating form-floating-outline">
+                                                        <input
+                                                            type="text"
+                                                            id="plapplication_flow_h8_input10_subinpt4"
+                                                            class="form-control" maxlength="50"
+                                                            placeholder="Daerah / Bandar" />
+                                                        <label>
+                                                            Daerah / Bandar
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-floating form-floating-outline ">
+                                                        <select id="plapplication_flow_h8_input10_subinpt5" class="select2 form-select" data-allow-clear="true">
+                                                        </select>
+                                                        <label for="plapplication_flow_h10_input10_subinpt5" class="form-label text-primary">
+                                                            Negeri
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="maxLength-wrapper form-floating form-floating-outline d-none"
+                                                id="plapplication_flow_h8_input11">
+                                                <textarea
+                                                    id="plapplication_flow_h8_input11_subinpt1"
+                                                    class="form-control maxLength-example h-auto" readonly="readonly"
+                                                    rows="4"
+                                                    maxlength="255"></textarea>
+
+
+                                                <label>
+                                                    Alamat Kad Pengenalan
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-floating form-floating-outline d-none mt-2" id="plapplication_flow_h8_input13">
+                                                <input
+                                                    type="tel"
+                                                    id="plapplication_flow_h8_input13_subinpt1"
+                                                    class="form-control"
+                                                    maxlength="15"
+                                                    inputmode="numeric"
+                                                    pattern="^(\+60|0)1[0-9]{8,9}$"
+                                                    placeholder="Nombor Telefon (untuk pengeposan kad)"
+                                                    required />
+                                                <label>Nombor Telefon (untuk pengeposan kad)
+                                                    <span class="text-danger">*</span>
+
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid Malaysia phone number (e.g.+032021908, 0123456789, +60123456789)
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="row g-1 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-1">
+                                        <div class="col-md-12">
+                                            <div class="divider divider-primary">
+                                                <div class="divider-text">Insurans / Takaful</div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 d-flex">
+                                        <div class="col-12 mt-2">
+                               
+                                        <div class="alert alert-secondary alert-dismissible mb-0" role="alert">
+                                       
+                                        <p class="mb-0  text-black text-justify-custom">
+                                            <div class="text-black text-justify-custom">
+<ul style="list-style:none; padding-left:0; margin:0;">
+        <li>
+            - Perlindungan insurans / takaful adalah tertakluk kepada 1 polisi untuk tempoh 12 bulan bermula dari tarikh bayaran dibuat.
+        </li>
+
+        <li>
+            - Perlindungan ini akan diperbaharui mengikut tempoh pendaftaran yang dipilih
+        </li>
+
+        <li>
+            - Contoh kiraan tempoh perlindungan:
+        </li>
+
+        <li style="margin-left:40px;">
+            - <i>Tarikh bayaran dibuat</i>
+            <span style="display:inline-block; width:20px;"></span>
+            : <i>10.5.2026</i>
+        </li>
+
+        <li style="margin-left:40px;">
+            - <i>Tempoh pendaftaran</i>
+            <span style="display:inline-block; width:27px;"></span>
+            : <i>2 tahun (bermula 10.5.2026 sehingga tarikh lahir tahun 2028)</i>
+        </li>
+
+        <li style="margin-left:40px;">
+            - <i>Tempoh perlindungan</i>
+            <span style="display:inline-block; width:18px;"></span>
+            : <i>Tahun Pertama</i>
+            <span style="display:inline-block; width:15px;"></span>
+            : <i>Mei 2026 sehingga Mei 2027</i>
+        
+        </li>
+
+        <li style="margin-left:225px;">
+            : <i>Tahun kedua</i>
+            <span style="display:inline-block; width:25px;"></span>
+            : <i>Mei 2027 sehingga Mei 2028</i>
+        </li>
+    </ul>
 </div>
+                                        </p>
+                                          
+                                     
+                                     </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-8">
+                                            <div class="form-floating form-floating-outline">
+                                                <select id="plapplication_flow_h8_input14" class="select2 form-select" data-allow-clear="true">
+                                                </select>
+                                                <label for="plapplication_flow_h8_input14" class="form-label text-primary">
+                                                    Operator Takaful
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-</div>
-
-
-</section>
-
-
-
-<section id="product" class="section">
-
-<h2>
-Power. Beauty. Intelligence.
-</h2>
-
-<p>
-A new generation experience.
-</p>
-
-</section>
-
-
-
-<section id="features" class="cards">
-
-
-<div class="card">
-<h3>⚡</h3>
-<p>Ultra Performance</p>
-</div>
-
-
-<div class="card">
-<h3>◈</h3>
-<p>Advanced Design</p>
-</div>
+                            
+                            <div class="row g-1 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-1">
+                                        <div class="col-md-12">
+                                            <div class="divider divider-primary">
+                                                <div class="divider-text">Pengakuan</div>
+                                            </div>
 
 
-<div class="card">
-<h3>∞</h3>
-<p>Infinite Possibility</p>
-</div>
+                                        </div>
 
 
-</section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+                                            <div class="form-check custom-option custom-option-label custom-option-basic">
+                                                <label class="form-check-label custom-option-content" for="plapplication_flow_h8_input6">
+                                                    <input class="form-check-input" type="checkbox" value="" id="plapplication_flow_h8_input6" />
+                                                    <span class="custom-option-header">
+                                                        <span class="h5 mb-0 fw-bold">Pengakuan</span>
+
+                                                    </span>
+                                                    <span class="custom-option-body">
+                                                        <small class="option-text fs-5">Saya dengan ini mengesahkan bahawa maklumat yang diisi dan dokumen yang dimuatnaik adalah benar, sahih 
+dan lengkap. CIDB berhak mengambil tindakan terhadap saya sekiranya didapati maklumat dan dokumen yang 
+dikemukakan tidak benar, tidak sahih dan tidak lengkap</small>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row g-1 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-1">
+                                        <div class="col-md-12">
+                                            <div class="divider divider-primary">
+                                                <div class="divider-text">Bayar</div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-1 mt-2  d-flex">
+                                <div class="col-12 ">
+                                    <div class="row g-1">
+                                        <div class="col-md-12">
+                                            <div class="card  summary-card ">
+
+                                                <div class="card-body p-2">
+
+                                                    <ul class="list-unstyled my-2 py-1 summary-text ">
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100 ">
+                                                                <div class="col-5 summary-label_fees ">
+                                                                    Fi Pendaftaran (RM)
+                                                                </div>
+                                                                <div class="col-1 text-center summary-value-fees">:</div>
+                                                                <div class="col-6 text-primary summary-value-fees" id="plapplication_flow_h8_input17"></div>
+                                                            </div>
+
+
+                                                        </li>
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label_fees">
+                                                                    Yuran Proses (RM)
+                                                                </div>
+                                                                <div class="col-1 text-center summary-value-fees">:</div>
+                                                                <div class="col-6 text-primary summary-value-fees" id="plapplication_flow_h8_input16"></div>
+                                                            </div>
+
+
+                                                        </li>
+                                                        
+                                                        <li class="d-flex align-items-start mb-2 ">
+                                                            <div class="row w-100">
+                                                                <div class="col-5 summary-label_fees">
+                                                                    Jumlah Bayaran (RM)
+                                                                </div>
+                                                                <div class="col-1 text-center summary-value-fees">:</div>
+                                                                <div class="col-6 text-primary summary-value-fees" id="plapplication_flow_h8_input18"></div>
+                                                            </div>
+
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-5 mt-2 d-flex">
+                                        <div class="col-12">
+                               
+                                        <div class="alert alert-secondary alert-dismissible mb-0" role="alert">
+                                        <h5 class="alert-heading d-flex align-items-center fw-bold text-primary">
+                                            <span class="alert-icon rounded d-none"
+                                            ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                            >KETERANGAN BAYARAN
+                                        </h5>
+                                        <p class="mb-0  text-black text-justify-custom">
+                                            a. Sila pastikan malumat bayaran adalah tepat <br>
+b. Invois Proforma yang belum dijelaskan melebihi 7 hari dari tarikh permohonan dibuat akan terbatal secara automatik <br>
+c. Sekiranya terdapat perubahan maklumat permohonan, penambahan / pengurangan tempoh pendaftaran, sila batalkan Invois Proforma. Jana semula Invois Proforma dan buat bayaran
+                                        </p>
+                                          
+                                     
+                                     </div>
+                                   
+                                </div>
+                            </div>
+                            <style>
+                                #plapplication_flow_h8_btnnext {
+                                    text-transform: none !important;
+                                }
+                            </style>
+                            <div class="row g-5 mt-3 d-flex">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary btn-prev" id="plapplication_flow_h8_btnprev">
+                                        <i class="icon-base ri ri-arrow-left-line icon-16px me-sm-1 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Kembali</span>
+                                    </button>
+                                     <button type="button" class="btn btn-primary d-none" id="plapplication_flow_h8_btnnext">
+                                        <span class="align-middle d-sm-inline-block  me-sm-1"> Simpan & Bayar</span>
+                                        <i class="icon-base ri ri-arrow-right-line icon-16px"></i>
+                                    </button>
+                                </div>
+                                 <div class="col-12 mt-5 d-none">
+                               
+                                        <div class="alert alert-secondary alert-dismissible mb-0 text-justify-custom" role="alert">
+                                        <h5 class="alert-heading d-flex align-items-center fw-bold text-primary">
+                                            <span class="alert-icon rounded d-none"
+                                            ><i class="icon-base ri ri-user-follow-line icon-md"></i></span
+                                            >KETERANGAN KAD PENDAFTARAN PERSONEL BINAAN
+                                        </h5>
+                                        <p class="mb-0 fs-5 text-black text-justify-custom">
+                                            a. Kad Pendaftaran Personel Binaan hanya dicetak sekali bagi pendaftaran personel binaan baharu <br>
+b. Kad Pendaftaran Personel Binaan akan dihantar ke alamat seperti yang diisi di dalam permohonan ini <br>
+c. Individu / majikan akan menerima nombor jejak konsainan kad pendaftaran personel binaan di 
+paparan Status Pendaftaran <br>
+d. Status penghantaran kad boleh disemak menggunakan nombor jejak konsainan melalui pautan 
+<a href="https://my.kex-express.com/tracking" target="_blank">https://my.kex-express.com/tracking
+</a> <br>
+e. Nombor jejak ini hanya sah sehingga 12 bulan dari tarikh ianya dijana
+                                        </p>
+                                          
+                                        <p class="mb-1 text-black mt-2 text-justify-custom">
+                                            
+                                        </p>
+                                         <p class="mb-0 fs-5 fw-bold text-black mt-2 text-justify-custom">
+                                            KETERANGAN BAYARAN
+                                        </p>
+                                             <p class="mb-1 fs-5 text-black  text-justify-custom">
+                                            a. Invois Proforma yang belum dijelaskan melebihi 7 hari dari tarikh permohonan dibuat akan terbatal 
+secara automatik
+                                        </p>
+                                     </div>
+                                   
+                                </div>
+                            </div>
+
+                            <span class="d-none" id="externaldata">0</span>
+                            <span class="d-none" id="externalphoto">0</span>
+                            <span class="d-none" id="jpn">X</span>
+                             <span class="d-none" id="rtnrecord">X</span>
+                            <span class="d-none" id="billno"></span>
+                             <span class="d-none" id="proformano"></span>
+                             <span class="d-none" id="regwithcard"></span>
+
+                        </div>
+                     </div>
+                    
+                    </div>
+
+            </div>
+        </div>
+     </div>
+        <div class="modal fade" id="payModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+             <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                      <div class="modal-content text-center py-4">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Sistem Bayaran</h5>
+                               
+                            </div>
+                          <div class="modal-body">
+
+                             <div class="row gy-6">
+                                  <div class="spinner-border text-primary mb-3" role="status"></div>
+
+                                    <h5 id="payTitle">Preparing Payment...</h5>
+
+                                    <p id="payMessage" class="text-muted"><span id="dots"></span>
+                                        Please wait, redirecting to payment page...
+                                    </p>
+                             </div>
+                             
+
+                             
+
+                                
+                        </div>
+                 </div>
+                         
+              </div>
+             </div>
+     
+    <style>
+        .terms-title {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+         .text-justify-custom {
+            text-align: justify;
+            display: block;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .text-justify-custom {
+                text-align: left;
+            }
+        }
+        .form-check-label {
+            text-align: justify;
+            max-width: 100%;
+        }
+        #acceptBtn {
+            white-space: nowrap;
+        }
+
+        .terms-banner {
+        background: #002060;
+        padding: 28px 20px;
+        width: 100%;
+    }
+
+    .terms-banner-text {
+        color: #fff;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+        .terms-banner-text {
+            font-size: 24px;
+        }
+    }
+    </style>
+
+    <div class="modal fade" id="termsModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+
+            <div class="modal-header border-0 ">
+                <h5 class="modal-title fw-bold d-none">
+                    TERMA DAN SYARAT PENDAFTARAN PERSONEL BINAAN
+                </h5>
+            </div>
+
+            <div class="modal-body" style="max-height: 700px; overflow-y: auto; text-align: justify;">
+
+                <div class="text-center mb-4">
+                    <img src="./assets/img/pages/cidb-logo.png" alt="CIDB Logo" style="max-height:80px;">
+                </div>
+
+               <div class="terms-banner text-center mb-4">
+                    <div class="terms-banner-text">
+                        TERMA DAN SYARAT<br>
+                        PENDAFTARAN PERSONEL BINAAN
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <p>
+                        Sila muat turun serta baca terma dan syarat pendaftaran personel binaan ini.
+                    </p>
+
+                    <p>
+                        Dengan mengakses laman dan/atau menggunakan modul yang disediakan,
+                        individu/majikan bersetuju untuk tertakluk kepada terma dan syarat ini.
+                    </p>
+
+                    <p>
+                        Dari semasa ke semasa, CIDB boleh mengemaskini terma dan syarat ini dan akan
+                        memaparkan terma dan syarat yang telah dikemaskini di pautan Manual modul ini.
+                        Jika individu/majikan memilih untuk terus menggunakan laman dan/atau modul
+                        selepas apa-apa pengemaskinian dibuat ke atas terma dan syarat ini,
+                        individu/majikan telah bersetuju kepada terma dan syarat yang dikemaskini tersebut.
+                    </p>
+
+                    <p>
+                        CIDB tidak bertanggungjawab ke atas sebarang kerugian yang ditanggung
+                        individu / majikan.
+                    </p>
+                </div>
+                <hr>
+
+                <div class="form-check d-flex align-items-start">
+                    <input class="form-check-input me-2 mt-1"
+                           type="checkbox"
+                           id="agreeCheck">
+
+                    <label class="form-check-label flex-grow-1"
+                           for="agreeCheck"
+                           style="text-align: justify;">
+                            Adalah dengan ini saya mengesahkan bahawa maklumat dan dokumen yang 
+                            dikemukakan adalah mengikut syarat dan kriteria pendaftaran. Saya juga memahamii 
+                            terma ini bahawa pendaftaran personel binaan saya boleh dikenakan tindakan 
+                            sekiranya didapati menyalahi syarat dan kriteria pendaftaran personel binaan
+                    </label>
+                </div>
+
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary d-none"
+                        data-bs-dismiss="modal">
+                    Tutup
+                </button>
+
+                <button type="button"
+                        id="acceptBtn"
+                        class="btn btn-primary"
+                        disabled>
+                    Terima dan Muat Turun
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+   <script>
+    $('#agreeCheck').on('change', function () {
+        $('#acceptBtn').prop('disabled', !this.checked);
+    });
+   </script>
+
+
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <footer class="content-footer footer bg-footer-theme">
+                      <div class="container-xxl">
+                          <div
+                              class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+                              <div class="mb-2 mb-md-0">
+                                 
+                   
+                                
+                               
+                   
+                                 
+                              </div>
+                              <div class="d-none d-lg-inline-block">
+                                   &#169;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                  <a
+                                      href="#"
+                                      target="_blank"
+                                      class="footer-link me-4">Personel Binaan</a>
+
+                                 
+                                  
+                                  <a
+                                      href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/"
+                                      target="_blank"
+                                      class="footer-link me-4">Documentation</a>
+
+                                  <a
+                                      href="https://themeselection.com/support/"
+                                      target="_blank"
+                                      class="footer-link d-none d-sm-inline-block">Support</a>
+                              </div>
+                          </div>
+                      </div>
+                  </footer>
+                  <div class="content-backdrop fade"></div>
+              </div>
+            </div>
+             <!-- Footer -->
+            
+        </div>
+         <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
+    </div>
 
 
 
-<section id="contact" class="contact">
+    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
 
-<h2>
-Connect
-</h2>
+    <script src="./assets/vendor/libs/popper/popper.js"></script>
+    <script src="./assets/vendor/js/bootstrap.js"></script>
 
+    <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+     <script src="./assets/vendor/libs/@algolia/autocomplete-js.js"></script>
 
-<div class="social">
+    <script src="./assets/vendor/libs/pickr/pickr.js"></script>
 
-<a href="https://github.com" target="_blank">
-🐙
-</a>
+    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<a href="https://linkedin.com" target="_blank">
-in
-</a>
+    <script src="./assets/vendor/libs/hammer/hammer.js"></script>
 
-<a href="mailto:hello@example.com">
-✉
-</a>
+        <script src="./assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="./assets/vendor/js/menu.js"></script>
+    <script src="./assets/js/main.js"></script>
+     <!-- Vendors JS -->
+    <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
+  
+    <script src="./assets/js/tables-datatables-extensions.js"></script>
+    <script src="./assets/vendor/libs/notiflix/notiflix.js"></script>
+    <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
+   
+        <script src="./assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+        <script src="./assets/js/extended-ui-sweetalert2.js"></script>
+    <script src="./assets/js/pages-appspbind.js?v=1.1.27"></script>
+     <script src="./assets/vendor/libs/select2/select2.js"></script>
+      <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+     <script src="./assets/vendor/libs/notiflix/notiflix.js"></script>
+        <script src="./assets/vendor/libs/cleave-zen/cleave-zen.js"></script>
+       <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+        <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="./assets/vendor/libs/bloodhound/bloodhound.js"></script>
+       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/css/bootstrap-datepicker.min.css">
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/js/bootstrap-datepicker.min.js"></script>
 
-</div>
-
-
-</section>
-
-
-<script src="script.js"></script>
 
 </body>
+
 </html>
