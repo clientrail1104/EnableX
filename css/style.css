@@ -1390,3 +1390,98 @@ transform:
 translateY(-6px);
 
 }
+/* ==========================================================
+   JAVASCRIPT EFFECT STYLES
+========================================================== */
+
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+transition:
+
+.8s ease;
+
+}
+
+
+.reveal.show{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+
+
+.cursor-glow{
+
+position:fixed;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(
+circle,
+rgba(46,197,255,.15),
+transparent 70%
+);
+
+transform:
+translate(-50%,-50%);
+
+z-index:-1;
+
+transition:
+
+.1s linear;
+
+}
+
+
+
+.loaded{
+
+animation:
+
+pageEnter .8s ease;
+
+}
+
+
+
+@keyframes pageEnter{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
