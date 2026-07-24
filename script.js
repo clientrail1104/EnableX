@@ -182,4 +182,37 @@ card.style.transform="";
 });
 
 </script>
+<script>
+
+
+const themeButton =
+document.querySelector(".theme-btn");
+
+
+themeButton.onclick=()=>{
+
+
+document.body.classList.toggle("light");
+
+
+};
+
+
+
+const menuButton =
+document.querySelector(".menu-btn");
+
+
+const mobileMenu =
+document.querySelector(".mobile-menu");
+
+
+menuButton.onclick=()=>{
+
+mobileMenu.classList.toggle("active");
+
+};
+
+
+</script>
 
