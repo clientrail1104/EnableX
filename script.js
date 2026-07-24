@@ -121,4 +121,65 @@ glow.style.top=e.clientY+"px";
 
 
 </script>
+<script>
+
+// Remove loader after page load
+
+window.addEventListener("load",()=>{
+
+document.querySelector(".loader")
+.style.display="none";
+
+});
+
+
+// Smooth card tilt
+
+document.querySelectorAll(
+".ai-card,.feed-card,.leader-card"
+)
+.forEach(card=>{
+
+
+card.addEventListener(
+"mousemove",
+(e)=>{
+
+let rect=card.getBoundingClientRect();
+
+let x=e.clientX-rect.left;
+
+let y=e.clientY-rect.top;
+
+
+let rotateX=
+(y-rect.height/2)/20;
+
+
+let rotateY=
+(rect.width/2-x)/20;
+
+
+card.style.transform=
+`
+perspective(700px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+`;
+
+});
+
+
+card.addEventListener(
+"mouseleave",
+()=>{
+
+card.style.transform="";
+
+});
+
+
+});
+
+</script>
 
