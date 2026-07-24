@@ -51,3 +51,74 @@ card.style.transform=
 });
 
 </script>
+
+<script>
+
+
+// Scroll reveal animation
+
+const revealElements =
+document.querySelectorAll(
+".card,.ai-card,.leader-card,.showcase,.timeline-item"
+);
+
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+{
+threshold:.15
+});
+
+
+revealElements.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(50px)";
+
+el.style.transition="1s ease";
+
+observer.observe(el);
+
+});
+
+
+
+// Cursor glow effect
+
+const glow=document.createElement("div");
+
+glow.className="cursor-glow";
+
+document.body.appendChild(glow);
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+
+
+</script>
+
