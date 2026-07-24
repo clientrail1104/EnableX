@@ -1261,3 +1261,51 @@ display:flex;
 }
 
 }
+
+.light{
+
+background:#f5f7fb;
+
+color:#111;
+
+}
+
+
+
+.light .card,
+.light .ai-card,
+.light .leader-card,
+.light .feed-card{
+
+background:white;
+
+border-color:#ddd;
+
+}
+
+
+
+.light p{
+
+color:#555;
+
+}
+
+
+
+.light nav,
+.light .premium-nav{
+
+background:
+
+rgba(255,255,255,.7);
+
+}
+
+
+
+.light a{
+
+color:#111;
+
+}
