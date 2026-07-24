@@ -1,513 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="description"
-content="Digital Enablement and Knowledge Management Department delivering digital transformation, enterprise knowledge solutions, automation and innovation.">
-
-
-<meta name="keywords"
-content="Digital Enablement, Knowledge Management, Digital Transformation, AI, Automation, Enterprise Innovation">
-
-
-<meta name="author"
-content="Digital Enablement and Knowledge Management Department">
-
-
-<meta property="og:title"
-content="Digital Enablement & Knowledge Management">
-
-
-<meta property="og:description"
-content="Creating intelligent digital experiences through knowledge, innovation and technology.">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Digital Enablement & Knowledge Management</title>
+
+<meta name="description"
+content="Premium Enterprise Digital Enablement and Knowledge Management Platform">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-<!-- ========================= -->
-<!-- LOADING SCREEN -->
-<!-- ========================= -->
-
-<div class="loader">
-
-<div class="loader-logo">
-DEKM
-</div>
-
-<div class="loader-bar"></div>
-
-</div>
-
-  
-body{
-font-family:'Inter',sans-serif;
-background:#000;
-color:white;
-overflow-x:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-width:900px;
-height:900px;
-background:radial-gradient(circle,#2458ff55,transparent 70%);
-top:-300px;
-right:-300px;
-z-index:-1;
-filter:blur(80px);
-}
-
-body::after{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-background:radial-gradient(circle,#00e5ff22,transparent 70%);
-bottom:-250px;
-left:-250px;
-z-index:-1;
-filter:blur(100px);
-}
-
-nav{
-
-<nav class="premium-nav">
-
-<div class="brand">
-DEKM
-<span>
-Digital Enablement
-</span>
-</div>
-
-
-<ul class="nav-links">
-
-<li><a href="#">Home</a></li>
-<li><a href="#services">Capabilities</a></li>
-<li><a href="#">Knowledge Hub</a></li>
-<li><a href="#">Innovation</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-
-<button class="theme-btn">
-◐
-</button>
-
-
-<button class="menu-btn">
-☰
-</button>
-
-
-</nav>
-
-}
-
-<div class="mobile-menu">
-
-<a href="#">Home</a>
-
-<a href="#services">
-Capabilities
-</a>
-
-<a href="#">
-Knowledge Hub
-</a>
-
-<a href="#">
-Innovation
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-</div>
-
-  
-.logo{
-
-font-size:22px;
-font-weight:700;
-letter-spacing:1px;
-
-}
-
-nav ul{
-
-display:flex;
-gap:45px;
-list-style:none;
-
-}
-
-nav a{
-
-text-decoration:none;
-color:white;
-opacity:.75;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-opacity:1;
-
-}
-
-.hero{
-
-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-
-padding:120px 8%;
-
-}
-<div class="floating-orb orb-one"></div>
-<div class="floating-orb orb-two"></div>
-<div class="floating-orb orb-three"></div>
-
-.hero-content{
-
-max-width:950px;
-
-}
-
-.tag{
-
-display:inline-block;
-
-padding:10px 22px;
-
-border-radius:999px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-margin-bottom:30px;
-
-font-size:14px;
-
-color:#9cc8ff;
-
-}
-
-.hero h1{
-
-font-size:clamp(50px,8vw,110px);
-
-line-height:1.05;
-
-font-weight:800;
-
-letter-spacing:-3px;
-
-margin-bottom:30px;
-
-background:linear-gradient(white,#8ebeff);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-color:#bdbdbd;
-
-line-height:1.8;
-
-max-width:850px;
-
-margin:auto;
-
-}
-
-.buttons{
-
-margin-top:55px;
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-padding:18px 34px;
-
-border-radius:50px;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.4s;
-
-}
-
-.primary{
-
-background:white;
-color:black;
-
-}
-
-.primary:hover{
-
-transform:translateY(-4px);
-
-}
-
-.secondary{
-
-border:1px solid rgba(255,255,255,.2);
-
-color:white;
-
-}
-
-.secondary:hover{
-
-background:white;
-color:black;
-
-}
-
-section{
-
-padding:120px 8%;
-
-}
-
-.title{
-
-font-size:54px;
-
-margin-bottom:20px;
-
-font-weight:800;
-
-letter-spacing:-2px;
-
-}
-
-.subtitle{
-
-color:#bdbdbd;
-
-font-size:20px;
-
-max-width:800px;
-
-line-height:1.8;
-
-margin-bottom:70px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:35px;
-
-}
-
-.card{
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-padding:45px;
-
-border-radius:30px;
-
-transition:.45s;
-
-backdrop-filter:blur(20px);
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-border-color:#2d6bff;
-
-box-shadow:0 30px 60px rgba(0,0,0,.35);
-
-}
-
-.icon{
-
-font-size:42px;
-
-margin-bottom:25px;
-
-}
-
-.card h3{
-
-font-size:26px;
-
-margin-bottom:18px;
-
-}
-
-.card p{
-
-color:#bfbfbf;
-
-line-height:1.8;
-
-}
-
-footer{
-
-padding:70px;
-
-text-align:center;
-
-color:#888;
-
-border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-@media(max-width:900px){
-
-nav ul{
-
-display:none;
-
-}
-
-.hero h1{
-
-font-size:58px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.title{
-
-font-size:40px;
-
-}
-
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
 
-<nav>
+<div class="aurora"></div>
+
+<header>
+
+<nav class="navbar">
 
 <div class="logo">
 
-DEKM
+<span class="diamond"></span>
+
+<h2>EnableX</h2>
 
 </div>
 
-<ul>
+<ul class="nav-links">
 
 <li><a href="#">Home</a></li>
-
-<li><a href="#">Services</a></li>
-
 <li><a href="#">Solutions</a></li>
-
-<li><a href="#">Innovation</a></li>
-
+<li><a href="#">Knowledge</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
 <li><a href="#">Contact</a></li>
 
 </ul>
 
+<a class="btn-primary" href="#">
+Request Demo
+</a>
+
 </nav>
+
+</header>
+
+<main>
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-left">
 
-<div class="tag">
-
-DIGITAL ENABLEMENT & KNOWLEDGE MANAGEMENT
-
-</div>
+<p class="badge">
+Enterprise Platform
+</p>
 
 <h1>
 
-Empowering Digital Excellence Through Knowledge.
+Digital Enablement
+<br>
+
+<span>Knowledge Management</span>
 
 </h1>
 
-<p>
+<p class="hero-text">
 
-Transforming ideas into intelligent digital experiences by integrating
-knowledge, innovation, automation, collaboration, and data-driven
-decision making across the organization.
+Empower your workforce with a premium digital platform that centralizes
+knowledge, accelerates collaboration, and transforms learning into measurable
+business outcomes.
 
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a class="btn primary" href="#services">
+<a href="#" class="btn-primary">
 
-Explore Services
+Get Started
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+Explore Platform
 
 </a>
 
-<a class="btn secondary" href="#">
+</div>
 
-Our Vision
+<div class="hero-stats">
 
-</a>
+<div>
+
+<h2>120K+</h2>
+
+<p>Knowledge Assets</p>
+
+</div>
+
+<div>
+
+<h2>450+</h2>
+
+<p>Enterprise Clients</p>
+
+</div>
+
+<div>
+
+<h2>98%</h2>
+
+<p>User Satisfaction</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="glass-card">
+
+<h3>AI Knowledge Assistant</h3>
+
+<p>
+
+Ask questions across your enterprise documents,
+training materials and knowledge base.
+
+</p>
+
+<div class="search-box">
+
+Search Knowledge...
+
+</div>
 
 </div>
 
@@ -515,128 +155,10 @@ Our Vision
 
 </section>
 
-<section id="services">
+</main>
 
-<h2 class="title">
+<script src="js/app.js"></script>
 
-Our Core Capabilities
+</body>
 
-</h2>
-
-<p class="subtitle">
-
-Driving digital transformation with enterprise knowledge management,
-automation, modern collaboration, and intelligent technology solutions.
-
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">💡</div>
-
-<h3>Digital Innovation</h3>
-
-<p>
-
-Accelerate digital initiatives through strategic technology adoption,
-modern platforms, AI integration, and continuous innovation.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">📚</div>
-
-<h3>Knowledge Management</h3>
-
-<p>
-
-Capture organizational knowledge, improve collaboration, and enable
-employees to access the right information anytime.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">⚙️</div>
-
-<h3>Process Automation</h3>
-
-<p>
-
-Automate repetitive tasks and streamline workflows using intelligent
-business process automation and modern cloud technologies.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">📈</div>
-
-<h3>Analytics</h3>
-
-<p>
-
-Empower leadership with dashboards, KPIs, predictive insights,
-and enterprise reporting.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-
-<div class="footer-logo">
-
-DEKM
-
-</div>
-
-
-<p>
-
-Digital Enablement & Knowledge Management Department
-
-</p>
-
-
-<div class="footer-links">
-
-<a href="#">Digital Strategy</a>
-
-<a href="#">Knowledge Centre</a>
-
-<a href="#">Innovation</a>
-
-<a href="#">Contact</a>
-
-</div>
-
-
-<p class="copyright">
-
-© 2026 All Rights Reserved
-
-</p>
-
-
-</footer>
-
-
-
-© 2026 Digital Enablement & Knowledge Management Department
-
-
+</html>
