@@ -277,3 +277,277 @@ display:none;
 }
 
 }
+
+/* ========================= */
+/* AI SECTION */
+/* ========================= */
+
+
+.ai-header span{
+
+color:#6ca8ff;
+font-weight:600;
+letter-spacing:2px;
+
+}
+
+
+.ai-header h2{
+
+font-size:70px;
+line-height:1.1;
+margin:25px 0;
+
+letter-spacing:-3px;
+
+}
+
+
+.ai-header p{
+
+font-size:21px;
+color:#aaa;
+max-width:800px;
+line-height:1.8;
+
+}
+
+
+
+.ai-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+
+.ai-card{
+
+padding:45px;
+
+border-radius:35px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.02)
+);
+
+border:1px solid rgba(255,255,255,.1);
+
+transition:.5s;
+
+}
+
+
+.ai-card:hover{
+
+transform:
+translateY(-15px)
+scale(1.03);
+
+box-shadow:
+0 30px 80px rgba(0,100,255,.25);
+
+}
+
+
+
+.ai-icon{
+
+font-size:55px;
+
+margin-bottom:30px;
+
+}
+
+
+.ai-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+
+.ai-card p{
+
+color:#aaa;
+
+line-height:1.8;
+
+}
+
+
+
+
+/* ========================= */
+/* LEADERSHIP */
+/* ========================= */
+
+
+.leader-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+}
+
+
+
+.leader-card{
+
+padding:50px 30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.04);
+
+border-radius:35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.avatar{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(
+135deg,
+#4b8cff,
+#00d4ff
+);
+
+box-shadow:
+
+0 0 50px rgba(0,140,255,.5);
+
+}
+
+
+
+.leader-card h3{
+
+font-size:25px;
+
+margin-bottom:10px;
+
+}
+
+
+.leader-card p{
+
+color:#aaa;
+
+}
+
+
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+
+.contact{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+
+.contact-box{
+
+width:100%;
+
+padding:100px 50px;
+
+text-align:center;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(40,100,255,.3),
+rgba(0,220,255,.15)
+);
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+}
+
+
+.contact-box h2{
+
+font-size:70px;
+
+letter-spacing:-3px;
+
+margin-bottom:25px;
+
+}
+
+
+.contact-box p{
+
+font-size:22px;
+
+color:#ddd;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.ai-grid,
+.leader-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.ai-header h2,
+.contact-box h2{
+
+font-size:42px;
+
+}
+
+}
