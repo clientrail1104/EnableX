@@ -600,3 +600,74 @@ font-size:
 
 
 }
+/* =====================================================
+   DASHBOARD ANIMATIONS
+===================================================== */
+
+
+.chart-placeholder div{
+
+transition:
+
+height 1.2s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.metric-card h2{
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#6C63FF
+);
+
+-webkit-background-clip:
+
+text;
+
+-webkit-text-fill-color:
+
+transparent;
+
+}
+
+
+
+.dashboard-card,
+.metric-card{
+
+animation:
+
+dashboardEnter .8s ease forwards;
+
+}
+
+
+
+@keyframes dashboardEnter{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+
+}
