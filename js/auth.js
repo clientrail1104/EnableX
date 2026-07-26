@@ -238,3 +238,69 @@ if (registerForm) {
     }
 
 });
+/* =========================================
+   FORGOT PASSWORD
+========================================= */
+
+const forgotForm = document.getElementById("forgotPasswordForm");
+
+if (forgotForm) {
+
+    forgotForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        showToast("Password reset link sent successfully.");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 1800);
+
+    });
+
+}
+
+/* =========================================
+   RESET PASSWORD
+========================================= */
+
+const resetForm = document.getElementById("resetPasswordForm");
+
+if (resetForm) {
+
+    resetForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const password = document.getElementById("newPassword").value;
+        const confirm = document.getElementById("confirmNewPassword").value;
+
+        if (password !== confirm) {
+
+            showToast("Passwords do not match.", "error");
+
+            return;
+
+        }
+
+        if (password.length < 8) {
+
+            showToast("Password must contain at least 8 characters.", "error");
+
+            return;
+
+        }
+
+        showToast("Password updated successfully.");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 1500);
+
+    });
+
+}
