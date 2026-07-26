@@ -485,3 +485,55 @@ align-items:flex-start;
 
 
 }
+/* ========================================
+   KNOWLEDGE TOAST
+======================================== */
+
+
+.knowledge-toast{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+padding:18px 26px;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#6C63FF
+);
+
+color:white;
+
+font-weight:600;
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.35s;
+
+z-index:9999;
+
+box-shadow:
+
+0 20px 50px rgba(46,197,255,.3);
+
+}
+
+
+
+.knowledge-toast.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
