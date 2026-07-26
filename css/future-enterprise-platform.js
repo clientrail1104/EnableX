@@ -1,0 +1,450 @@
+/* ==========================================================
+   ENABLEX FUTURE ENTERPRISE INTELLIGENCE PLATFORM
+   future-enterprise-platform.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.future-enterprise-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.future-enterprise-hero{
+
+text-align:center;
+
+max-width:1100px;
+
+margin:0 auto 75px;
+
+}
+
+
+
+.future-enterprise-hero h1{
+
+font-size:4rem;
+
+margin:25px 0;
+
+}
+
+
+
+.future-enterprise-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.future-enterprise-hero p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   PLATFORM METRICS
+======================================== */
+
+.platform-metrics{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.platform-metrics div{
+
+padding:40px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.platform-metrics strong{
+
+display:block;
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.platform-metrics p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   PLATFORM CARDS
+======================================== */
+
+.platform-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.platform-card{
+
+padding:35px;
+
+border-radius:28px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.35s;
+
+}
+
+
+
+.platform-card:hover{
+
+transform:translateY(-10px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.platform-card p{
+
+color:var(--text-light);
+
+line-height:1.7;
+
+}
+
+
+
+.platform-card button{
+
+margin-top:20px;
+
+padding:12px 24px;
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+font-weight:700;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+}
+
+
+
+/* ========================================
+   PLATFORM FRAMEWORK
+======================================== */
+
+.platform-framework{
+
+padding:45px;
+
+border-radius:35px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.14),
+rgba(108,99,255,.14)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.platform-framework h2{
+
+font-size:2.2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.platform-flow{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.platform-flow div{
+
+padding:30px;
+
+border-radius:24px;
+
+background:
+
+rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+
+
+.platform-flow div:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(24,216,158,.12);
+
+}
+
+
+
+.platform-flow p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   PLATFORM TOAST
+======================================== */
+
+.platform-toast{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+padding:18px 26px;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+font-weight:700;
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.35s;
+
+z-index:9999;
+
+box-shadow:
+
+0 20px 50px rgba(46,197,255,.35);
+
+}
+
+
+
+.platform-toast.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1100px){
+
+
+.platform-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+
+
+.platform-flow{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.platform-metrics{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.platform-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.future-enterprise-hero h1{
+
+font-size:2.6rem;
+
+}
+
+
+
+.platform-framework{
+
+padding:30px;
+
+}
+
+
+}
