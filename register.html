@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EnableX | Create Account</title>
+
+<meta name="description"
+content="Create your EnableX enterprise account">
+
+<link rel="icon" href="assets/favicon/favicon.svg">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+
+<div class="page-loader">
+    <div class="loader-diamond"></div>
+</div>
+
+<div class="aurora"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<span class="diamond"></span>
+
+<h2>EnableX</h2>
+
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="login.html">Sign In</a>
+
+</div>
+
+</nav>
+
+</header>
+
+<main class="auth-page">
+
+<div class="auth-card">
+
+<div class="auth-header">
+
+<div class="auth-logo">
+
+<span class="diamond large"></span>
+
+</div>
+
+<h1>Create Your Account</h1>
+
+<p>
+
+Join your organization's Digital Enablement platform.
+
+</p>
+
+</div>
+
+<form id="registerForm">
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="fullName"
+placeholder="Jane Doe"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Work Email</label>
+
+<input
+type="email"
+id="registerEmail"
+placeholder="name@company.com"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Department</label>
+
+<select id="department" required>
+
+<option value="">Select Department</option>
+
+<option>Information Technology</option>
+
+<option>Human Resources</option>
+
+<option>Finance</option>
+
+<option>Operations</option>
+
+<option>Marketing</option>
+
+<option>Sales</option>
+
+<option>Legal</option>
+
+<option>Executive Office</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Job Title</label>
+
+<input
+type="text"
+id="jobTitle"
+placeholder="Senior Business Analyst"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Password</label>
+
+<div class="password-wrapper">
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Minimum 8 characters"
+required>
+
+<button
+type="button"
+class="password-toggle"
+id="toggleRegisterPassword">
+
+👁
+
+</button>
+
+</div>
+
+<div class="password-strength">
+
+<div class="strength-bar">
+
+<div id="strengthFill"></div>
+
+</div>
+
+<small id="strengthLabel">
+Password strength
+</small>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Confirm Password</label>
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Re-enter password"
+required>
+
+</div>
+
+<label class="remember">
+
+<input
+type="checkbox"
+id="terms"
+required>
+
+I agree to the Terms of Service and Privacy Policy.
+
+</label>
+
+<button
+type="submit"
+class="btn-primary auth-button">
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="auth-footer">
+
+<p>
+
+Already have an account?
+
+<a href="login.html">
+
+Sign In
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<div class="auth-side">
+
+<h2>
+
+Enterprise Collaboration Starts Here
+
+</h2>
+
+<p>
+
+Create your account to access dashboards,
+knowledge repositories, AI-powered search,
+learning resources and collaboration tools.
+
+</p>
+
+<ul class="feature-list">
+
+<li>✓ AI Knowledge Assistant</li>
+
+<li>✓ Enterprise Learning</li>
+
+<li>✓ Knowledge Repository</li>
+
+<li>✓ Executive Dashboard</li>
+
+<li>✓ Secure Enterprise Access</li>
+
+</ul>
+
+</div>
+
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>
