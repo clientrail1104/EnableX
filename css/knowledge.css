@@ -1,5 +1,5 @@
 /* ==========================================================
-   KNOWLEDGE HUB UI
+   ENABLEX KNOWLEDGE MANAGEMENT HUB
    knowledge.css
 ========================================================== */
 
@@ -9,54 +9,37 @@
 ========================================================== */
 
 
-.knowledge-hero{
+.knowledge-hero {
 
-min-height:90vh;
+width:min(1200px,92%);
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+margin:90px auto 60px;
 
 text-align:center;
-
-padding-top:130px;
 
 }
 
 
 
-.knowledge-hero h1{
+.knowledge-hero h1 {
 
 font-size:
 
 clamp(3rem,6vw,5rem);
 
-line-height:
+letter-spacing:-3px;
 
-1.1;
-
-letter-spacing:
-
--3px;
-
-margin-bottom:25px;
+margin:25px 0;
 
 }
 
 
 
-.knowledge-hero h1 span{
+.knowledge-hero h1 span {
 
 background:
 
-linear-gradient(
-135deg,
-#2EC5FF,
-#6C63FF,
-#18D89E
-);
+var(--gradient-diamond);
 
 -webkit-background-clip:
 
@@ -70,17 +53,19 @@ transparent;
 
 
 
-.knowledge-hero p{
+.knowledge-hero p {
 
-max-width:750px;
+max-width:700px;
 
 margin:auto;
-
-font-size:1.15rem;
 
 color:
 
 var(--text-light);
+
+line-height:1.8;
+
+font-size:1.1rem;
 
 }
 
@@ -89,263 +74,635 @@ var(--text-light);
 
 
 /* ==========================================================
-   SEARCH BOX
+   SEARCH AREA
 ========================================================== */
 
 
-.knowledge-search{
+.knowledge-search {
 
 margin:
 
-50px auto 0;
-
-max-width:760px;
-
-height:75px;
-
-padding:
-
-10px;
+45px auto 0;
 
 display:flex;
 
-align-items:center;
+max-width:750px;
 
-gap:15px;
+padding:
+
+8px;
+
 
 background:
 
 rgba(255,255,255,.08);
 
+
 border:
 
-1px solid rgba(255,255,255,.15);
+var(--border);
+
 
 border-radius:
 
-40px;
+50px;
+
 
 backdrop-filter:
 
 blur(20px);
 
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.25);
-
 }
 
 
 
-.knowledge-search span{
+.knowledge-search input {
 
-font-size:
-
-30px;
-
-color:
-
-var(--primary);
-
-padding-left:20px;
-
-}
-
-
-
-.knowledge-search input{
 
 flex:1;
 
-background:none;
 
 border:none;
 
+
 outline:none;
+
+
+background:transparent;
+
+
+padding:
+
+18px 25px;
+
 
 color:white;
 
+
 font-size:1rem;
+
 
 }
 
 
 
-.knowledge-search input::placeholder{
+.knowledge-search input::placeholder {
+
 
 color:
 
 var(--text-muted);
 
+
 }
 
 
 
-.knowledge-search button{
+.knowledge-search button {
 
-height:55px;
-
-padding:
-
-0 35px;
 
 border:none;
 
+
+padding:
+
+15px 35px;
+
+
 border-radius:
 
-30px;
+40px;
+
 
 background:
 
 var(--gradient-primary);
 
+
 color:white;
+
 
 font-weight:700;
 
+
 }
+
+
 
 
 
 
 
 /* ==========================================================
-   DOCUMENT LIBRARY
+   CATEGORY SECTION
 ========================================================== */
 
 
-.knowledge-library{
+.knowledge-categories,
 
-display:grid;
+.knowledge-library,
 
-grid-template-columns:
+.experts,
 
-repeat(3,1fr);
+.learning-panel {
 
-gap:30px;
+
+width:min(1200px,92%);
+
+margin:
+
+100px auto;
+
 
 }
 
 
 
-.document-card{
+.knowledge-categories h2,
+
+.knowledge-library h2,
+
+.experts h2,
+
+.learning-panel h2 {
+
+
+font-size:
+
+2.5rem;
+
+margin-bottom:
+
+45px;
+
+text-align:center;
+
+}
+
+
+
+
+
+
+
+.category-grid {
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+
+gap:25px;
+
+
+}
+
+
+
+
+.category-card {
+
 
 padding:
 
 35px;
 
-border-radius:
-
-30px;
 
 background:
 
 rgba(255,255,255,.06);
 
+
 border:
 
-1px solid rgba(255,255,255,.12);
+var(--border);
+
+
+border-radius:
+
+var(--radius-lg);
+
 
 transition:
 
-.35s;
+var(--transition);
+
 
 }
 
 
 
-.document-card:hover{
+.category-card:hover {
+
 
 transform:
 
 translateY(-10px);
 
+
 box-shadow:
 
 var(--shadow-blue);
 
-border-color:
-
-rgba(46,197,255,.4);
 
 }
 
 
 
-.document-card h3{
+.category-card h3 {
 
-font-size:
 
-1.35rem;
+margin-bottom:
 
-margin-bottom:15px;
+15px;
+
 
 }
 
 
 
-.document-card p{
+.category-card p {
 
-color:
-
-var(--text-light);
-
-margin-bottom:20px;
-
-}
-
-
-
-.document-card span{
 
 color:
 
 var(--primary);
 
-font-size:.9rem;
+
+font-weight:700;
+
 
 }
+
+
 
 
 
 
 
 /* ==========================================================
-   EXPERT NETWORK
+   ARTICLE LIBRARY
 ========================================================== */
 
 
-.ai-message{
+.article-grid {
 
-display:flex;
 
-justify-content:space-between;
+display:grid;
 
-align-items:center;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+gap:30px;
+
 
 }
 
 
 
-.ai-message::after{
+.article-card {
 
-content:"";
 
-width:10px;
+padding:
 
-height:10px;
+35px;
+
 
 background:
 
-var(--success);
+rgba(255,255,255,.06);
 
-border-radius:50%;
+
+border:
+
+var(--border);
+
+
+border-radius:
+
+var(--radius-lg);
+
+
+transition:
+
+var(--transition);
+
+
+}
+
+
+
+.article-card:hover {
+
+
+transform:
+
+translateY(-12px);
+
 
 box-shadow:
 
-0 0 15px var(--success);
+var(--shadow-blue);
+
 
 }
+
+
+
+.article-icon {
+
+
+width:
+
+60px;
+
+
+height:
+
+60px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+border-radius:
+
+20px;
+
+
+background:
+
+var(--gradient-primary);
+
+
+font-weight:
+
+800;
+
+
+margin-bottom:
+
+25px;
+
+
+}
+
+
+
+.article-card p {
+
+
+color:
+
+var(--text-light);
+
+
+line-height:
+
+1.7;
+
+
+margin:
+
+20px 0;
+
+
+}
+
+
+
+.article-card span {
+
+
+color:
+
+var(--accent);
+
+
+font-weight:
+
+700;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   EXPERT DIRECTORY
+========================================================== */
+
+
+.expert-grid {
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+gap:
+
+30px;
+
+
+}
+
+
+
+.expert-card {
+
+
+text-align:center;
+
+
+padding:
+
+35px;
+
+
+background:
+
+rgba(255,255,255,.06);
+
+
+border:
+
+var(--border);
+
+
+border-radius:
+
+var(--radius-lg);
+
+
+}
+
+
+
+.avatar {
+
+
+width:
+
+90px;
+
+
+height:
+
+90px;
+
+
+margin:
+
+0 auto 20px;
+
+
+border-radius:
+
+50%;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+background:
+
+var(--gradient-diamond);
+
+
+font-size:
+
+1.5rem;
+
+
+font-weight:
+
+800;
+
+
+}
+
+
+
+.expert-card p {
+
+
+color:
+
+var(--text-light);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   LEARNING PATHS
+========================================================== */
+
+
+.learning-items {
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+gap:
+
+25px;
+
+
+}
+
+
+
+.learning-items div {
+
+
+padding:
+
+30px;
+
+
+text-align:center;
+
+
+background:
+
+rgba(255,255,255,.06);
+
+
+border:
+
+var(--border);
+
+
+border-radius:
+
+25px;
+
+
+transition:
+
+var(--transition);
+
+
+}
+
+
+
+.learning-items div:hover {
+
+
+background:
+
+rgba(46,197,255,.12);
+
+
+transform:
+
+translateY(-8px);
+
+
+}
+
+
 
 
 
@@ -356,57 +713,110 @@ box-shadow:
 ========================================================== */
 
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
 
-.knowledge-library{
+.category-grid {
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+.article-grid {
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+.learning-items {
+
 
 grid-template-columns:
 
 1fr;
 
+
+}
+
+
 }
 
 
 
-.knowledge-search{
 
-height:auto;
+@media(max-width:768px){
+
+
+.knowledge-search {
+
 
 flex-direction:
 
 column;
 
-padding:
-
-15px;
 
 border-radius:
 
-30px;
+25px;
+
 
 }
 
 
 
-.knowledge-search input{
+.knowledge-search button {
 
-width:100%;
 
-padding:
+width:
 
-15px;
+100%;
+
 
 }
 
 
 
-.knowledge-search button{
+.category-grid,
 
-width:100%;
+.article-grid,
+
+.expert-grid {
+
+
+grid-template-columns:
+
+1fr;
+
 
 }
 
+
+
+.knowledge-categories h2,
+
+.knowledge-library h2,
+
+.experts h2,
+
+.learning-panel h2 {
+
+
+font-size:
+
+2rem;
+
+
+}
 
 
 }
