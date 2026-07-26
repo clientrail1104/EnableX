@@ -1,0 +1,396 @@
+/* ==========================================================
+   ENABLEX AI AGENTS PLATFORM
+   ai-agents.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.agents-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.agents-hero{
+
+text-align:center;
+
+max-width:1000px;
+
+margin:0 auto 70px;
+
+}
+
+
+
+.agents-hero h1{
+
+font-size:4rem;
+
+margin:25px 0;
+
+}
+
+
+
+.agents-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.agents-hero p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   AGENT STATUS
+======================================== */
+
+.agent-status{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.agent-status div{
+
+padding:40px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.agent-status strong{
+
+display:block;
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.agent-status p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   AGENT CARDS
+======================================== */
+
+.agents-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.agent-card{
+
+padding:35px;
+
+border-radius:28px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.35s;
+
+}
+
+
+
+.agent-card:hover{
+
+transform:translateY(-10px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.agent-card p{
+
+color:var(--text-light);
+
+line-height:1.7;
+
+}
+
+
+
+.agent-card button{
+
+margin-top:20px;
+
+padding:12px 24px;
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+font-weight:700;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+}
+
+
+
+/* ========================================
+   AGENT INTELLIGENCE FRAMEWORK
+======================================== */
+
+.agent-intelligence{
+
+padding:45px;
+
+border-radius:35px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.14),
+rgba(108,99,255,.14)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.agent-intelligence h2{
+
+font-size:2.2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.agent-flow{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.agent-flow div{
+
+padding:30px;
+
+border-radius:24px;
+
+background:
+
+rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+
+
+.agent-flow div:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(24,216,158,.12);
+
+}
+
+
+
+.agent-flow p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1100px){
+
+
+.agents-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+
+
+.agent-flow{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.agent-status{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.agents-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.agents-hero h1{
+
+font-size:2.6rem;
+
+}
+
+
+
+.agent-intelligence{
+
+padding:30px;
+
+}
+
+
+}
