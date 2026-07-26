@@ -10,22 +10,22 @@
 
 
 <title>
-Enterprise Knowledge Dashboard
+EnableX | Executive Dashboard
 </title>
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description"
+content="Enterprise digital enablement analytics dashboard showing knowledge intelligence, AI adoption and organizational insights.">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link rel="icon" href="assets/favicon/favicon.svg">
 
 
 <link rel="stylesheet" href="css/variables.css">
 
 <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
 
 <link rel="stylesheet" href="css/dashboard.css">
 
@@ -36,116 +36,62 @@ rel="stylesheet">
 <body>
 
 
+<div class="page-loader">
+
+<div class="loader-diamond"></div>
+
+</div>
+
+
+
 <div class="aurora"></div>
 
 
 
-<div class="dashboard-layout">
 
+<header>
 
-
-<!-- SIDEBAR -->
-
-
-<aside class="sidebar">
+<nav class="navbar">
 
 
 <div class="logo">
 
-
 <span class="diamond"></span>
-
 
 <h2>
 EnableX
 </h2>
 
-
 </div>
 
 
 
-<ul class="dashboard-menu">
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
 
 
-<li class="active">
-Overview
-</li>
+<a href="dashboard.html">
+Dashboard
+</a>
 
 
-<li>
-Knowledge
-</li>
+<a href="knowledge.html">
+Knowledge Hub
+</a>
 
 
-<li>
+<a href="ai-assistant.html">
 AI Assistant
-</li>
-
-
-<li>
-Analytics
-</li>
-
-
-<li>
-Learning
-</li>
-
-
-<li>
-Settings
-</li>
-
-
-</ul>
-
-
-
-</aside>
-
-
-
-
-
-<!-- MAIN DASHBOARD -->
-
-
-<main class="dashboard-main">
-
-
-
-<header class="dashboard-header">
-
-
-<div>
-
-
-<p class="badge">
-
-Executive Dashboard
-
-</p>
-
-
-<h1>
-
-Knowledge Intelligence Center
-
-</h1>
+</a>
 
 
 </div>
 
 
-
-<button class="btn-primary">
-
-Create Report
-
-</button>
-
-
+</nav>
 
 </header>
 
@@ -154,117 +100,34 @@ Create Report
 
 
 
-
-<!-- METRICS -->
-
-
-<section class="metric-grid">
+<main>
 
 
+<section class="dashboard-hero">
 
-<div class="metric-card">
+
+<p class="badge">
+Executive Intelligence Center
+</p>
+
+
+<h1>
+
+Digital Enablement
+
+<span>
+Dashboard
+</span>
+
+</h1>
 
 
 <p>
 
-Knowledge Assets
+Real-time visibility into knowledge adoption,
+AI engagement and organizational intelligence.
 
 </p>
-
-
-<h2>
-128,450
-</h2>
-
-
-<span>
-↑ 18% this month
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="metric-card">
-
-
-<p>
-
-Active Users
-
-</p>
-
-
-<h2>
-24,560
-</h2>
-
-
-<span>
-↑ 12% this week
-</span>
-
-
-</div>
-
-
-
-
-
-
-<div class="metric-card">
-
-
-<p>
-
-AI Queries
-
-</p>
-
-
-<h2>
-85,230
-</h2>
-
-
-<span>
-↑ 35%
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="metric-card">
-
-
-<p>
-
-Knowledge Score
-
-</p>
-
-
-<h2>
-94%
-</h2>
-
-
-<span>
-Excellent
-</span>
-
-
-</div>
-
 
 
 </section>
@@ -273,48 +136,120 @@ Excellent
 
 
 
-
-
-
-<!-- ANALYTICS AREA -->
 
 
 <section class="dashboard-grid">
 
 
 
-<div class="dashboard-card">
+<div class="stat-card">
+
+<span>
+Knowledge Assets
+</span>
+
+<strong>
+25,430
+</strong>
+
+<p>
++12% this month
+</p>
+
+</div>
 
 
-<h3>
 
-Knowledge Adoption
 
-</h3>
+<div class="stat-card">
 
+<span>
+AI Conversations
+</span>
+
+<strong>
+98,240
+</strong>
+
+<p>
++24% adoption
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<span>
+Active Employees
+</span>
+
+<strong>
+8,940
+</strong>
+
+<p>
+94% engagement
+</p>
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<span>
+Learning Hours
+</span>
+
+<strong>
+42K
+</strong>
+
+<p>
+Enterprise growth
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="analytics-layout">
+
+
+
+<div class="analytics-card">
+
+
+<h2>
+Knowledge Growth
+</h2>
 
 
 <div class="chart-placeholder">
 
 
-<div style="height:70%">
-</div>
+<div class="bar bar-one"></div>
 
+<div class="bar bar-two"></div>
 
-<div style="height:45%">
-</div>
+<div class="bar bar-three"></div>
 
-
-<div style="height:85%">
-</div>
-
-
-<div style="height:60%">
-</div>
-
-
-<div style="height:95%">
-</div>
+<div class="bar bar-four"></div>
 
 
 </div>
@@ -327,76 +262,56 @@ Knowledge Adoption
 
 
 
-<div class="dashboard-card">
+
+<div class="analytics-card">
 
 
-<h3>
-
-AI Recommendations
-
-</h3>
+<h2>
+AI Adoption
+</h2>
 
 
 
-<div class="recommendation">
+<ul class="activity-list">
 
 
-<p>
-
-Customer Experience Guide
-
-</p>
-
-
+<li>
+AI Search Usage
 <span>
-98% relevance
+87%
 </span>
+</li>
 
 
-</div>
-
-
-
-<div class="recommendation">
-
-
-<p>
-
-Digital Process Library
-
-</p>
-
-
+<li>
+Knowledge Discovery
 <span>
-94% relevance
+92%
 </span>
+</li>
 
 
-</div>
-
-
-
-<div class="recommendation">
-
-
-<p>
-
-Leadership Knowledge Base
-
-</p>
-
-
+<li>
+Employee Learning
 <span>
-91% relevance
+78%
 </span>
+</li>
+
+
+<li>
+Expert Connection
+<span>
+81%
+</span>
+</li>
+
+
+
+</ul>
 
 
 </div>
-
-
-
-</div>
-
 
 
 
@@ -409,88 +324,59 @@ Leadership Knowledge Base
 
 
 
-<!-- ACTIVITY -->
+<section class="activity-panel">
 
 
-<section class="dashboard-card">
-
-
-<h3>
-
+<h2>
 Recent Activity
-
-</h3>
-
-
-<div class="activity">
+</h2>
 
 
-<span></span>
 
+<div class="activity-item">
+
+<strong>
+New Knowledge Article Published
+</strong>
 
 <p>
-
-New enterprise knowledge article published
-
+Digital transformation framework updated.
 </p>
-
-
-<small>
-5 minutes ago
-</small>
-
 
 </div>
 
 
 
-<div class="activity">
+<div class="activity-item">
 
-
-<span></span>
-
+<strong>
+AI Assistant Usage Increased
+</strong>
 
 <p>
-
-AI assistant answered 350 queries
-
+Enterprise searches increased this week.
 </p>
-
-
-<small>
-20 minutes ago
-</small>
-
 
 </div>
 
 
 
-<div class="activity">
 
+<div class="activity-item">
 
-<span></span>
-
+<strong>
+New Learning Path Created
+</strong>
 
 <p>
-
-Learning pathway completed by team
-
+Employees enrolled in digital skills program.
 </p>
-
-
-<small>
-1 hour ago
-</small>
-
 
 </div>
 
 
 
 </section>
-
-
 
 
 
@@ -498,13 +384,27 @@ Learning pathway completed by team
 </main>
 
 
-</div>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 EnableX. Enterprise Digital Intelligence Platform.
+</p>
+
+</footer>
+
+
+
 
 
 
 <script src="js/app.js"></script>
-<script src="js/dashboard.js"></script>
 
+<script src="js/dashboard.js"></script>
 
 
 </body>
