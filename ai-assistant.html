@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -14,34 +13,20 @@ EnableX | AI Knowledge Assistant
 </title>
 
 
-<meta name="description"
-content="AI-powered enterprise knowledge assistant for digital enablement and intelligent discovery.">
-
-
 <link rel="icon" href="assets/favicon/favicon.svg">
 
 
 <link rel="stylesheet" href="css/variables.css">
-
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/responsive.css">
-
 <link rel="stylesheet" href="css/ai-assistant.css">
 
 
 </head>
 
 
+
 <body>
-
-
-<div class="page-loader">
-
-<div class="loader-diamond"></div>
-
-</div>
-
 
 
 <div class="aurora"></div>
@@ -60,20 +45,15 @@ content="AI-powered enterprise knowledge assistant for digital enablement and in
 <span class="diamond"></span>
 
 <h2>
-EnableX
+EnableX AI
 </h2>
 
 </div>
 
 
 
+
 <div class="nav-links">
-
-
-<a href="index.html">
-Home
-</a>
-
 
 <a href="dashboard.html">
 Dashboard
@@ -81,12 +61,17 @@ Dashboard
 
 
 <a href="knowledge.html">
-Knowledge Hub
+Knowledge
 </a>
 
 
-<a href="ai-assistant.html">
-AI Assistant
+<a href="admin.html">
+Admin
+</a>
+
+
+<a href="profile.html">
+Profile
 </a>
 
 
@@ -103,25 +88,29 @@ AI Assistant
 
 
 
-
-<main>
-
-
-<section class="ai-hero">
+<main class="ai-container">
 
 
-<p class="badge">
-Enterprise AI Intelligence
-</p>
+
+
+
+<section class="ai-header">
+
+
+<span class="badge">
+
+Enterprise AI Assistant
+
+</span>
 
 
 
 <h1>
 
-Your Digital
+Your
 
 <span>
-Knowledge Assistant
+Intelligent Knowledge Partner
 </span>
 
 </h1>
@@ -130,13 +119,15 @@ Knowledge Assistant
 
 <p>
 
-Ask questions, discover organizational knowledge,
-and accelerate decision making with AI-powered insights.
+Ask questions, discover knowledge,
+summarize documents and unlock enterprise intelligence.
 
 </p>
 
 
+
 </section>
+
 
 
 
@@ -149,28 +140,24 @@ and accelerate decision making with AI-powered insights.
 
 
 
-<div class="assistant-panel">
+
+
+<div class="chat-panel">
 
 
 
-<div class="assistant-header">
+<div class="chat-header">
 
 
-<div class="assistant-avatar">
-AI
-</div>
+<h2>
+EnableX AI Assistant
+</h2>
 
 
+<span class="status">
 
-<div>
+● Online
 
-<h3>
-EnableX Assistant
-</h3>
-
-
-<span>
-● Online Intelligence Engine
 </span>
 
 
@@ -178,27 +165,16 @@ EnableX Assistant
 
 
 
-</div>
+
+
+<div class="chat-messages" id="chatMessages">
 
 
 
+<div class="message ai-message">
 
-
-
-
-<div class="messages">
-
-
-<div class="message ai">
-
-
-Hello! I am your EnableX AI Assistant.
-
-<br><br>
-
-I can help you discover documents,
-processes, experts and enterprise knowledge.
-
+Hello. I can help you discover enterprise knowledge,
+documents and insights.
 
 </div>
 
@@ -206,31 +182,6 @@ processes, experts and enterprise knowledge.
 
 </div>
 
-
-
-
-
-
-
-<div class="prompt-area">
-
-
-<button class="prompt">
-Find digital transformation resources
-</button>
-
-
-<button class="prompt">
-Summarize latest knowledge updates
-</button>
-
-
-<button class="prompt">
-Recommend learning paths
-</button>
-
-
-</div>
 
 
 
@@ -241,31 +192,152 @@ Recommend learning paths
 <div class="chat-input">
 
 
+
 <input
+
 type="text"
-placeholder="Ask your enterprise knowledge question..."
+
+id="aiInput"
+
+placeholder="Ask anything about your organization..."
+
 >
 
 
-<button>
+
+<button
+
+id="sendAI"
+
+class="btn-primary">
+
 Send
+
 </button>
 
 
-</div>
-
-
-
 
 </div>
 
 
 
+</div>
 
 
 
 
-<div class="ai-insights">
+
+
+
+
+<aside class="ai-sidebar">
+
+
+
+
+
+<div class="prompt-card">
+
+
+<h3>
+Suggested Prompts
+</h3>
+
+
+<button>
+Summarize AI Strategy
+</button>
+
+
+<button>
+Find Security Policies
+</button>
+
+
+<button>
+Recommend Learning Paths
+</button>
+
+
+<button>
+Explain Business Process
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="insight-card">
+
+
+<h3>
+AI Insights
+</h3>
+
+
+<div>
+
+Knowledge Accuracy
+
+<strong>
+96%
+</strong>
+
+</div>
+
+
+
+<div>
+
+Documents Indexed
+
+<strong>
+25K+
+</strong>
+
+</div>
+
+
+<div>
+
+AI Conversations
+
+<strong>
+98K
+</strong>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</aside>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="ai-features">
 
 
 
@@ -275,101 +347,50 @@ AI Capabilities
 
 
 
-<div class="capability">
+<div class="ai-feature-grid">
 
+
+
+<div>
 
 <h3>
-Knowledge Discovery
+Knowledge Search
 </h3>
 
-
 <p>
-Find relevant documents and insights instantly.
+Find information across enterprise resources instantly.
 </p>
-
 
 </div>
 
 
 
 
+<div>
 
-<div class="capability">
+<h3>
+Document Intelligence
+</h3>
 
+<p>
+Summarize and analyze organizational documents.
+</p>
+
+</div>
+
+
+
+
+<div>
 
 <h3>
 Smart Recommendations
 </h3>
 
-
 <p>
-Receive personalized learning suggestions.
+Receive personalized learning and knowledge suggestions.
 </p>
 
-
-</div>
-
-
-
-
-
-<div class="capability">
-
-
-<h3>
-Decision Support
-</h3>
-
-
-<p>
-Generate insights from enterprise information.
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-<section class="ai-flow">
-
-
-<h2>
-How AI Works
-</h2>
-
-
-<div class="flow-grid">
-
-
-<div>
-Question
-</div>
-
-
-<div>
-Knowledge Search
-</div>
-
-
-<div>
-AI Reasoning
-</div>
-
-
-<div>
-Insight Delivery
 </div>
 
 
@@ -378,6 +399,8 @@ Insight Delivery
 
 
 </section>
+
+
 
 
 
@@ -389,18 +412,13 @@ Insight Delivery
 
 
 
-
 <footer>
 
 <p>
-
-© 2026 EnableX. AI Knowledge Intelligence Platform.
-
+© 2026 EnableX AI Platform
 </p>
 
 </footer>
-
-
 
 
 
@@ -412,5 +430,6 @@ Insight Delivery
 
 
 </body>
+
 
 </html>
