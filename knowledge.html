@@ -2,20 +2,23 @@
 
 <html lang="en">
 
-
 <head>
 
-
 <meta charset="UTF-8">
-
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <title>
-Knowledge Hub | Digital Enablement
+EnableX | Knowledge Management Hub
 </title>
 
+
+<meta name="description"
+content="Enterprise knowledge management hub for discovering documents, insights, experts and learning resources.">
+
+
+<link rel="icon" href="assets/favicon/favicon.svg">
 
 
 <link rel="stylesheet" href="css/variables.css">
@@ -30,8 +33,14 @@ Knowledge Hub | Digital Enablement
 </head>
 
 
-
 <body>
+
+
+<div class="page-loader">
+
+<div class="loader-diamond"></div>
+
+</div>
 
 
 <div class="aurora"></div>
@@ -40,11 +49,7 @@ Knowledge Hub | Digital Enablement
 
 
 
-<!-- HEADER -->
-
-
 <header>
-
 
 <nav class="navbar">
 
@@ -63,19 +68,23 @@ EnableX
 
 <div class="nav-links">
 
+
 <a href="index.html">
 Home
 </a>
+
 
 <a href="dashboard.html">
 Dashboard
 </a>
 
+
 <a href="knowledge.html">
 Knowledge Hub
 </a>
 
-<a href="#">
+
+<a href="ai-assistant.html">
 AI Assistant
 </a>
 
@@ -84,7 +93,6 @@ AI Assistant
 
 
 </nav>
-
 
 </header>
 
@@ -99,29 +107,21 @@ AI Assistant
 
 
 
-
-<!-- HERO -->
-
-
 <section class="knowledge-hero">
 
 
-<div>
-
-
 <p class="badge">
-
-Knowledge Intelligence
-
+Enterprise Knowledge Intelligence
 </p>
 
 
 
 <h1>
 
-Find, share and
+Knowledge
+
 <span>
-create knowledge
+Hub
 </span>
 
 </h1>
@@ -130,35 +130,26 @@ create knowledge
 
 <p>
 
-A centralized knowledge ecosystem
-powered by AI search and intelligent
-recommendations.
+Discover documents, expertise, learning resources
+and organizational intelligence from one connected platform.
 
 </p>
+
 
 
 
 <div class="knowledge-search">
 
 
-<span>
-⌕
-</span>
-
-
 <input
-
 type="text"
-
-placeholder="Search enterprise knowledge..."
-
+placeholder="Search knowledge articles, documents, experts..."
+id="knowledgeSearch"
 >
 
 
 <button>
-
 Search
-
 </button>
 
 
@@ -166,10 +157,6 @@ Search
 
 
 
-</div>
-
-
-
 </section>
 
 
@@ -179,349 +166,77 @@ Search
 
 
 
-<!-- CATEGORIES -->
 
-
-<section>
-
-
-<div class="section-header">
-
-
-<p class="badge">
-
-Knowledge Areas
-
-</p>
-
-
-<h2 class="section-title">
-
-Explore your
-<span>
-knowledge ecosystem
-</span>
-
-</h2>
-
-
-</div>
-
-
-
-
-
-<div class="feature-grid">
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-📘
-</div>
-
-
-<h3>
-
-Policies & Processes
-
-</h3>
-
-
-<p>
-
-Operational guidelines,
-documentation and procedures.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-🧠
-</div>
-
-
-<h3>
-
-Expert Knowledge
-
-</h3>
-
-
-<p>
-
-Connect with experienced
-professionals and specialists.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-🚀
-</div>
-
-
-<h3>
-
-Learning Resources
-
-</h3>
-
-
-<p>
-
-Courses, tutorials and
-development materials.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- DOCUMENT LIBRARY -->
-
-
-<section>
-
-
-<div class="section-header">
-
-
-<p class="badge">
-
-Knowledge Library
-
-</p>
-
-
-<h2 class="section-title">
-
-Recommended
-<span>
-resources
-</span>
-
-</h2>
-
-
-</div>
-
-
-
-
-
-<div class="knowledge-library">
-
-
-
-<div class="document-card">
-
-
-<h3>
-
-Digital Transformation Guide
-
-</h3>
-
-
-<p>
-
-Enterprise strategy framework
-
-</p>
-
-
-<span>
-PDF • 12 MB
-</span>
-
-
-</div>
-
-
-
-
-<div class="document-card">
-
-
-<h3>
-
-AI Adoption Playbook
-
-</h3>
-
-
-<p>
-
-Artificial intelligence roadmap
-
-</p>
-
-
-<span>
-Document
-</span>
-
-
-</div>
-
-
-
-
-
-<div class="document-card">
-
-
-<h3>
-
-Customer Experience Framework
-
-</h3>
-
-
-<p>
-
-Service improvement knowledge
-
-</p>
-
-
-<span>
-Guide
-</span>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- EXPERTS -->
-
-
-<section>
-
-
-<div class="ai-panel">
-
-
-<div>
-
-
-<p class="badge">
-
-Expert Network
-
-</p>
-
+<section class="knowledge-categories">
 
 
 <h2>
-
-Find the right people
-with the right knowledge.
-
+Knowledge Categories
 </h2>
 
 
 
+<div class="category-grid">
+
+
+
+<div class="category-card">
+
+<h3>
+Digital Transformation
+</h3>
+
 <p>
-
-Discover internal specialists,
-mentors and knowledge owners.
-
+124 resources
 </p>
 
+</div>
+
+
+
+
+<div class="category-card">
+
+<h3>
+Artificial Intelligence
+</h3>
+
+<p>
+86 resources
+</p>
 
 </div>
 
 
 
-<div class="ai-screen">
 
+<div class="category-card">
 
-<div class="ai-message">
+<h3>
+Leadership & Strategy
+</h3>
 
-👤 AI Specialist
-
-<br>
-
-98% match
-
-</div>
-
-
-
-<div class="ai-message">
-
-👤 Digital Strategy Expert
-
-<br>
-
-94% match
+<p>
+72 resources
+</p>
 
 </div>
 
 
 
-<div class="ai-message">
 
-👤 Process Consultant
+<div class="category-card">
 
-<br>
+<h3>
+Technology Skills
+</h3>
 
-91% match
+<p>
+210 resources
+</p>
 
 </div>
 
-
-
-</div>
 
 
 </div>
@@ -529,6 +244,259 @@ mentors and knowledge owners.
 
 </section>
 
+
+
+
+
+
+
+
+
+<section class="knowledge-library">
+
+
+<h2>
+Featured Knowledge
+</h2>
+
+
+
+<div class="article-grid">
+
+
+
+<article class="article-card">
+
+
+<div class="article-icon">
+AI
+</div>
+
+
+<h3>
+AI Adoption Framework
+</h3>
+
+
+<p>
+
+A practical guide for implementing
+enterprise AI capabilities.
+
+</p>
+
+
+<span>
+Technology
+</span>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="article-card">
+
+
+<div class="article-icon">
+DX
+</div>
+
+
+<h3>
+Digital Workplace Strategy
+</h3>
+
+
+<p>
+
+Building connected teams through
+digital enablement.
+
+</p>
+
+
+<span>
+Strategy
+</span>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="article-card">
+
+
+<div class="article-icon">
+KM
+</div>
+
+
+<h3>
+Knowledge Sharing Model
+</h3>
+
+
+<p>
+
+Creating sustainable organizational
+knowledge systems.
+
+</p>
+
+
+<span>
+Knowledge
+</span>
+
+
+</article>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="experts">
+
+
+<h2>
+Knowledge Experts
+</h2>
+
+
+
+<div class="expert-grid">
+
+
+
+<div class="expert-card">
+
+<div class="avatar">
+AM
+</div>
+
+
+<h3>
+Alex Morgan
+</h3>
+
+
+<p>
+AI Transformation Lead
+</p>
+
+</div>
+
+
+
+
+
+<div class="expert-card">
+
+<div class="avatar">
+SK
+</div>
+
+
+<h3>
+Sarah Kim
+</h3>
+
+
+<p>
+Digital Learning Specialist
+</p>
+
+</div>
+
+
+
+
+
+<div class="expert-card">
+
+<div class="avatar">
+JD
+</div>
+
+
+<h3>
+James Davis
+</h3>
+
+
+<p>
+Enterprise Architect
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="learning-panel">
+
+
+<h2>
+Learning Paths
+</h2>
+
+
+<div class="learning-items">
+
+
+<div>
+Digital Skills Accelerator
+</div>
+
+
+<div>
+AI Productivity Program
+</div>
+
+
+<div>
+Leadership Excellence Track
+</div>
+
+
+</div>
+
+
+</section>
 
 
 
@@ -539,10 +507,29 @@ mentors and knowledge owners.
 
 
 
+
+<footer>
+
+
+<p>
+
+© 2026 EnableX. Knowledge Management Platform.
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
 <script src="js/app.js"></script>
+
+<script src="js/knowledge.js"></script>
 
 
 </body>
-
 
 </html>
