@@ -1,0 +1,401 @@
+/* ==========================================================
+   ENABLEX AI WORKFORCE STRATEGY
+   strategy.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.strategy-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.strategy-hero{
+
+text-align:center;
+
+max-width:1000px;
+
+margin:0 auto 70px;
+
+}
+
+
+
+.strategy-hero h1{
+
+font-size:3.8rem;
+
+margin:25px 0;
+
+}
+
+
+
+.strategy-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.strategy-hero p{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   STRATEGY METRICS
+======================================== */
+
+.strategy-metrics{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.strategy-card{
+
+padding:40px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.3s;
+
+}
+
+
+
+.strategy-card:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.strategy-card strong{
+
+display:block;
+
+font-size:3.2rem;
+
+margin:20px 0;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.strategy-card p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   FORECAST SECTION
+======================================== */
+
+.forecast-section{
+
+margin-top:60px;
+
+}
+
+
+
+.forecast-section h2,
+.strategy-insights h2{
+
+font-size:2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.forecast-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.forecast-grid div{
+
+padding:35px;
+
+border-radius:26px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.forecast-grid p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   FORECAST BARS
+======================================== */
+
+.forecast-bar{
+
+height:12px;
+
+margin-top:25px;
+
+border-radius:999px;
+
+overflow:hidden;
+
+background:
+
+rgba(255,255,255,.1);
+
+}
+
+
+
+.forecast-bar span{
+
+display:block;
+
+height:100%;
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+}
+
+
+
+/* ========================================
+   AI STRATEGIC INSIGHTS
+======================================== */
+
+.strategy-insights{
+
+margin-top:70px;
+
+padding:45px;
+
+border-radius:32px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.12),
+rgba(108,99,255,.12)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.recommendation-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.recommendation-grid div{
+
+padding:30px;
+
+border-radius:22px;
+
+background:
+
+rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+
+
+.recommendation-grid div:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(24,216,158,.12);
+
+}
+
+
+
+.recommendation-grid p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1000px){
+
+
+.strategy-metrics{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.forecast-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.recommendation-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.strategy-hero h1{
+
+font-size:2.5rem;
+
+}
+
+
+}
