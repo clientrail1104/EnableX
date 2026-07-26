@@ -1,53 +1,57 @@
 /* ==========================================================
-   DIGITAL ENABLEMENT
-   Premium Interaction Engine
+   ENABLEX APPLICATION ENGINE
    app.js
 ========================================================== */
 
 
 /* ==========================================================
-   PAGE READY
+   DOM READY
 ========================================================== */
+
 
 document.addEventListener(
 "DOMContentLoaded",
 ()=>{
 
 
+console.log(
+"EnableX Platform Loaded"
+);
+
+
+
 /* ==========================================================
-   NAVBAR SCROLL EFFECT
+   ACTIVE NAVIGATION
 ========================================================== */
 
 
-const navbar=document.querySelector(".navbar");
+const currentPage =
+window.location.pathname.split("/").pop();
 
 
-if(navbar){
+
+const navLinks =
+document.querySelectorAll(
+".nav-links a"
+);
 
 
-window.addEventListener(
-"scroll",
-()=>{
+
+navLinks.forEach(link=>{
 
 
-if(window.scrollY>50){
-
-navbar.style.background=
-"rgba(5,8,22,.85)";
-
-navbar.style.boxShadow=
-"0 20px 50px rgba(0,0,0,.35)";
+const href =
+link.getAttribute("href");
 
 
-}else{
 
+if(
+href === currentPage
+){
 
-navbar.style.background=
-"rgba(255,255,255,.06)";
-
-navbar.style.boxShadow=
-"0 10px 30px rgba(0,0,0,.20)";
-
+link.classList.add(
+"active"
+);
 
 }
 
@@ -55,236 +59,246 @@ navbar.style.boxShadow=
 });
 
 
-}
 
 
 
 /* ==========================================================
-   SCROLL REVEAL SYSTEM
+   SMOOTH BUTTON EFFECTS
 ========================================================== */
 
 
-const revealElements=
+const buttons =
 document.querySelectorAll(
-".feature-card, .knowledge-card, .solution-card, .glass-card"
+".btn-primary, .btn-secondary"
 );
 
 
 
-const revealObserver=
-new IntersectionObserver(
+buttons.forEach(button=>{
 
+
+button.addEventListener(
+"mouseenter",
+()=>{
+
+button.style.transform =
+"translateY(-4px)";
+
+});
+
+
+button.addEventListener(
+"mouseleave",
+()=>{
+
+button.style.transform =
+"translateY(0)";
+
+});
+
+
+});
+
+
+
+
+
+
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
+
+
+const revealElements =
+document.querySelectorAll(
+".feature-card, .glass-card, .cta"
+);
+
+
+
+const observer =
+new IntersectionObserver(
 (entries)=>{
 
 
-entries.forEach(
-
-(entry)=>{
+entries.forEach(entry=>{
 
 
 if(entry.isIntersecting){
 
 
-entry.target.classList.add(
-"show"
-);
+entry.target.style.opacity="1";
+
+entry.target.style.transform=
+"translateY(0)";
 
 
 }
 
 
-}
-
-);
+});
 
 
 },
-
 {
 
 threshold:.15
 
 }
-
 );
 
 
 
-revealElements.forEach(
-(el)=>{
+revealElements.forEach(element=>{
 
 
-el.classList.add(
-"reveal"
-);
+element.style.opacity="0";
+
+element.style.transform=
+"translateY(40px)";
 
 
-revealObserver.observe(el);
+element.style.transition=
+"all .6s ease";
 
 
-}
+observer.observe(element);
 
-);
+
+});
+
 
 
 
 
 
 /* ==========================================================
-   CURSOR LIGHT EFFECT
+   AI DEMO INTERACTION
 ========================================================== */
 
 
-const cursorGlow=
+const aiInput =
+document.querySelector(
+".chat-input input"
+);
+
+
+
+const aiButton =
+document.querySelector(
+".chat-input button"
+);
+
+
+
+if(
+aiInput &&
+aiButton
+){
+
+
+aiButton.addEventListener(
+"click",
+()=>{
+
+
+const question =
+aiInput.value.trim();
+
+
+
+if(question === "")
+return;
+
+
+
+const messages =
+document.querySelector(
+".messages"
+);
+
+
+
+const userMessage =
 document.createElement(
 "div"
 );
 
 
-cursorGlow.className=
-"cursor-glow";
+
+userMessage.className =
+"message user";
 
 
-document.body.appendChild(
-cursorGlow
+
+userMessage.textContent =
+question;
+
+
+
+messages.appendChild(
+userMessage
 );
 
 
 
-document.addEventListener(
-"mousemove",
-(e)=>{
+aiInput.value="";
 
 
-cursorGlow.style.left=
-e.clientX+"px";
 
 
-cursorGlow.style.top=
-e.clientY+"px";
+setTimeout(
+()=>{
 
 
-}
-
+const aiMessage =
+document.createElement(
+"div"
 );
 
 
 
-
-
-/* ==========================================================
-   PREMIUM CARD TILT
-========================================================== */
-
-
-const cards=
-document.querySelectorAll(
-".glass-card, .feature-card"
-);
+aiMessage.className =
+"message ai";
 
 
 
-cards.forEach(
-(card)=>{
-
-
-card.addEventListener(
-"mousemove",
-(e)=>{
-
-
-const rect=
-card.getBoundingClientRect();
-
-
-const x=
-e.clientX-rect.left;
-
-
-const y=
-e.clientY-rect.top;
-
-
-const rotateX=
-((y-rect.height/2)/20)*-1;
-
-
-const rotateY=
-(x-rect.width/2)/20;
-
-
-card.style.transform=
+aiMessage.innerHTML =
 `
-perspective(900px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)
+I analyzed your request.
+
+<br><br>
+
+Recommended knowledge resources
+have been identified from the
+enterprise knowledge base.
+
+<br><br>
+
+AI Insight:
+"${question}"
+can be explored through
+relevant documents and experts.
 `;
 
 
 
-}
-
+messages.appendChild(
+aiMessage
 );
 
 
 
-card.addEventListener(
-"mouseleave",
-()=>{
+messages.scrollTop =
+messages.scrollHeight;
 
 
-card.style.transform="";
 
-
-}
-
+},
+800
 );
 
 
-
-}
-
-);
-
-
-
-
-
-/* ==========================================================
-   SMOOTH ANCHOR SCROLL
-========================================================== */
-
-
-document
-.querySelectorAll(
-'a[href^="#"]'
-)
-.forEach(
-(anchor)=>{
-
-
-anchor.addEventListener(
-"click",
-function(e){
-
-
-const target=
-document.querySelector(
-this.getAttribute("href")
-);
-
-
-
-if(target){
-
-
-e.preventDefault();
-
-
-target.scrollIntoView({
-
-behavior:"smooth"
 
 });
 
@@ -292,25 +306,47 @@ behavior:"smooth"
 }
 
 
-}
 
-);
-
-
-}
-
-);
 
 
 
 /* ==========================================================
-   PAGE LOAD ANIMATION
+   PROMPT BUTTONS
 ========================================================== */
 
 
-document.body.classList.add(
-"loaded"
+const prompts =
+document.querySelectorAll(
+".prompt"
 );
+
+
+
+prompts.forEach(prompt=>{
+
+
+prompt.addEventListener(
+"click",
+()=>{
+
+
+if(aiInput){
+
+
+aiInput.value =
+prompt.textContent.trim();
+
+
+aiInput.focus();
+
+
+}
+
+
+});
+
+
+});
 
 
 
