@@ -544,3 +544,68 @@ border-left:5px solid #18D89E;
 border-left:5px solid #EF4444;
 
 }
+/* ========================================
+   SELECT
+======================================== */
+
+.form-group select{
+
+width:100%;
+
+padding:18px 20px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+outline:none;
+
+}
+
+.form-group select option{
+
+background:#0F172A;
+
+color:white;
+
+}
+
+/* ========================================
+   PASSWORD STRENGTH
+======================================== */
+
+.password-strength{
+
+margin-top:12px;
+
+}
+
+.strength-bar{
+
+height:8px;
+
+background:rgba(255,255,255,.1);
+
+border-radius:999px;
+
+overflow:hidden;
+
+margin-bottom:8px;
+
+}
+
+#strengthFill{
+
+width:0;
+
+height:100%;
+
+background:#EF4444;
+
+transition:all .3s ease;
+
+}
