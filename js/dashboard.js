@@ -1,277 +1,204 @@
 /* ==========================================================
-   ENABLEX EXECUTIVE DASHBOARD ENGINE
+   ENABLEX EMPLOYEE DASHBOARD ENGINE
    dashboard.js
 ========================================================== */
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
 
-console.log(
-"EnableX Dashboard Activated"
+console.log("EnableX Dashboard Loaded");
+
+
+
+/* ========================================
+   SESSION PERSONALIZATION
+======================================== */
+
+
+const session =
+JSON.parse(
+
+localStorage.getItem(
+"enablex-session"
+)
+
 );
 
 
 
-/* ==========================================================
-   KPI COUNTER ANIMATION
-========================================================== */
+const welcomeName =
+document.querySelector(".welcome-section h1 span");
 
 
-const counters =
+
+if(session && welcomeName){
+
+
+const userName =
+session.email
+? session.email.split("@")[0]
+: "Employee";
+
+
+
+welcomeName.textContent =
+capitalize(userName);
+
+
+}
+
+
+
+
+
+function capitalize(value){
+
+
+return value.charAt(0).toUpperCase()
++
+value.slice(1);
+
+
+}
+
+
+
+
+
+
+
+/* ========================================
+   METRIC ANIMATION
+======================================== */
+
+
+const metrics =
 document.querySelectorAll(
-".stat-card strong"
+".metric-grid strong"
 );
 
 
 
-counters.forEach(counter=>{
+metrics.forEach(metric => {
 
 
-const target =
+const raw =
+metric.textContent.trim();
+
+
+
+const number =
 parseInt(
-counter.textContent.replace(/,/g,"")
+raw.replace(/\D/g,"")
 );
 
+
+
+if(!isNaN(number)){
+
+
+animateMetric(
+metric,
+number,
+raw
+);
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+function animateMetric(element,target,original){
 
 
 let current = 0;
 
 
-
-const increment =
-Math.ceil(
-target / 120
-);
+const step =
+Math.ceil(target / 50);
 
 
 
-const updateCounter = ()=>{
+const timer =
+setInterval(()=>{
 
 
-current += increment;
-
-
-
-if(current < target){
-
-
-counter.textContent =
-current.toLocaleString();
+current += step;
 
 
 
-requestAnimationFrame(
-updateCounter
-);
+if(current >= target){
 
 
-
-}
-
-else{
+current = target;
 
 
-counter.textContent =
-target.toLocaleString();
-
+clearInterval(timer);
 
 
 }
 
 
-};
+
+let suffix =
+original.replace(/[0-9]/g,"");
 
 
 
-updateCounter();
+element.textContent =
+current.toLocaleString()
++
+suffix;
 
 
 
-});
+},25);
+
+
+
+}
 
 
 
 
 
 
-/* ==========================================================
-   KPI CARD INTERACTION
-========================================================== */
+
+/* ========================================
+   AI BUTTON SHORTCUT
+======================================== */
 
 
-const cards =
-document.querySelectorAll(
-".stat-card"
+const aiButton =
+document.querySelector(
+".welcome-section button"
 );
 
 
 
-cards.forEach(card=>{
+if(aiButton){
 
 
-card.addEventListener(
+aiButton.addEventListener(
 "click",
 ()=>{
 
 
-cards.forEach(item=>{
-
-item.classList.remove(
-"selected"
-);
-
-});
-
-
-card.classList.add(
-"selected"
-);
-
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-/* ==========================================================
-   LIVE TIME INDICATOR
-========================================================== */
-
-
-const createTimeWidget =
-()=>{
-
-
-const dashboardHero =
-document.querySelector(
-".dashboard-hero"
-);
-
-
-
-if(!dashboardHero)
-return;
-
-
-
-const time =
-document.createElement(
-"p"
-);
-
-
-
-time.className =
-"dashboard-time";
-
-
-
-dashboardHero.appendChild(
-time
-);
-
-
-
-const updateTime =
-()=>{
-
-
-const now =
-new Date();
-
-
-
-time.textContent =
-"Last Updated: "
-+
-now.toLocaleString();
-
-
-
-};
-
-
-
-updateTime();
-
-
-
-setInterval(
-updateTime,
-1000
-);
-
-
-
-};
-
-
-
-createTimeWidget();
-
-
-
-
-
-
-/* ==========================================================
-   CHART OBSERVER
-========================================================== */
-
-
-const chart =
-document.querySelector(
-".chart-placeholder"
-);
-
-
-
-if(chart){
-
-
-
-const observer =
-new IntersectionObserver(
-(entries)=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-
-chart.classList.add(
-"chart-active"
-);
+window.location.href =
+"ai-assistant.html";
 
 
 }
 
-
-});
-
-
-},
-{
-threshold:.4
-}
 );
-
-
-
-observer.observe(chart);
-
 
 
 }
@@ -282,68 +209,116 @@ observer.observe(chart);
 
 
 
-/* ==========================================================
-   DASHBOARD NOTIFICATION
-========================================================== */
+/* ========================================
+   DASHBOARD CARD INTERACTION
+======================================== */
 
 
-const showNotification =
-(message)=>{
-
-
-const notification =
-document.createElement(
-"div"
+const recommendations =
+document.querySelectorAll(
+".recommendation button"
 );
 
 
 
-notification.className =
-"dashboard-notification";
+recommendations.forEach(button=>{
 
 
-
-notification.textContent =
-message;
-
-
-
-document.body.appendChild(
-notification
-);
-
-
-
-setTimeout(
+button.addEventListener(
+"click",
 ()=>{
 
 
-notification.remove();
+button.textContent =
+"Opening...";
 
 
-},
-3000
+
+setTimeout(()=>{
+
+
+button.textContent =
+"Continue";
+
+
+},1200);
+
+
+
+}
+
+);
+
+
+});
+
+
+
+
+
+
+
+/* ========================================
+   KNOWLEDGE ITEM CLICK
+======================================== */
+
+
+const knowledgeItems =
+document.querySelectorAll(
+".knowledge-list li"
 );
 
 
 
-};
+knowledgeItems.forEach(item=>{
 
 
-
-
-setTimeout(
+item.addEventListener(
+"click",
 ()=>{
 
 
-showNotification(
-"Dashboard intelligence synchronized"
+localStorage.setItem(
+
+"selectedKnowledge",
+
+item.textContent.trim()
+
 );
 
 
-},
-1500
+
+window.location.href =
+"knowledge-detail.html";
+
+
+}
+
 );
+
+
+});
+
+
+
+
+
+
+
+/* ========================================
+   DASHBOARD READY MESSAGE
+======================================== */
+
+
+setTimeout(()=>{
+
+
+console.log(
+"EnableX workspace ready"
+);
+
+
+},800);
 
 
 
