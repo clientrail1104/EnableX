@@ -482,3 +482,45 @@ max-width:90%;
 
 
 }
+/* ========================================
+   AI TYPING INDICATOR
+======================================== */
+
+
+#aiTyping{
+
+opacity:.8;
+
+font-style:italic;
+
+animation:pulseAI 1.2s infinite;
+
+}
+
+
+
+@keyframes pulseAI{
+
+
+0%{
+
+opacity:.4;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+opacity:.4;
+
+}
+
+
+}
