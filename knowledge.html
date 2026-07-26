@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,42 +9,26 @@
 
 
 <title>
-EnableX | Knowledge Management Hub
+EnableX | Knowledge Hub
 </title>
-
-
-<meta name="description"
-content="Enterprise knowledge management hub for discovering documents, insights, experts and learning resources.">
 
 
 <link rel="icon" href="assets/favicon/favicon.svg">
 
 
 <link rel="stylesheet" href="css/variables.css">
-
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/responsive.css">
-
 <link rel="stylesheet" href="css/knowledge.css">
 
-
 </head>
+
 
 
 <body>
 
 
-<div class="page-loader">
-
-<div class="loader-diamond"></div>
-
-</div>
-
-
 <div class="aurora"></div>
-
-
 
 
 
@@ -59,28 +42,19 @@ content="Enterprise knowledge management hub for discovering documents, insights
 <span class="diamond"></span>
 
 <h2>
-EnableX
+EnableX Knowledge
 </h2>
 
 </div>
 
 
 
+
 <div class="nav-links">
-
-
-<a href="index.html">
-Home
-</a>
 
 
 <a href="dashboard.html">
 Dashboard
-</a>
-
-
-<a href="knowledge.html">
-Knowledge Hub
 </a>
 
 
@@ -89,7 +63,18 @@ AI Assistant
 </a>
 
 
+<a href="admin.html">
+Admin
+</a>
+
+
+<a href="profile.html">
+Profile
+</a>
+
+
 </div>
+
 
 
 </nav>
@@ -100,9 +85,8 @@ AI Assistant
 
 
 
+<main class="knowledge-container">
 
-
-<main>
 
 
 
@@ -110,18 +94,18 @@ AI Assistant
 <section class="knowledge-hero">
 
 
-<p class="badge">
-Enterprise Knowledge Intelligence
-</p>
+<span class="badge">
+Enterprise Knowledge Platform
+</span>
 
 
 
 <h1>
 
-Knowledge
+Discover
 
 <span>
-Hub
+Organizational Intelligence
 </span>
 
 </h1>
@@ -130,8 +114,9 @@ Hub
 
 <p>
 
-Discover documents, expertise, learning resources
-and organizational intelligence from one connected platform.
+Search documents, policies, expertise,
+learning resources and institutional knowledge
+from one intelligent workspace.
 
 </p>
 
@@ -142,15 +127,23 @@ and organizational intelligence from one connected platform.
 
 
 <input
-type="text"
-placeholder="Search knowledge articles, documents, experts..."
+
+type="search"
+
 id="knowledgeSearch"
+
+placeholder="Search knowledge, documents, experts..."
+
 >
 
 
-<button>
+
+<button class="btn-primary">
+
 Search
+
 </button>
+
 
 
 </div>
@@ -166,12 +159,11 @@ Search
 
 
 
-
 <section class="knowledge-categories">
 
 
 <h2>
-Knowledge Categories
+Explore Categories
 </h2>
 
 
@@ -183,11 +175,11 @@ Knowledge Categories
 <div class="category-card">
 
 <h3>
-Digital Transformation
+Policies
 </h3>
 
 <p>
-124 resources
+Corporate guidelines and standards
 </p>
 
 </div>
@@ -198,11 +190,11 @@ Digital Transformation
 <div class="category-card">
 
 <h3>
-Artificial Intelligence
+Technology
 </h3>
 
 <p>
-86 resources
+Engineering and digital resources
 </p>
 
 </div>
@@ -210,14 +202,15 @@ Artificial Intelligence
 
 
 
+
 <div class="category-card">
 
 <h3>
-Leadership & Strategy
+Learning
 </h3>
 
 <p>
-72 resources
+Courses and development paths
 </p>
 
 </div>
@@ -225,14 +218,15 @@ Leadership & Strategy
 
 
 
+
 <div class="category-card">
 
 <h3>
-Technology Skills
+Business
 </h3>
 
 <p>
-210 resources
+Strategy and operational knowledge
 </p>
 
 </div>
@@ -255,9 +249,25 @@ Technology Skills
 <section class="knowledge-library">
 
 
+<div class="section-header">
+
+
 <h2>
 Featured Knowledge
 </h2>
+
+
+<button class="btn-secondary">
+
+Create Article
+
+</button>
+
+
+</div>
+
+
+
 
 
 
@@ -265,31 +275,42 @@ Featured Knowledge
 
 
 
-<article class="article-card">
 
 
-<div class="article-icon">
-AI
+<article class="knowledge-card">
+
+
+<div class="card-icon">
+
+📘
+
 </div>
 
 
 <h3>
-AI Adoption Framework
+AI Transformation Strategy
 </h3>
 
 
 <p>
 
-A practical guide for implementing
-enterprise AI capabilities.
+Enterprise AI adoption roadmap and best practices.
 
 </p>
 
+
+<div class="article-meta">
 
 <span>
 Technology
 </span>
 
+<span>
+Updated Today
+</span>
+
+</div>
+
 
 </article>
 
@@ -299,30 +320,40 @@ Technology
 
 
 
-<article class="article-card">
+
+<article class="knowledge-card">
 
 
-<div class="article-icon">
-DX
+<div class="card-icon">
+
+📄
+
 </div>
 
 
 <h3>
-Digital Workplace Strategy
+Security Framework
 </h3>
 
 
 <p>
 
-Building connected teams through
-digital enablement.
+Enterprise security standards and compliance rules.
 
 </p>
 
 
+<div class="article-meta">
+
 <span>
-Strategy
+Security
 </span>
+
+<span>
+Updated Yesterday
+</span>
+
+</div>
 
 
 </article>
@@ -333,33 +364,44 @@ Strategy
 
 
 
-<article class="article-card">
+
+<article class="knowledge-card">
 
 
-<div class="article-icon">
-KM
+<div class="card-icon">
+
+🎓
+
 </div>
 
 
 <h3>
-Knowledge Sharing Model
+Leadership Learning Path
 </h3>
 
 
 <p>
 
-Creating sustainable organizational
-knowledge systems.
+Professional development resources for managers.
 
 </p>
 
 
+<div class="article-meta">
+
 <span>
-Knowledge
+Learning
 </span>
+
+<span>
+Updated This Week
+</span>
+
+</div>
 
 
 </article>
+
 
 
 
@@ -377,78 +419,53 @@ Knowledge
 
 
 
-
-<section class="experts">
+<section class="knowledge-insights">
 
 
 <h2>
-Knowledge Experts
+Knowledge Intelligence
 </h2>
 
 
-
-<div class="expert-grid">
-
+<div class="insight-grid">
 
 
-<div class="expert-card">
+<div>
 
-<div class="avatar">
-AM
-</div>
-
-
-<h3>
-Alex Morgan
-</h3>
-
+<strong>
+25,840
+</strong>
 
 <p>
-AI Transformation Lead
+Knowledge Assets
 </p>
 
 </div>
 
 
 
+<div>
 
-
-<div class="expert-card">
-
-<div class="avatar">
-SK
-</div>
-
-
-<h3>
-Sarah Kim
-</h3>
-
+<strong>
+94%
+</strong>
 
 <p>
-Digital Learning Specialist
+Search Success Rate
 </p>
 
 </div>
 
 
 
+<div>
 
-
-<div class="expert-card">
-
-<div class="avatar">
-JD
-</div>
-
-
-<h3>
-James Davis
-</h3>
-
+<strong>
+8,420
+</strong>
 
 <p>
-Enterprise Architect
+Active Contributors
 </p>
 
 </div>
@@ -461,42 +478,6 @@ Enterprise Architect
 </section>
 
 
-
-
-
-
-
-
-<section class="learning-panel">
-
-
-<h2>
-Learning Paths
-</h2>
-
-
-<div class="learning-items">
-
-
-<div>
-Digital Skills Accelerator
-</div>
-
-
-<div>
-AI Productivity Program
-</div>
-
-
-<div>
-Leadership Excellence Track
-</div>
-
-
-</div>
-
-
-</section>
 
 
 
@@ -508,13 +489,12 @@ Leadership Excellence Track
 
 
 
+
 <footer>
 
 
 <p>
-
-© 2026 EnableX. Knowledge Management Platform.
-
+© 2026 EnableX Knowledge Platform
 </p>
 
 
