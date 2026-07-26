@@ -1,0 +1,403 @@
+/* ==========================================================
+   ENABLEX MANAGER INTELLIGENCE
+   manager.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.manager-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.manager-hero{
+
+text-align:center;
+
+max-width:950px;
+
+margin:0 auto 70px;
+
+}
+
+
+
+.manager-hero h1{
+
+font-size:3.8rem;
+
+margin:25px 0;
+
+}
+
+
+
+.manager-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.manager-hero p{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+
+
+/* ========================================
+   TEAM OVERVIEW CARDS
+======================================== */
+
+.team-overview{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.manager-card{
+
+padding:35px;
+
+text-align:center;
+
+border-radius:28px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.3s;
+
+}
+
+
+
+.manager-card:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.manager-card strong{
+
+display:block;
+
+font-size:3rem;
+
+margin:20px 0;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.manager-card p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   SKILL HEATMAP
+======================================== */
+
+.heatmap-section{
+
+margin-top:60px;
+
+}
+
+
+
+.heatmap-section h2,
+.manager-insights h2{
+
+font-size:2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.skill-heatmap{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.skill-heatmap div{
+
+padding:30px;
+
+border-radius:24px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.skill-heatmap span{
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+}
+
+
+
+.skill-heatmap .high{
+
+background:#18D89E;
+
+box-shadow:
+
+0 0 15px #18D89E;
+
+}
+
+
+
+.skill-heatmap .medium{
+
+background:#2EC5FF;
+
+box-shadow:
+
+0 0 15px #2EC5FF;
+
+}
+
+
+
+.skill-heatmap .low{
+
+background:#F59E0B;
+
+box-shadow:
+
+0 0 15px #F59E0B;
+
+}
+
+
+
+/* ========================================
+   AI INSIGHTS
+======================================== */
+
+.manager-insights{
+
+margin-top:70px;
+
+padding:45px;
+
+border-radius:32px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.12),
+rgba(108,99,255,.12)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.insight-cards{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.insight-cards div{
+
+padding:30px;
+
+border-radius:22px;
+
+background:
+
+rgba(255,255,255,.06);
+
+}
+
+
+
+.insight-cards p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1100px){
+
+
+.team-overview{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+
+
+.skill-heatmap{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.insight-cards{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.team-overview{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.manager-hero h1{
+
+font-size:2.5rem;
+
+}
+
+
+}
