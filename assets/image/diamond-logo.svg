@@ -1,1 +1,57 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none"
+xmlns="http://www.w3.org/2000/svg">
 
+
+<defs>
+
+<linearGradient id="diamondGradient"
+x1="0"
+y1="0"
+x2="300"
+y2="300">
+
+
+<stop stop-color="#2EC5FF"/>
+
+<stop offset="0.5"
+stop-color="#6C63FF"/>
+
+<stop offset="1"
+stop-color="#18D89E"/>
+
+
+</linearGradient>
+
+
+</defs>
+
+
+
+<rect
+x="45"
+y="45"
+width="210"
+height="210"
+rx="45"
+transform="rotate(45 150 150)"
+fill="url(#diamondGradient)"
+/>
+
+
+
+<path
+
+d="M150 75
+L215 150
+L150 225
+L85 150Z"
+
+fill="white"
+
+fill-opacity="0.15"
+
+/>
+
+
+
+</svg>
