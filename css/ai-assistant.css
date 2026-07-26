@@ -900,3 +900,33 @@ font-size:
 
 
 }
+/* ==========================================================
+   AI TYPING STATE
+========================================================== */
+
+
+.typing {
+
+opacity:.7;
+
+font-style:italic;
+
+animation:
+
+pulseAI 1.2s infinite;
+
+}
+
+
+
+@keyframes pulseAI {
+
+
+50% {
+
+opacity:.35;
+
+}
+
+
+}
