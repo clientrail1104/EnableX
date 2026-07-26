@@ -1,0 +1,445 @@
+/* ==========================================================
+   ENABLEX ENTERPRISE AI ASSISTANT
+   ai-enterprise.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.ai-enterprise-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   AI HERO
+======================================== */
+
+.ai-hero{
+
+text-align:center;
+
+max-width:1000px;
+
+margin:0 auto 70px;
+
+}
+
+
+
+.ai-hero h1{
+
+font-size:4rem;
+
+margin:25px 0;
+
+}
+
+
+
+.ai-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.ai-hero p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   AI CONSOLE
+======================================== */
+
+.ai-console{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:70px;
+
+}
+
+
+
+.assistant-panel{
+
+width:min(900px,100%);
+
+padding:35px;
+
+border-radius:32px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.25);
+
+}
+
+
+
+/* ========================================
+   ASSISTANT HEADER
+======================================== */
+
+.assistant-header{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+padding-bottom:25px;
+
+border-bottom:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.ai-avatar{
+
+width:70px;
+
+height:70px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+font-weight:800;
+
+font-size:1.8rem;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+}
+
+
+
+.assistant-header p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   CHAT AREA
+======================================== */
+
+.conversation{
+
+height:350px;
+
+overflow-y:auto;
+
+padding:30px 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+
+
+.message{
+
+max-width:75%;
+
+padding:18px 22px;
+
+border-radius:22px;
+
+line-height:1.6;
+
+}
+
+
+
+.ai-message{
+
+align-self:flex-start;
+
+background:
+
+rgba(46,197,255,.12);
+
+border:
+
+1px solid rgba(46,197,255,.25);
+
+}
+
+
+
+.user-message{
+
+align-self:flex-end;
+
+background:
+
+rgba(108,99,255,.18);
+
+border:
+
+1px solid rgba(108,99,255,.3);
+
+}
+
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.ai-input{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+
+.ai-input input{
+
+flex:1;
+
+padding:18px 22px;
+
+border-radius:18px;
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+background:
+
+rgba(255,255,255,.08);
+
+color:white;
+
+font-size:1rem;
+
+outline:none;
+
+}
+
+
+
+.ai-input button{
+
+padding:18px 35px;
+
+border:none;
+
+border-radius:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+}
+
+
+
+/* ========================================
+   CAPABILITY SECTIONS
+======================================== */
+
+.ai-capabilities,
+.automation-panel{
+
+margin-top:70px;
+
+}
+
+
+
+.ai-capabilities h2,
+.automation-panel h2{
+
+font-size:2.2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.capability-grid,
+.automation-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.capability-grid div,
+.automation-grid div{
+
+padding:32px;
+
+border-radius:24px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.3s;
+
+}
+
+
+
+.capability-grid div:hover,
+.automation-grid div:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.capability-grid p,
+.automation-grid p{
+
+color:var(--text-light);
+
+line-height:1.7;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1000px){
+
+
+.capability-grid,
+.automation-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.ai-hero h1{
+
+font-size:2.6rem;
+
+}
+
+
+
+.ai-input{
+
+flex-direction:column;
+
+}
+
+
+
+.message{
+
+max-width:90%;
+
+}
+
+
+}
