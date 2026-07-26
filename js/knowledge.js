@@ -1,211 +1,73 @@
 /* ==========================================================
-   ENABLEX KNOWLEDGE HUB ENGINE
+   ENABLEX KNOWLEDGE ENGINE
    knowledge.js
 ========================================================== */
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
 
-console.log(
-"EnableX Knowledge Hub Activated"
-);
+console.log("EnableX Knowledge Hub Loaded");
 
 
 
-
-
-/* ==========================================================
-   KNOWLEDGE SEARCH
-========================================================== */
+/* ========================================
+   SEARCH ENGINE
+======================================== */
 
 
 const searchInput =
-document.getElementById(
-"knowledgeSearch"
-);
+document.getElementById("knowledgeSearch");
+
+
+const cards =
+document.querySelectorAll(".knowledge-card");
 
 
 
-const searchButton =
-document.querySelector(
-".knowledge-search button"
-);
+if(searchInput){
 
 
-
-const articles =
-document.querySelectorAll(
-".article-card"
-);
-
-
-
-
-
-if(searchInput && searchButton){
-
-
-
-const performSearch = ()=>{
+searchInput.addEventListener("input", () => {
 
 
 const keyword =
-searchInput.value
-.toLowerCase()
-.trim();
+searchInput.value.toLowerCase();
 
 
 
-let found = false;
-
-
-
-articles.forEach(article=>{
+cards.forEach(card => {
 
 
 const content =
-article.textContent
-.toLowerCase();
+card.textContent.toLowerCase();
 
 
 
-if(
-content.includes(keyword)
-||
-keyword === ""
-){
+if(content.includes(keyword)){
 
 
-article.style.display =
-"block";
-
-
-found = true;
+card.style.display = "block";
 
 
 }
-
 else{
 
 
-article.style.display =
-"none";
+card.style.display = "none";
 
 
 }
+
 
 
 });
 
 
 
-showSearchMessage(
-found
-?
-"Knowledge resources found"
-:
-"No matching knowledge resources found"
-);
-
-
-
-};
-
-
-
-
-
-searchButton.addEventListener(
-"click",
-performSearch
-);
-
-
-
-searchInput.addEventListener(
-"keypress",
-(event)=>{
-
-
-if(event.key==="Enter"){
-
-performSearch();
-
-}
-
-
 });
 
 
-
-}
-
-
-
-
-
-/* ==========================================================
-   SEARCH MESSAGE
-========================================================== */
-
-
-function showSearchMessage(message){
-
-
-let notification =
-document.querySelector(
-".knowledge-notification"
-);
-
-
-
-if(notification){
-
-notification.remove();
-
-}
-
-
-
-notification =
-document.createElement(
-"div"
-);
-
-
-
-notification.className =
-"knowledge-notification";
-
-
-
-notification.textContent =
-message;
-
-
-
-document.body.appendChild(
-notification
-);
-
-
-
-setTimeout(
-()=>{
-
-
-notification.remove();
-
-
-},
-2500
-);
-
-
-
 }
 
 
@@ -213,47 +75,30 @@ notification.remove();
 
 
 
-/* ==========================================================
+/* ========================================
    CATEGORY INTERACTION
-========================================================== */
+======================================== */
 
 
 const categories =
-document.querySelectorAll(
-".category-card"
-);
+document.querySelectorAll(".category-card");
 
 
 
-categories.forEach(category=>{
+categories.forEach(category => {
 
 
-category.addEventListener(
-"click",
-()=>{
+category.addEventListener("click", () => {
 
 
-categories.forEach(item=>{
-
-item.classList.remove(
-"active-category"
-);
-
-});
+const name =
+category.querySelector("h3").textContent;
 
 
 
-category.classList.add(
-"active-category"
-);
+showKnowledgeToast(
 
-
-
-showSearchMessage(
-
-category.querySelector("h3").textContent
-+
-" selected"
+`${name} category selected`
 
 );
 
@@ -270,53 +115,115 @@ category.querySelector("h3").textContent
 
 
 
-/* ==========================================================
+/* ========================================
    ARTICLE CARD INTERACTION
-========================================================== */
+======================================== */
 
 
-articles.forEach(article=>{
+cards.forEach(card => {
 
 
-article.addEventListener(
-"mouseenter",
-()=>{
-
-
-article.style.cursor =
-"pointer";
-
-
-});
-
-
-
-article.addEventListener(
-"click",
-()=>{
+card.addEventListener("click", () => {
 
 
 const title =
-article.querySelector(
-"h3"
-).textContent;
+card.querySelector("h3").textContent;
 
 
 
-showSearchMessage(
+localStorage.setItem(
 
-"Opening knowledge article: "
-+
+"selectedKnowledge",
+
 title
 
 );
 
 
 
+window.location.href =
+"knowledge-detail.html";
+
+
+
 });
 
 
 });
+
+
+
+
+
+
+
+/* ========================================
+   TOAST SYSTEM
+======================================== */
+
+
+function showKnowledgeToast(message){
+
+
+const old =
+document.querySelector(".knowledge-toast");
+
+
+
+if(old){
+
+old.remove();
+
+}
+
+
+
+const toast =
+document.createElement("div");
+
+
+
+toast.className =
+"knowledge-toast";
+
+
+
+toast.textContent =
+message;
+
+
+
+document.body.appendChild(toast);
+
+
+
+setTimeout(()=>{
+
+toast.classList.add("active");
+
+},50);
+
+
+
+setTimeout(()=>{
+
+
+toast.classList.remove("active");
+
+
+setTimeout(()=>{
+
+toast.remove();
+
+},300);
+
+
+
+},2500);
+
+
+
+}
 
 
 
