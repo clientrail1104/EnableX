@@ -1,95 +1,37 @@
 /* ==========================================================
-   DIGITAL ENABLEMENT
-   Premium Responsive System
+   ENABLEX RESPONSIVE SYSTEM
    responsive.css
 ========================================================== */
 
 
+
 /* ==========================================================
-   LARGE SCREENS
+   LARGE TABLETS / SMALL LAPTOPS
 ========================================================== */
 
 
-@media(max-width:1200px){
+@media (max-width:1100px){
 
-
-.hero{
-
-gap:50px;
-
-}
-
-
-.hero h1{
-
-font-size:4rem;
-
-}
-
-
-.nav-links{
-
-gap:20px;
-
-}
-
-
-.feature-grid,
-.knowledge-grid{
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-}
-
-
-.solution-wrapper{
-
-grid-template-columns:
-
-1fr;
-
-}
-
-
-}
-
-
-
-/* ==========================================================
-   TABLETS
-========================================================== */
-
-
-@media(max-width:992px){
-
-
-section{
-
-padding:90px 0;
-
-}
-
-
-/* Navbar */
 
 
 .navbar{
 
-padding:16px 20px;
+padding:
+
+0 25px;
 
 }
+
 
 
 .nav-links{
 
-display:none;
+gap:
+
+20px;
 
 }
 
-
-/* Hero */
 
 
 .hero{
@@ -98,14 +40,20 @@ grid-template-columns:
 
 1fr;
 
+
 text-align:center;
 
-padding-top:140px;
+
+padding-top:
+
+80px;
+
 
 }
 
 
-.hero-left{
+
+.hero-content{
 
 display:flex;
 
@@ -116,324 +64,454 @@ align-items:center;
 }
 
 
-.hero-text{
 
-max-width:600px;
+.hero p{
 
-}
+max-width:
 
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-
-.hero-stats{
-
-justify-content:center;
-
-}
-
-
-.hero-right{
-
-margin-top:40px;
+600px;
 
 }
 
 
 
-/* Components */
+.hero-card{
+
+margin-top:
+
+40px;
+
+}
 
 
-.feature-grid,
-.knowledge-grid{
+
+.feature-grid{
+
 
 grid-template-columns:
 
-1fr;
+repeat(2,1fr);
+
+
+}
+
+
 
 }
 
 
-.ai-panel{
-
-grid-template-columns:
-
-1fr;
-
-padding:40px;
-
-}
-
-
-.ai-panel h2{
-
-font-size:2.4rem;
-
-}
-
-
-}
 
 
 
 /* ==========================================================
-   MOBILE
+   TABLETS
 ========================================================== */
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-
-body{
-
-overflow-x:hidden;
-
-}
-
-
-/* Navbar */
 
 
 .navbar{
 
-margin:12px auto;
 
-border-radius:16px;
+height:
 
-}
+auto;
 
-
-.logo h2{
-
-font-size:1.1rem;
-
-}
-
-
-.btn-primary{
 
 padding:
 
-12px 22px;
+20px 25px;
 
-font-size:.9rem;
-
-}
-
-
-
-/* Hero */
-
-
-.hero{
-
-padding-top:120px;
-
-}
-
-
-.hero h1{
-
-font-size:
-
-2.7rem;
-
-letter-spacing:-1.5px;
-
-}
-
-
-.hero-text{
-
-font-size:
-
-1rem;
-
-}
-
-
-.hero-buttons{
-
-width:100%;
-
-flex-direction:
-
-column;
-
-}
-
-
-.hero-buttons a{
-
-width:100%;
-
-}
-
-
-
-/* Stats */
-
-
-.hero-stats{
-
-width:100%;
-
-flex-direction:
-
-column;
-
-}
-
-
-.hero-stats div{
-
-width:100%;
-
-}
-
-
-
-/* AI Card */
-
-
-.glass-card{
-
-padding:28px;
-
-border-radius:28px;
-
-}
-
-
-.glass-card h3{
-
-font-size:1.4rem;
-
-}
-
-
-
-/* Sections */
-
-
-.section-title{
-
-font-size:
-
-2.2rem;
-
-}
-
-
-.section-description{
-
-font-size:
-
-1rem;
-
-}
-
-
-
-/* Cards */
-
-
-.feature-card,
-.knowledge-card,
-.solution-card{
-
-padding:
-
-28px;
-
-border-radius:
-
-24px;
-
-}
-
-
-
-/* AI Panel */
-
-
-.ai-panel{
-
-padding:
-
-28px;
 
 border-radius:
 
 30px;
 
-}
+
+flex-direction:
+
+column;
 
 
-.ai-panel h2{
-
-font-size:
-
-2rem;
-
-}
-
-
-.ai-screen{
-
-height:
-
-280px;
-
-padding:
+gap:
 
 20px;
 
-}
-
 
 }
 
 
-/* ==========================================================
-   SMALL MOBILE
-========================================================== */
+
+.nav-links{
 
 
-@media(max-width:380px){
+width:
+
+100%;
+
+
+justify-content:
+
+center;
+
+
+flex-wrap:
+
+wrap;
+
+
+}
+
+
+
+.hero{
+
+
+min-height:
+
+auto;
+
+
+padding:
+
+60px 0;
+
+
+}
+
 
 
 .hero h1{
 
+
 font-size:
 
-2.35rem;
+3rem;
+
+
+letter-spacing:
+
+-2px;
+
 
 }
 
 
+
+.hero-actions{
+
+
+flex-direction:
+
+column;
+
+
+width:
+
+100%;
+
+
+}
+
+
+
+.hero-actions a{
+
+
+width:
+
+100%;
+
+
+}
+
+
+
+.feature-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+
+.features h2{
+
+
+font-size:
+
+2.3rem;
+
+
+}
+
+
+
+.cta h2{
+
+
+font-size:
+
+2.2rem;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+   MOBILE PHONES
+========================================================== */
+
+
+@media(max-width:480px){
+
+
+
+.navbar{
+
+
+width:
+
+94%;
+
+
+}
+
+
+
+.logo h2{
+
+
+font-size:
+
+1.2rem;
+
+
+}
+
+
+
+.diamond{
+
+
+width:
+
+28px;
+
+
+height:
+
+28px;
+
+
+}
+
+
+
+.nav-links{
+
+
+font-size:
+
+.9rem;
+
+
+gap:
+
+15px;
+
+
+}
+
+
+
+.hero{
+
+
+width:
+
+90%;
+
+
+}
+
+
+
+.hero h1{
+
+
+font-size:
+
+2.4rem;
+
+
+}
+
+
+
+.hero p{
+
+
+font-size:
+
+1rem;
+
+
+}
+
+
+
 .badge{
+
 
 font-size:
 
 .75rem;
 
+
 }
 
 
-.btn-primary,
-.btn-secondary{
+
+.glass-card{
+
 
 padding:
 
-12px 18px;
-
-}
+25px;
 
 
 }
 
+
+
+.metric strong{
+
+
+font-size:
+
+1.4rem;
+
+
+}
+
+
+
+.features{
+
+
+margin-top:
+
+80px;
+
+
+}
+
+
+
+.feature-card{
+
+
+padding:
+
+25px;
+
+
+}
+
+
+
+.cta{
+
+
+padding:
+
+45px 25px;
+
+
+border-radius:
+
+25px;
+
+
+}
+
+
+
+.cta h2{
+
+
+font-size:
+
+1.8rem;
+
+
+}
+
+
+
+footer{
+
+
+font-size:
+
+.85rem;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+
+*{
+
+
+animation-duration:
+
+0.01ms!important;
+
+
+animation-iteration-count:
+
+1!important;
+
+
+transition-duration:
+
+0.01ms!important;
+
+
+}
+
+
+
+}
