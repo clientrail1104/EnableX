@@ -1,0 +1,450 @@
+/* ==========================================================
+   ENABLEX ENTERPRISE INTELLIGENCE COMMAND CENTER
+   enterprise-command-center.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.command-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.command-hero{
+
+text-align:center;
+
+max-width:1100px;
+
+margin:0 auto 75px;
+
+}
+
+
+
+.command-hero h1{
+
+font-size:4rem;
+
+margin:25px 0;
+
+}
+
+
+
+.command-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.command-hero p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   SYSTEM STATUS GRID
+======================================== */
+
+.command-status-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.status-card{
+
+padding:30px;
+
+border-radius:25px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+text-align:center;
+
+}
+
+
+
+.status-card strong{
+
+display:block;
+
+font-size:1.8rem;
+
+margin:15px 0;
+
+color:#18D89E;
+
+}
+
+
+
+.status-card p{
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   COMMAND CARDS
+======================================== */
+
+.command-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.command-card{
+
+padding:35px;
+
+border-radius:28px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.35s;
+
+}
+
+
+
+.command-card:hover{
+
+transform:translateY(-10px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.command-card p{
+
+color:var(--text-light);
+
+line-height:1.7;
+
+}
+
+
+
+.command-card button{
+
+margin-top:20px;
+
+padding:12px 24px;
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+font-weight:700;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+}
+
+
+
+/* ========================================
+   OPERATING MODEL
+======================================== */
+
+.command-framework{
+
+padding:45px;
+
+border-radius:35px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.14),
+rgba(108,99,255,.14)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.command-framework h2{
+
+font-size:2.2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.command-flow{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.command-flow div{
+
+padding:30px;
+
+border-radius:24px;
+
+background:
+
+rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+
+
+.command-flow div:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(24,216,158,.12);
+
+}
+
+
+
+.command-flow p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   COMMAND TOAST
+======================================== */
+
+.command-toast{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+padding:18px 26px;
+
+border-radius:18px;
+
+background:
+
+linear-gradient(
+135deg,
+#2EC5FF,
+#18D89E
+);
+
+color:#06111F;
+
+font-weight:700;
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.35s;
+
+z-index:9999;
+
+box-shadow:
+
+0 20px 50px rgba(46,197,255,.35);
+
+}
+
+
+
+.command-toast.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1100px){
+
+
+.command-status-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+
+
+.command-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+}
+
+
+
+.command-flow{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.command-status-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.command-grid{
+
+grid-template-columns:
+
+1fr;
+
+}
+
+
+
+.command-hero h1{
+
+font-size:2.6rem;
+
+}
+
+
+
+.command-framework{
+
+padding:30px;
+
+}
+
+
+}
