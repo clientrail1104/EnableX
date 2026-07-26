@@ -25,6 +25,96 @@ document.addEventListener("DOMContentLoaded", () => {
             password.type = isPassword ? "text" : "password";
 
             togglePassword.textContent = isPassword ? "🙈" : "👁";
+/* =========================================
+   REGISTRATION
+========================================= */
+
+const registerForm = document.getElementById("registerForm");
+const registerPassword = document.getElementById("registerPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const strengthFill = document.getElementById("strengthFill");
+const strengthLabel = document.getElementById("strengthLabel");
+const toggleRegisterPassword = document.getElementById("toggleRegisterPassword");
+
+if (toggleRegisterPassword && registerPassword) {
+
+    toggleRegisterPassword.addEventListener("click", () => {
+
+        const visible = registerPassword.type === "text";
+
+        registerPassword.type = visible ? "password" : "text";
+
+        toggleRegisterPassword.textContent = visible ? "👁" : "🙈";
+
+    });
+
+}
+
+if (registerPassword && strengthFill && strengthLabel) {
+
+    registerPassword.addEventListener("input", () => {
+
+        const value = registerPassword.value;
+
+        let score = 0;
+
+        if (value.length >= 8) score++;
+        if (/[A-Z]/.test(value)) score++;
+        if (/[a-z]/.test(value)) score++;
+        if (/\d/.test(value)) score++;
+        if (/[^A-Za-z0-9]/.test(value)) score++;
+
+        const widths = ["0%", "20%", "40%", "60%", "80%", "100%"];
+        const colors = [
+            "#EF4444",
+            "#EF4444",
+            "#F59E0B",
+            "#FBBF24",
+            "#10B981",
+            "#18D89E"
+        ];
+        const labels = [
+            "Password strength",
+            "Very Weak",
+            "Weak",
+            "Medium",
+            "Strong",
+            "Excellent"
+        ];
+
+        strengthFill.style.width = widths[score];
+        strengthFill.style.background = colors[score];
+        strengthLabel.textContent = labels[score];
+
+    });
+
+}
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        if (registerPassword.value !== confirmPassword.value) {
+
+            showToast("Passwords do not match.", "error");
+
+            return;
+
+        }
+
+        showToast("Account created successfully!");
+
+        setTimeout(() => {
+
+            window.location.href = "login.html";
+
+        }, 1200);
+
+    });
+
+}
 
         });
 
