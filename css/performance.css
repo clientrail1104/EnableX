@@ -1,0 +1,460 @@
+/* ==========================================================
+   ENABLEX PERFORMANCE INTELLIGENCE
+   performance.css
+========================================================== */
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.performance-container{
+
+width:min(1400px,92%);
+
+margin:60px auto;
+
+}
+
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.performance-hero{
+
+text-align:center;
+
+max-width:900px;
+
+margin:0 auto 70px;
+
+}
+
+
+
+.performance-hero h1{
+
+font-size:3.8rem;
+
+margin:25px 0;
+
+}
+
+
+
+.performance-hero h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#6C63FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.performance-hero p{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:var(--text-light);
+
+}
+
+
+
+/* ========================================
+   PERFORMANCE SCORES
+======================================== */
+
+.performance-score{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.score-card{
+
+padding:40px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.score-card h2{
+
+font-size:1.3rem;
+
+margin-bottom:30px;
+
+}
+
+
+
+/* ========================================
+   SCORE CIRCLE
+======================================== */
+
+.score-circle{
+
+width:160px;
+
+height:160px;
+
+margin:0 auto 25px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:2.8rem;
+
+font-weight:800;
+
+background:
+
+conic-gradient(
+#18D89E 92%,
+rgba(255,255,255,.1) 92%
+);
+
+position:relative;
+
+}
+
+
+
+.score-circle::before{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#08111f;
+
+}
+
+
+
+.score-circle{
+
+z-index:1;
+
+}
+
+
+
+.score-circle::after{
+
+content:"";
+
+position:absolute;
+
+z-index:2;
+
+}
+
+
+
+.score-circle.green{
+
+background:
+
+conic-gradient(
+#18D89E 87%,
+rgba(255,255,255,.1) 87%
+);
+
+}
+
+
+
+.score-circle.blue{
+
+background:
+
+conic-gradient(
+#2EC5FF 78%,
+rgba(255,255,255,.1) 78%
+);
+
+}
+
+
+
+/* ========================================
+   OKR SECTION
+======================================== */
+
+.okr-section{
+
+margin-top:60px;
+
+}
+
+
+
+.okr-section h2,
+.talent-insights h2{
+
+font-size:2rem;
+
+margin-bottom:35px;
+
+}
+
+
+
+.okr-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.okr-card{
+
+padding:35px;
+
+border-radius:26px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.3s;
+
+}
+
+
+
+.okr-card:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(46,197,255,.1);
+
+}
+
+
+
+.okr-card p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   OKR PROGRESS
+======================================== */
+
+.okr-progress{
+
+height:12px;
+
+margin:25px 0 12px;
+
+border-radius:999px;
+
+overflow:hidden;
+
+background:
+
+rgba(255,255,255,.1);
+
+}
+
+
+
+.okr-progress span{
+
+display:block;
+
+height:100%;
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+}
+
+
+
+/* ========================================
+   TALENT INSIGHTS
+======================================== */
+
+.talent-insights{
+
+margin-top:70px;
+
+padding:45px;
+
+border-radius:32px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(46,197,255,.12),
+rgba(108,99,255,.12)
+);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.insight-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.insight-grid div{
+
+padding:30px;
+
+border-radius:22px;
+
+background:
+
+rgba(255,255,255,.06);
+
+}
+
+
+
+.insight-grid p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:1000px){
+
+
+.performance-score{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.okr-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.insight-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.performance-hero h1{
+
+font-size:2.5rem;
+
+}
+
+
+}
