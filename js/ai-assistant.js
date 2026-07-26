@@ -4,99 +4,116 @@
 ========================================================== */
 
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
 
-console.log(
-"EnableX AI Assistant Activated"
-);
+console.log("EnableX AI Assistant Loaded");
 
 
 
 const input =
-document.querySelector(
-".chat-input input"
-);
-
+document.getElementById("aiInput");
 
 
 const sendButton =
-document.querySelector(
-".chat-input button"
+document.getElementById("sendAI");
+
+
+const chatMessages =
+document.getElementById("chatMessages");
+
+
+
+/* ========================================
+   SEND MESSAGE
+======================================== */
+
+
+function sendMessage(){
+
+
+const question =
+input.value.trim();
+
+
+
+if(!question){
+
+return;
+
+}
+
+
+
+addMessage(
+question,
+"user-message"
 );
 
 
 
-const messages =
-document.querySelector(
-".messages"
+input.value="";
+
+
+
+showTyping();
+
+
+
+setTimeout(()=>{
+
+
+removeTyping();
+
+
+const response =
+generateAIResponse(question);
+
+
+
+addMessage(
+
+response,
+
+"ai-message"
+
 );
 
 
 
-const prompts =
-document.querySelectorAll(
-".prompt"
+saveConversation(
+question,
+response
 );
 
 
 
+},1200);
 
 
-/* ==========================================================
-   AI KNOWLEDGE RESPONSES
-========================================================== */
 
-
-const responses = {
-
-
-"find":
-"Here are recommended knowledge resources related to your request. I identified relevant documents, expert recommendations and learning materials.",
-
-
-"summarize":
-"The latest knowledge updates include digital transformation insights, AI adoption practices and enterprise learning improvements.",
-
-
-"recommend":
-"Recommended learning path: Digital Foundations → AI Productivity → Enterprise Innovation → Leadership Enablement.",
-
-
-"default":
-"I analyzed your question using the enterprise knowledge intelligence engine and generated a recommended insight pathway."
-
-};
+}
 
 
 
 
 
 
-/* ==========================================================
-   CREATE MESSAGE
-========================================================== */
+/* ========================================
+   MESSAGE CREATOR
+======================================== */
 
 
-function addMessage(
-text,
-type
-){
+function addMessage(text,type){
 
 
 const message =
-document.createElement(
-"div"
-);
+document.createElement("div");
 
 
 
 message.className =
-"message "
-+
-type;
+`message ${type}`;
 
 
 
@@ -105,14 +122,13 @@ text;
 
 
 
-messages.appendChild(
-message
-);
+chatMessages.appendChild(message);
 
 
 
-messages.scrollTop =
-messages.scrollHeight;
+chatMessages.scrollTop =
+chatMessages.scrollHeight;
+
 
 
 }
@@ -123,147 +139,194 @@ messages.scrollHeight;
 
 
 
-/* ==========================================================
+/* ========================================
+   AI RESPONSE SIMULATION
+======================================== */
+
+
+function generateAIResponse(question){
+
+
+const text =
+question.toLowerCase();
+
+
+
+if(text.includes("security")){
+
+
+return "I found enterprise security resources including policies, compliance frameworks and access governance guidelines.";
+
+
+}
+
+
+
+if(text.includes("learning")){
+
+
+return "Recommended learning paths include leadership development, AI literacy and digital transformation programs.";
+
+
+}
+
+
+
+if(text.includes("strategy")){
+
+
+return "The AI Transformation Strategy focuses on governance, adoption, capability building and measurable business outcomes.";
+
+
+}
+
+
+
+return "I searched the enterprise knowledge repository and found relevant information. I can help summarize documents, explain processes and recommend resources.";
+
+}
+
+
+
+
+
+
+
+/* ========================================
    TYPING INDICATOR
-========================================================== */
+======================================== */
 
 
 function showTyping(){
 
 
 const typing =
-document.createElement(
-"div"
-);
+document.createElement("div");
+
+
+
+typing.id =
+"aiTyping";
 
 
 
 typing.className =
-"message ai typing";
+"message ai-message";
 
 
 
 typing.textContent =
-"AI is analyzing knowledge...";
+"AI is thinking...";
 
 
 
-messages.appendChild(
-typing
-);
+chatMessages.appendChild(typing);
 
-
-
-messages.scrollTop =
-messages.scrollHeight;
-
-
-
-return typing;
 
 
 }
 
 
 
-
-
-
-
-/* ==========================================================
-   AI RESPONSE ENGINE
-========================================================== */
-
-
-function processQuestion(
-question
-){
-
-
-addMessage(
-question,
-"user"
-);
-
+function removeTyping(){
 
 
 const typing =
-showTyping();
+document.getElementById("aiTyping");
 
 
 
-setTimeout(
-()=>{
-
+if(typing){
 
 typing.remove();
 
-
-
-const lower =
-question.toLowerCase();
-
-
-
-let response =
-responses.default;
-
-
-
-if(
-lower.includes("find")
-||
-lower.includes("resource")
-){
-
-
-response =
-responses.find;
-
-
 }
-
-
-else if(
-lower.includes("summary")
-||
-lower.includes("update")
-){
-
-
-response =
-responses.summarize;
-
-
-}
-
-
-else if(
-lower.includes("learn")
-||
-lower.includes("training")
-||
-lower.includes("recommend")
-){
-
-
-response =
-responses.recommend;
 
 
 }
 
 
 
-addMessage(
+
+
+
+
+/* ========================================
+   PROMPT BUTTONS
+======================================== */
+
+
+const prompts =
+document.querySelectorAll(".prompt-card button");
+
+
+
+prompts.forEach(prompt=>{
+
+
+prompt.addEventListener("click",()=>{
+
+
+input.value =
+prompt.textContent;
+
+
+
+sendMessage();
+
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+/* ========================================
+   STORAGE
+======================================== */
+
+
+function saveConversation(question,response){
+
+
+const history =
+JSON.parse(
+
+localStorage.getItem(
+"enablex-ai-history"
+)
+
+|| "[]"
+
+);
+
+
+
+history.push({
+
+question,
+
 response,
-"ai"
-);
+
+time:
+new Date().toISOString()
+
+});
 
 
 
-},
-1200
+localStorage.setItem(
+
+"enablex-ai-history",
+
+JSON.stringify(history)
+
 );
 
 
@@ -276,109 +339,43 @@ response,
 
 
 
+/* ========================================
+   EVENTS
+======================================== */
 
-/* ==========================================================
-   SEND BUTTON
-========================================================== */
 
-
-if(
-sendButton &&
-input
-){
-
+if(sendButton){
 
 
 sendButton.addEventListener(
 "click",
-()=>{
-
-
-const question =
-input.value.trim();
-
-
-
-if(
-question === ""
-)
-return;
-
-
-
-processQuestion(
-question
+sendMessage
 );
 
 
-
-input.value =
-"";
+}
 
 
 
-});
-
-
-
+if(input){
 
 
 input.addEventListener(
-"keypress",
+"keydown",
 (event)=>{
 
 
-if(
-event.key === "Enter"
-){
+if(event.key==="Enter"){
 
-
-sendButton.click();
-
+sendMessage();
 
 }
 
 
-
 });
-
 
 
 }
-
-
-
-
-
-
-
-
-/* ==========================================================
-   QUICK PROMPTS
-========================================================== */
-
-
-prompts.forEach(
-prompt=>{
-
-
-prompt.addEventListener(
-"click",
-()=>{
-
-
-processQuestion(
-prompt.textContent
-);
-
-
-});
-
-
-});
-
-
-
 
 
 
