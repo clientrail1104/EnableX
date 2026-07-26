@@ -1,50 +1,7 @@
 /* ==========================================================
-   ENTERPRISE DASHBOARD ENGINE
+   ENABLEX EXECUTIVE DASHBOARD ENGINE
    dashboard.js
 ========================================================== */
-
-
-/* ==========================================================
-   ANIMATED COUNTERS
-========================================================== */
-
-
-function animateCounter(element,target,duration=1800){
-
-let start=0;
-
-let increment=
-target/(duration/16);
-
-
-let timer=setInterval(()=>{
-
-
-start+=increment;
-
-
-if(start>=target){
-
-element.innerText=
-target.toLocaleString();
-
-clearInterval(timer);
-
-}
-else{
-
-element.innerText=
-Math.floor(start).toLocaleString();
-
-}
-
-
-},16);
-
-
-}
-
-
 
 
 document.addEventListener(
@@ -52,151 +9,341 @@ document.addEventListener(
 ()=>{
 
 
-/* KPI COUNTERS */
-
-
-const counters=
-document.querySelectorAll(
-".metric-card h2"
-);
-
-
-
-const values=[
-
-128450,
-24560,
-85230,
-94
-
-];
-
-
-
-counters.forEach(
-(counter,index)=>{
-
-
-animateCounter(
-counter,
-values[index]
-);
-
-
-});
-
-
-/* ==========================================================
-   CHART ANIMATION
-========================================================== */
-
-
-const bars=
-document.querySelectorAll(
-".chart-placeholder div"
-);
-
-
-
-bars.forEach(
-(bar,index)=>{
-
-
-const height=
-bar.style.height;
-
-
-bar.style.height="0";
-
-
-setTimeout(()=>{
-
-
-bar.style.height=
-height;
-
-
-},300+(index*150));
-
-
-});
-
-
-
-
-
-/* ==========================================================
-   ACTIVITY LIVE UPDATE
-========================================================== */
-
-
-const activityBox=
-document.querySelector(
-".activity"
-);
-
-
-
-if(activityBox){
-
-
-setInterval(()=>{
-
-
 console.log(
-"Dashboard synced"
+"EnableX Dashboard Activated"
 );
-
-
-},10000);
-
-
-}
 
 
 
 /* ==========================================================
-   CARD GLOW EFFECT
+   KPI COUNTER ANIMATION
 ========================================================== */
 
 
-const cards=
+const counters =
 document.querySelectorAll(
-".metric-card, .dashboard-card"
+".stat-card strong"
 );
 
 
 
-cards.forEach(
-(card)=>{
+counters.forEach(counter=>{
+
+
+const target =
+parseInt(
+counter.textContent.replace(/,/g,"")
+);
+
+
+
+let current = 0;
+
+
+
+const increment =
+Math.ceil(
+target / 120
+);
+
+
+
+const updateCounter = ()=>{
+
+
+current += increment;
+
+
+
+if(current < target){
+
+
+counter.textContent =
+current.toLocaleString();
+
+
+
+requestAnimationFrame(
+updateCounter
+);
+
+
+
+}
+
+else{
+
+
+counter.textContent =
+target.toLocaleString();
+
+
+
+}
+
+
+};
+
+
+
+updateCounter();
+
+
+
+});
+
+
+
+
+
+
+/* ==========================================================
+   KPI CARD INTERACTION
+========================================================== */
+
+
+const cards =
+document.querySelectorAll(
+".stat-card"
+);
+
+
+
+cards.forEach(card=>{
 
 
 card.addEventListener(
-"mouseenter",
+"click",
 ()=>{
 
 
-card.style.boxShadow=
-"0 0 35px rgba(46,197,255,.20)";
+cards.forEach(item=>{
+
+item.classList.remove(
+"selected"
+);
+
+});
 
 
+card.classList.add(
+"selected"
+);
+
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+/* ==========================================================
+   LIVE TIME INDICATOR
+========================================================== */
+
+
+const createTimeWidget =
+()=>{
+
+
+const dashboardHero =
+document.querySelector(
+".dashboard-hero"
+);
+
+
+
+if(!dashboardHero)
+return;
+
+
+
+const time =
+document.createElement(
+"p"
+);
+
+
+
+time.className =
+"dashboard-time";
+
+
+
+dashboardHero.appendChild(
+time
+);
+
+
+
+const updateTime =
+()=>{
+
+
+const now =
+new Date();
+
+
+
+time.textContent =
+"Last Updated: "
++
+now.toLocaleString();
+
+
+
+};
+
+
+
+updateTime();
+
+
+
+setInterval(
+updateTime,
+1000
+);
+
+
+
+};
+
+
+
+createTimeWidget();
+
+
+
+
+
+
+/* ==========================================================
+   CHART OBSERVER
+========================================================== */
+
+
+const chart =
+document.querySelector(
+".chart-placeholder"
+);
+
+
+
+if(chart){
+
+
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+chart.classList.add(
+"chart-active"
+);
+
+
+}
+
+
+});
+
+
+},
+{
+threshold:.4
 }
 );
 
 
 
-card.addEventListener(
-"mouseleave",
+observer.observe(chart);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   DASHBOARD NOTIFICATION
+========================================================== */
+
+
+const showNotification =
+(message)=>{
+
+
+const notification =
+document.createElement(
+"div"
+);
+
+
+
+notification.className =
+"dashboard-notification";
+
+
+
+notification.textContent =
+message;
+
+
+
+document.body.appendChild(
+notification
+);
+
+
+
+setTimeout(
 ()=>{
 
 
-card.style.boxShadow="";
+notification.remove();
 
 
-});
+},
+3000
+);
 
 
-});
+
+};
+
+
+
+
+setTimeout(
+()=>{
+
+
+showNotification(
+"Dashboard intelligence synchronized"
+);
+
+
+},
+1500
+);
 
 
 
