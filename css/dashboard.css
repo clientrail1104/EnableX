@@ -1,82 +1,365 @@
 /* ==========================================================
-   ENABLEX EXECUTIVE DASHBOARD
+   ENABLEX EMPLOYEE DASHBOARD
    dashboard.css
 ========================================================== */
 
 
-/* ==========================================================
-   DASHBOARD HERO
-========================================================== */
+/* ========================================
+   MAIN CONTAINER
+======================================== */
 
+.dashboard-container{
 
-.dashboard-hero {
+width:min(1400px,92%);
 
-width: min(1200px, 92%);
-
-margin: 80px auto 50px;
-
-text-align:center;
+margin:60px auto;
 
 }
 
 
 
-.dashboard-hero h1 {
+/* ========================================
+   WELCOME SECTION
+======================================== */
 
-font-size:
+.welcome-section{
 
-clamp(2.8rem,5vw,4.5rem);
+display:flex;
 
-letter-spacing:-3px;
+justify-content:space-between;
 
-margin:25px 0;
+align-items:center;
 
-}
+gap:30px;
 
+margin-bottom:60px;
 
+padding:45px;
 
-.dashboard-hero h1 span {
+border-radius:32px;
 
 background:
 
-var(--gradient-diamond);
+linear-gradient(
+135deg,
+rgba(46,197,255,.15),
+rgba(108,99,255,.12)
+);
 
--webkit-background-clip:text;
+border:
 
--webkit-text-fill-color:transparent;
+1px solid rgba(255,255,255,.12);
 
 }
 
 
 
-.dashboard-hero p {
+.welcome-section h1{
+
+font-size:3.4rem;
+
+margin:20px 0;
+
+}
+
+
+
+.welcome-section h1 span{
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.welcome-section p{
 
 color:var(--text-light);
 
 font-size:1.1rem;
 
-line-height:1.8;
+}
 
-max-width:650px;
 
-margin:auto;
+
+/* ========================================
+   DASHBOARD GRID
+======================================== */
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:
+
+2fr 1fr 1fr;
+
+gap:25px;
 
 }
 
 
 
+/* ========================================
+   CARDS
+======================================== */
+
+.dashboard-card{
+
+padding:30px;
+
+border-radius:28px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+backdrop-filter:blur(20px);
+
+}
 
 
-/* ==========================================================
-   KPI GRID
-========================================================== */
+
+.dashboard-card.large{
+
+grid-row:span 2;
+
+}
 
 
-.dashboard-grid {
 
-width:min(1200px,92%);
+.dashboard-card h2{
 
-margin:60px auto;
+font-size:1.5rem;
+
+margin-bottom:25px;
+
+}
+
+
+
+/* ========================================
+   RECOMMENDATIONS
+======================================== */
+
+.recommendation{
+
+padding:22px;
+
+margin-bottom:20px;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+
+
+.recommendation:hover{
+
+transform:translateX(8px);
+
+background:
+
+rgba(46,197,255,.12);
+
+}
+
+
+
+.recommendation h3{
+
+margin-bottom:10px;
+
+}
+
+
+
+.recommendation p{
+
+color:var(--text-light);
+
+line-height:1.6;
+
+}
+
+
+
+.recommendation button{
+
+margin-top:15px;
+
+padding:12px 20px;
+
+border-radius:12px;
+
+border:none;
+
+cursor:pointer;
+
+background:#2EC5FF;
+
+color:#06111F;
+
+font-weight:700;
+
+}
+
+
+
+/* ========================================
+   LEARNING PROGRESS
+======================================== */
+
+.progress-circle{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:25px auto;
+
+font-size:2.4rem;
+
+font-weight:800;
+
+background:
+
+conic-gradient(
+#18D89E 78%,
+rgba(255,255,255,.1) 78%
+);
+
+position:relative;
+
+}
+
+
+
+.progress-circle::before{
+
+content:"";
+
+position:absolute;
+
+width:110px;
+
+height:110px;
+
+background:#08111f;
+
+border-radius:50%;
+
+}
+
+
+
+.progress-circle{
+
+z-index:1;
+
+}
+
+
+
+.progress-circle::after{
+
+content:"78%";
+
+position:absolute;
+
+z-index:2;
+
+}
+
+
+
+/* ========================================
+   KNOWLEDGE LIST
+======================================== */
+
+.knowledge-list{
+
+list-style:none;
+
+padding:0;
+
+}
+
+
+
+.knowledge-list li{
+
+padding:15px;
+
+margin-bottom:12px;
+
+border-radius:14px;
+
+background:
+
+rgba(255,255,255,.05);
+
+transition:.3s;
+
+}
+
+
+
+.knowledge-list li:hover{
+
+background:
+
+rgba(46,197,255,.15);
+
+}
+
+
+
+/* ========================================
+   METRICS
+======================================== */
+
+.metrics-section{
+
+margin-top:60px;
+
+}
+
+
+
+.metric-grid{
 
 display:grid;
 
@@ -90,528 +373,150 @@ gap:25px;
 
 
 
+.metric-grid div{
 
+padding:30px;
 
-.stat-card {
+text-align:center;
 
-padding:35px;
-
+border-radius:24px;
 
 background:
 
 rgba(255,255,255,.06);
 
-
 border:
-
-var(--border);
-
-
-border-radius:
-
-var(--radius-lg);
-
-
-backdrop-filter:
-
-blur(20px);
-
-
-transition:
-
-var(--transition);
-
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-
-
-.stat-card::before {
-
-content:"";
-
-position:absolute;
-
-width:120px;
-
-height:120px;
-
-background:
-
-var(--gradient-primary);
-
-filter:blur(60px);
-
-opacity:.3;
-
-top:-40px;
-
-right:-40px;
-
-}
-
-
-
-.stat-card:hover {
-
-transform:
-
-translateY(-10px);
-
-box-shadow:
-
-var(--shadow-blue);
-
-}
-
-
-
-
-
-.stat-card span {
-
-display:block;
-
-color:
-
-var(--text-light);
-
-font-size:.95rem;
-
-margin-bottom:20px;
-
-}
-
-
-
-.stat-card strong {
-
-display:block;
-
-font-size:2.6rem;
-
-background:
-
-var(--gradient-primary);
-
--webkit-background-clip:
-
-text;
-
--webkit-text-fill-color:
-
-transparent;
-
-}
-
-
-
-.stat-card p {
-
-margin-top:15px;
-
-color:
-
-var(--accent);
-
-font-weight:600;
-
-}
-
-
-
-
-
-/* ==========================================================
-   ANALYTICS AREA
-========================================================== */
-
-
-.analytics-layout {
-
-
-width:min(1200px,92%);
-
-
-margin:70px auto;
-
-
-display:grid;
-
-
-grid-template-columns:
-
-1fr 1fr;
-
-
-gap:30px;
-
-
-}
-
-
-
-
-.analytics-card {
-
-
-padding:40px;
-
-
-background:
-
-rgba(255,255,255,.06);
-
-
-border:
-
-var(--border);
-
-
-border-radius:
-
-var(--radius-lg);
-
-
-backdrop-filter:
-
-blur(25px);
-
-
-}
-
-
-
-.analytics-card h2 {
-
-
-font-size:1.5rem;
-
-margin-bottom:35px;
-
-}
-
-
-
-
-
-
-/* ==========================================================
-   BAR CHART SIMULATION
-========================================================== */
-
-
-.chart-placeholder {
-
-
-height:260px;
-
-
-display:flex;
-
-
-align-items:flex-end;
-
-
-justify-content:center;
-
-
-gap:25px;
-
-
-padding:20px;
-
-
-}
-
-
-
-
-
-.bar {
-
-
-width:45px;
-
-
-border-radius:
-
-20px 20px 0 0;
-
-
-background:
-
-var(--gradient-primary);
-
-
-animation:
-
-chartGrow 1.5s ease;
-
-
-}
-
-
-
-.bar-one {
-
-height:80px;
-
-}
-
-
-
-.bar-two {
-
-height:140px;
-
-}
-
-
-
-.bar-three {
-
-height:190px;
-
-}
-
-
-
-.bar-four {
-
-height:230px;
-
-}
-
-
-
-
-
-@keyframes chartGrow {
-
-
-from {
-
-height:0;
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================================
-   ACTIVITY LIST
-========================================================== */
-
-
-.activity-list {
-
-
-list-style:none;
-
-
-display:flex;
-
-
-flex-direction:column;
-
-
-gap:20px;
-
-
-}
-
-
-
-.activity-list li {
-
-
-display:flex;
-
-
-justify-content:space-between;
-
-
-padding:20px;
-
-
-background:
-
-rgba(255,255,255,.05);
-
-
-border-radius:
-
-18px;
-
-
-color:
-
-var(--text-light);
-
-
-}
-
-
-
-.activity-list span {
-
-
-color:
-
-var(--primary);
-
-
-font-weight:700;
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================================
-   RECENT ACTIVITY
-========================================================== */
-
-
-.activity-panel {
-
-
-width:min(1200px,92%);
-
-
-margin:
-
-70px auto;
-
-
-padding:
-
-40px;
-
-
-background:
-
-rgba(255,255,255,.06);
-
-
-border:
-
-var(--border);
-
-
-border-radius:
-
-var(--radius-lg);
-
-
-}
-
-
-
-.activity-panel h2 {
-
-
-margin-bottom:
-
-30px;
-
-
-}
-
-
-
-
-.activity-item {
-
-
-padding:
-
-25px 0;
-
-
-border-bottom:
 
 1px solid rgba(255,255,255,.1);
 
+}
+
+
+
+.metric-grid strong{
+
+display:block;
+
+font-size:2.8rem;
+
+background:
+
+linear-gradient(
+90deg,
+#2EC5FF,
+#18D89E
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
 
 }
 
 
 
-.activity-item:last-child {
+.metric-grid p{
 
-
-border-bottom:none;
-
+color:var(--text-light);
 
 }
 
 
 
-.activity-item strong {
+/* ========================================
+   QUICK ACTIONS
+======================================== */
 
+.quick-actions{
 
-font-size:
-
-1.1rem;
-
-
-}
-
-
-
-.activity-item p {
-
-
-margin-top:
-
-10px;
-
-
-color:
-
-var(--text-light);
-
+margin-top:60px;
 
 }
 
 
 
+.action-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:20px;
+
+}
 
 
 
+.action-grid a{
 
-/* ==========================================================
-   RESPONSIVE DASHBOARD
-========================================================== */
+padding:25px;
 
+text-align:center;
+
+text-decoration:none;
+
+color:white;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+transition:.3s;
+
+}
+
+
+
+.action-grid a:hover{
+
+transform:translateY(-8px);
+
+background:
+
+rgba(46,197,255,.15);
+
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
 
 @media(max-width:1100px){
 
 
-.dashboard-grid {
+.dashboard-grid{
 
+grid-template-columns:
+
+1fr;
+
+}
+
+
+.metric-grid{
 
 grid-template-columns:
 
 repeat(2,1fr);
 
+}
+
+
+.action-grid{
+
+grid-template-columns:
+
+repeat(2,1fr);
 
 }
 
@@ -620,123 +525,35 @@ repeat(2,1fr);
 
 
 
+@media(max-width:700px){
 
-@media(max-width:768px){
+
+.welcome-section{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
 
 
-.dashboard-grid {
 
+.welcome-section h1{
+
+font-size:2.4rem;
+
+}
+
+
+
+.metric-grid,
+.action-grid{
 
 grid-template-columns:
 
 1fr;
 
-
 }
 
-
-
-.analytics-layout {
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-
-.stat-card strong {
-
-
-font-size:
-
-2.2rem;
-
-
-}
-
-
-
-.activity-panel {
-
-
-padding:
-
-25px;
-
-
-}
-
-
-}
-/* ==========================================================
-   DASHBOARD INTERACTION STATES
-========================================================== */
-
-
-.stat-card.selected {
-
-border-color:
-
-var(--primary);
-
-box-shadow:
-
-var(--shadow-blue);
-
-transform:
-
-translateY(-8px);
-
-}
-
-
-
-.dashboard-time {
-
-margin-top:20px;
-
-font-size:.85rem;
-
-color:
-
-var(--text-muted);
-
-}
-
-
-
-.dashboard-notification {
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-padding:18px 25px;
-
-background:
-
-var(--gradient-primary);
-
-border-radius:30px;
-
-color:white;
-
-font-weight:700;
-
-box-shadow:
-
-var(--shadow-blue);
-
-z-index:9999;
-
-animation:
-
-fadeUp .5s ease;
 
 }
