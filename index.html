@@ -1,53 +1,262 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EnableX | Digital Enablement & Knowledge Management</title>
+<title>EnableX | Digital Enablement & Knowledge Management</title>
 
-    <meta name="description"
-        content="Premium enterprise Digital Enablement and Knowledge Management platform powered by AI.">
+<meta name="description"
+    content="Premium enterprise Digital Enablement and Knowledge Management platform powered by AI.">
 
-    <link rel="icon" href="assets/favicon/favicon.svg">
+<link rel="icon" href="assets/favicon/favicon.svg">
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+    /* =========================================================
+       AI VOICE AGENT
+       ========================================================= */
+
+    .ai-agent-wrapper {
+        position: relative;
+        width: min(460px, 100%);
+        margin-left: auto;
+    }
+
+    .ai-agent-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        padding: 1px;
+        background: linear-gradient(
+            135deg,
+            rgba(100, 210, 255, 0.65),
+            rgba(130, 90, 255, 0.45),
+            rgba(255, 255, 255, 0.08)
+        );
+        box-shadow:
+            0 30px 80px rgba(0, 0, 0, 0.35),
+            0 0 60px rgba(80, 150, 255, 0.12);
+    }
+
+    .ai-agent-inner {
+        position: relative;
+        overflow: hidden;
+        min-height: 520px;
+        border-radius: 27px;
+        background: #10131d;
+    }
+
+    .agent-video {
+        display: block;
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        object-position: center;
+        background: #090b11;
+    }
+
+    .agent-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(5, 8, 15, 0.12) 0%,
+                transparent 45%,
+                rgba(5, 8, 15, 0.78) 100%
+            );
+    }
+
+    .agent-status {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 9px 14px;
+
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+
+        background: rgba(10, 14, 24, 0.68);
+        backdrop-filter: blur(12px);
+
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+    }
+
+    .agent-status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #43e6a0;
+        box-shadow: 0 0 12px rgba(67, 230, 160, 0.9);
+    }
+
+    .agent-info {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        z-index: 2;
+    }
+
+    .agent-info h3 {
+        margin: 0 0 7px;
+        color: #fff;
+        font-size: 1.35rem;
+    }
+
+    .agent-info p {
+        margin: 0 0 16px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .agent-launch {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+
+        padding: 11px 17px;
+
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+
+        font-size: 0.85rem;
+        font-weight: 600;
+
+        backdrop-filter: blur(14px);
+    }
+
+    .agent-launch::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #72b7ff;
+        box-shadow: 0 0 10px rgba(114, 183, 255, 0.8);
+    }
+
+    /* ElevenLabs widget sits above the page */
+    elevenlabs-convai {
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Floating agent label */
+    .agent-floating-label {
+        position: absolute;
+        right: -18px;
+        top: 45%;
+
+        padding: 10px 13px;
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+
+        background: rgba(15, 18, 28, 0.8);
+        backdrop-filter: blur(12px);
+
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.72rem;
+
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+
+    @media (max-width: 900px) {
+        .ai-agent-wrapper {
+            width: 100%;
+            max-width: 520px;
+            margin: 40px auto 0;
+        }
+
+        .ai-agent-inner,
+        .agent-video {
+            min-height: 460px;
+            height: 460px;
+        }
+
+        .agent-floating-label {
+            display: none;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ai-agent-inner,
+        .agent-video {
+            min-height: 400px;
+            height: 400px;
+        }
+
+        .agent-info {
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+        }
+    }
+</style>
+```
 
 </head>
 
 <body>
+
 <header>
 
-    <nav class="navbar">
+```
+<nav class="navbar">
 
-        <div class="logo">
+    <div class="logo">
 
-            <span class="diamond"></span>
+        <span class="diamond"></span>
 
-            <h2>EnableX</h2>
+        <h2>EnableX</h2>
 
-        </div>
+    </div>
 
-        <div class="nav-links">
+    <div class="nav-links">
 
-            <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
 
-            <a href="dashboard.html">Dashboard</a>
+        <a href="dashboard.html">Dashboard</a>
 
-            <a href="knowledge.html">Knowledge Hub</a>
+        <a href="knowledge.html">Knowledge Hub</a>
 
-            <a href="ai-assistant.html">AI Assistant</a>
+        <a href="ai-assistant.html">AI Assistant</a>
 
-        </div>
+    </div>
 
-    </nav>
+</nav>
+```
 
 </header>
+
 <main>
+
+```
+<!-- =========================================================
+     HERO
+     ========================================================= -->
 
 <section class="hero">
 
@@ -71,64 +280,96 @@
         </p>
 
         <div class="hero-actions">
-                      
+
             <a href="dashboard.html" class="btn-primary">
-
                 Open Dashboard
-
             </a>
 
             <a href="knowledge.html" class="btn-secondary">
-
                 Explore Knowledge
-
             </a>
 
         </div>
 
     </div>
 
-    <div class="hero-card">
 
-        <div class="glass-card">
+    <!-- =====================================================
+         AI VOICE / LIP-SYNC AGENT
+         ===================================================== -->
 
-            <h3>Enterprise Snapshot</h3>
+    <div class="ai-agent-wrapper">
 
-            <div class="metric">
+        <div class="ai-agent-card">
 
-                <span>Knowledge Assets</span>
+            <div class="ai-agent-inner">
 
-                <strong>25K+</strong>
+                <video
+                    class="agent-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    aria-label="EnableX AI Voice Assistant">
+
+                    <source
+                        src="assets/agent/animate_voice_agent_lip_sync_a(1).mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video element.
+
+                </video>
+
+                <div class="agent-overlay"></div>
+
+                <div class="agent-status">
+
+                    <span class="agent-status-dot"></span>
+
+                    AI Assistant Online
+
+                </div>
+
+                <div class="agent-info">
+
+                    <h3>Meet Your EnableX AI Agent</h3>
+
+                    <p>
+                        Ask questions, explore enterprise knowledge and
+                        get intelligent answers through a natural
+                        conversational experience.
+                    </p>
+
+                    <span class="agent-launch">
+                        Voice-enabled enterprise assistant
+                    </span>
+
+                </div>
 
             </div>
 
-            <div class="metric">
+        </div>
 
-                <span>AI Conversations</span>
-
-                <strong>98K</strong>
-
-            </div>
-
-            <div class="metric">
-
-                <span>Employee Adoption</span>
-
-                <strong>94%</strong>
-
-            </div>
-
+        <div class="agent-floating-label">
+            AI POWERED
         </div>
 
     </div>
 
 </section>
+
+
+<!-- =========================================================
+     FEATURES
+     ========================================================= -->
+
 <section class="features">
 
     <h2>Everything Your Enterprise Needs</h2>
 
     <div class="feature-grid">
-      
+
         <div class="feature-card">
 
             <h3>Executive Dashboard</h3>
@@ -139,6 +380,7 @@
             </p>
 
         </div>
+
 
         <div class="feature-card">
 
@@ -151,13 +393,14 @@
 
         </div>
 
+
         <div class="feature-card">
 
             <h3>AI Assistant</h3>
 
             <p>
-                Ask questions naturally and receive contextual answers powered
-                by enterprise knowledge.
+                Ask questions naturally and receive contextual answers
+                powered by enterprise knowledge.
             </p>
 
         </div>
@@ -165,45 +408,57 @@
     </div>
 
 </section>
+
+
+<!-- =========================================================
+     CTA
+     ========================================================= -->
+
 <section class="cta">
 
     <h2>
-
         Accelerate Digital Transformation
-
     </h2>
 
     <p>
-
         Connect your workforce, knowledge and AI into a single modern
         enterprise experience.
-
     </p>
 
     <a href="ai-assistant.html" class="btn-primary">
-
         Launch AI Assistant
-
     </a>
-    
+
 </section>
+```
+
 </main>
 
 <footer>
 
-    <p>
-
-        © 2026 EnableX. Digital Enablement & Knowledge Management Platform.
-
-    </p>
+```
+<p>
+    © 2026 EnableX. Digital Enablement & Knowledge Management Platform.
+</p>
+```
 
 </footer>
+
+<!-- =============================================================
+     ELEVENLABS CONVERSATIONAL AI
+     ============================================================= -->
+
+<elevenlabs-convai
+ agent-id="agent_0301ky516eb3emwsy22td2f8z96g"> </elevenlabs-convai>
+
+<script
+    src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+    async
+    type="text/javascript">
+</script>
 
 <script src="js/app.js"></script>
 
 </body>
 
 </html>
-
-<elevenlabs-convai agent-id="agent_0301ky516eb3emwsy22td2f8z96g"></elevenlabs-convai>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
